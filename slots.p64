@@ -1,0 +1,266 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNTowOSIscmV2aXNpb249MzE2XV1sejQAOwIAAMgyAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAynk9MCx6b29tPTh9LD4A-xT_GBPO
+Iw4jjgMqI45KI15qI06KE06KEz6aXnp_en5avir_GFIAHP8U8BJYADgwaA8YSCBoDkggWA5YIMgg
+yECYUJhgeIBYoDiwGPBTAB7-DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOg
+Ay8bE2AzPhNAM04DDgMwAy4DLhMOEyADLgMOIy4DIAMeM04DMCMeEy4TUAMuQ2ADPgOQBAB-Ex4T
+oDPwBnEAHfAKIcrwAzdgFyAHEAcgFxAnEAcAFyAXEAcABwoAURAnECcQDgBhAAcQFzA3CABCJyAX
+ICAAbwfwA7rwEnIAHfAVI5xADC8cDB4MLhwQDE4cTgwgDD4MTgwwDD4MPgxQDC4MPgxgHgD-CAxw
+DB4MHgyQDA4MDgywHA4MsCzQDPAIbwAd-z0HTxtwPjsuIC6LDiAOa0cQHjs3KAcQDisnSBcOAA4b
+F1gXCw4ADgsXWBcbDgAOF0gnKw4ADgc4J0sOEAcIN1seECd7HhAuWz5AfvAF6wAe-wwIcBhAqECo
+QAhQKMAYwBjAKLAooDigOLAo8BlMABmPEhIE-APwABwDABkv-AOuAB0f8DEA----------------
+----------------------------------------------8dUG09OH19
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNToxMCJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNTowOSIscmV2aXNpb249MzA4XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
+CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNToxMCJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNTowOSIscmV2aXNpb249MzA3XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
+Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
+-70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNToxMCJdXQ==
+:: classic.lua
+--[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
+--
+-- classic
+--
+-- Copyright (c) 2014, rxi
+--
+-- This module is free software; you can redistribute it and/or modify it under
+-- the terms of the MIT license. See LICENSE for details.
+--
+
+
+Object = {}
+Object.__index = Object
+
+
+function Object:new()
+end
+
+
+function Object:extend()
+  local cls = {}
+  for k, v in pairs(self) do
+    if k:find("__") == 1 then
+      cls[k] = v
+    end
+  end
+  cls.__index = cls
+  cls.super = self
+  setmetatable(cls, self)
+  return cls
+end
+
+
+function Object:implement(...)
+  for _, cls in pairs({...}) do
+    for k, v in pairs(cls) do
+      if self[k] == nil and type(v) == "function" then
+        self[k] = v
+      end
+    end
+  end
+end
+
+
+function Object:is(T)
+  local mt = getmetatable(self)
+  while mt do
+    if mt == T then
+      return true
+    end
+    mt = getmetatable(mt)
+  end
+  return false
+end
+
+
+function Object:__tostring()
+  return "Object"
+end
+
+
+function Object:__call(...)
+  local obj = setmetatable({}, self)
+  obj:new(...)
+  return obj
+end
+
+
+:: face.lua
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 17:05:09",revision=135]]
+Face = Object:extend()
+
+
+
+function Face:new(reel, img, y)
+	self.img = img
+	self.x = reel.x + 1
+	self.y = y
+	self.in_play = true
+end
+
+function Face:draw()
+	spr(self.img, self.x, self.y)
+end
+
+function Face:update()
+	
+end
+
+
+:: main.lua
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 17:05:09",revision=427]]
+
+include "classic.lua"
+include "face.lua"
+include "reel.lua"
+
+W, H = 100, 100
+
+canvas = {}
+canvas = userdata("u8", W, H)
+
+function _init()
+	window {
+		width      = 200,
+		height     = 200,
+		resizeable = false,
+		title      = "Slots",
+		--fullscreen = false
+	}
+	
+	reel_1 = Reel(10, 20)
+	reel_2 = Reel(32, 20)
+	reel_3 = Reel(54, 20)
+
+end
+
+function _draw()
+	cls()
+	
+	set_draw_target(canvas)
+	
+	--spr(8, 10, 20)
+	--spr(1, 11, 21)
+	reel_1:draw()
+	reel_2:draw()
+	reel_3:draw()
+	
+	
+	set_draw_target()
+	
+	sspr(canvas, 0, 0, 100, 100, 0, 0, 200, 200)
+	--print("bet", 30, 80, 7)
+	--blit(canvas, get_draw_target(), 0, 0, 0, 0, 200,200 )
+	
+	--print("cpu: " .. stat(1), 0, 0, 7)
+	--print("mem: " .. stat(0), 0, 8, 7)
+	
+ 	--print("mem: " .. stat(0) .. "kb", 10, 0, 8)
+   --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
+	
+
+
+end
+:: reel.lua
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 17:05:09",revision=91]]
+
+local face_data = {
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+}
+
+Reel = Object:extend()
+
+local bg_spr = 9
+
+function Reel:new(x, y)
+	self.img = 1
+	self.x = x
+	self.y = y
+	self.reel_y = 0 
+	self.faces = {
+		
+	}
+	set_upfaces(self)
+end
+
+function Reel:draw()
+	--spr(self.img, self.x+1, self.y+1)
+	for f in all(self.faces) do 
+		f:draw()
+	end
+	spr(bg_spr, self.x, self.y)
+end
+
+function Reel:spawn_next_face()
+	
+end
+
+function set_upfaces(reel)
+	local start_y = reel.y +1
+	for i=1, 8 do
+		print( i )
+		local f = Face(reel, i, start_y-i*16)
+		add(reel.faces, f)
+	end
+end
+:: slot.lua
+--[[pod_format="raw",created="2025-04-19 15:58:28",modified="2025-04-19 16:25:00",revision=96]]
+
+Slot = Object:extend()
+
+local bg_spr = 8
+
+function Slot:new(x, y)
+	self.img = 1
+	self.x = x
+	self.y = y
+	self.reel_y = 0 
+	self.faces = {
+		{ 
+			y = 0,
+			img = 0
+		}
+	}
+end
+
+function Slot:draw()
+	spr(bg_spr, self.x, self.y)
+	spr(self.img, self.x+1, self.y+1)
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
+NC0xOSAxNzowNToxMCIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzQ4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMyOCIsd29ya3NwYWNl
+X2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2Nh
+dGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAi
+LHdvcmtzcGFjZV9pbmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4
+PTR9fV1d
+:: [eoc]
