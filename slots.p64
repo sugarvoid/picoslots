@@ -4,39 +4,40 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNTowOSIscmV2aXNpb249MzE2XV1sejQAOwIAAMgyAADzIXtbMF09e2JtcD1weHUA
-QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAynk9MCx6b29tPTh9LD4A-xT_GBPO
-Iw4jjgMqI45KI15qI06KE06KEz6aXnp_en5avir_GFIAHP8U8BJYADgwaA8YSCBoDkggWA5YIMgg
-yECYUJhgeIBYoDiwGPBTAB7-DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOg
-Ay8bE2AzPhNAM04DDgMwAy4DLhMOEyADLgMOIy4DIAMeM04DMCMeEy4TUAMuQ2ADPgOQBAB-Ex4T
-oDPwBnEAHfAKIcrwAzdgFyAHEAcgFxAnEAcAFyAXEAcABwoAURAnECcQDgBhAAcQFzA3CABCJyAX
-ICAAbwfwA7rwEnIAHfAVI5xADC8cDB4MLhwQDE4cTgwgDD4MTgwwDD4MPgxQDC4MPgxgHgD-CAxw
-DB4MHgyQDA4MDgywHA4MsCzQDPAIbwAd-z0HTxtwPjsuIC6LDiAOa0cQHjs3KAcQDisnSBcOAA4b
-F1gXCw4ADgsXWBcbDgAOF0gnKw4ADgc4J0sOEAcIN1seECd7HhAuWz5AfvAF6wAe-wwIcBhAqECo
-QAhQKMAYwBjAKLAooDigOLAo8BlMABmPEhIE-APwABwDABkv-AOuAB0f8DEA----------------
-----------------------------------------------8dUG09OH19
+NC0xOSAxODowNzowMiIscmV2aXNpb249NDgzXV1sejQAYQIAAOYyAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A-xMYE8Aj
+ACOAAyojgEojUGojQIoTQIoTMJpQenB6cFqwKvAYUgAd-xISWAA4MGgPGEggaA5IIFgOWCDIIMhA
+mFCYYHiAWKA4sBhTAB--DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOgAy8b
+E2AzPhNAM04DDgMwAy4DLhMOEyADLgMOIy4DIAMeM04DMCMeEy4TUAMuQ2ADPgOQBAB-Ex4ToDPw
+BnEAHfAKIcrwAzdgFyAHEAcgFxAnEAcAFyAXEAcABwoAURAnECcQDgBhAAcQFzA3CABCJyAXICAA
+bwfwA7rwEnIAHfAVI5xADC8cDB4MLhwQDE4cTgwgDD4MTgwwDD4MPgxQDC4MPgxgHgD-CAxwDB4M
+HgyQDA4MDgywHA4MsCzQDPAIbwAd-z0HTxtwPjsuIC6LDiAOa0cQHjs3KAcQDisnSBcOAA4bF1gX
+Cw4ADgsXWBcbDgAOF0gnKw4ADgc4J0sOEAcIN1seECd7HhAuWz5AfvAF6wAe-wwIcBhAqECoQAhQ
+KMAYwBjAKLAooDigOLAo8BlMABmPEhIE-APwABwDABkv-AOuAB0f8DEA-w-xAwoKBCA8MBw-HRwQ
+DF4MAAx_HAIAzwwADF4MEBw_HDA8IIAAHg8xAP--------------------------------------
+---------------------8RQbT04fX0=
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNToxMCJdXQ==
+NC0xOSAxODowNzowMiJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNTowOSIscmV2aXNpb249MzA4XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+NC0xOSAxODowNzowMiIscmV2aXNpb249NDY3XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
 KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
 CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNToxMCJdXQ==
+NC0xOSAxODowNzowMiJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNTowOSIscmV2aXNpb249MzA3XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+NC0xOSAxODowNzowMiIscmV2aXNpb249NDY1XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
 Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
 Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
 -70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNToxMCJdXQ==
+NC0xOSAxODowNzowMiJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -107,10 +108,11 @@ end
 
 
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 17:05:09",revision=135]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 18:07:02",revision=317]]
 Face = Object:extend()
 
-
+top = -60
+bottom = 68
 
 function Face:new(reel, img, y)
 	self.img = img
@@ -120,22 +122,288 @@ function Face:new(reel, img, y)
 end
 
 function Face:draw()
-	spr(self.img, self.x, self.y)
+	if self.y >= 5 and self.y <= 35 then
+		spr(self.img, self.x, self.y)
+	end
 end
 
 function Face:update()
-	
+	self.y += 1
+	if self.y >= bottom then
+		self.y = top
+	end
 end
 
 
-:: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 17:05:09",revision=427]]
+:: flux.lua
+--[[pod_format="raw",created="2025-04-19 17:37:55",modified="2025-04-19 18:07:02",revision=108]]
+--
+-- flux
+--
+-- Copyright (c) 2016 rxi
+--
+-- This library is free software; you can redistribute it and/or modify it
+-- under the terms of the MIT license. See LICENSE for details.
+--
 
+local flux = { _version = "0.1.5" }
+flux.__index = flux
+
+flux.tweens = {}
+flux.easing = { linear = function(p) return p end }
+
+local easing = {
+  quad    = "p * p",
+  cubic   = "p * p * p",
+  quart   = "p * p * p * p",
+  quint   = "p * p * p * p * p",
+  expo    = "2 ^ (10 * (p - 1))",
+  sine    = "-math.cos(p * (math.pi * .5)) + 1",
+  --circ    = "-(math.sqrt(1 - (p * p)) - 1)",
+  back    = "p * p * (2.7 * p - 1.7)",
+  elastic = "-(2^(10 * (p - 1)) * math.sin((p - 1.075) * (math.pi * 2) / .3))"
+}
+
+local makefunc = function(str, expr)
+  local load = loadstring or load
+  return load("return function(p) " .. str:gsub("%$e", expr) .. " end")()
+end
+
+for k, v in pairs(easing) do
+  flux.easing[k .. "in"] = makefunc("return $e", v)
+  flux.easing[k .. "out"] = makefunc([[
+    p = 1 - p
+    return 1 - ($e)
+  ]], v)
+  flux.easing[k .. "inout"] = makefunc([[
+    p = p * 2
+    if p < 1 then
+      return .5 * ($e)
+    else
+      p = 2 - p
+      return .5 * (1 - ($e)) + .5
+    end
+  ]], v)
+end
+
+
+
+local tween = {}
+tween.__index = tween
+
+local function makefsetter(field)
+  return function(self, x)
+    local mt = getmetatable(x)
+    if type(x) ~= "function" and not (mt and mt.__call) then
+      error("expected function or callable", 2)
+    end
+    local old = self[field]
+    self[field] = old and function() old() x() end or x
+    return self
+  end
+end
+
+local function makesetter(field, checkfn, errmsg)
+  return function(self, x)
+    if checkfn and not checkfn(x) then
+      error(errmsg:gsub("%$x", tostring(x)), 2)
+    end
+    self[field] = x
+    return self
+  end
+end
+
+tween.ease  = makesetter("_ease",
+                         function(x) return flux.easing[x] end,
+                         "bad easing type '$x'")
+tween.delay = makesetter("_delay",
+                         function(x) return type(x) == "number" end,
+                         "bad delay time; expected number")
+tween.onstart     = makefsetter("_onstart")
+tween.onupdate    = makefsetter("_onupdate")
+tween.oncomplete  = makefsetter("_oncomplete")
+
+
+function tween.new(obj, dur, vars)
+  local self = setmetatable({}, tween)
+  self.obj = obj
+  self.rate = dur > 0 and 1 / dur or 0
+  self.progress = dur > 0 and 0 or 1
+  self._delay = 0
+  self._ease = "quadout"
+  self.vars = {}
+  for k, v in pairs(vars) do
+    if type(v) ~= "number" then
+      error("bad value for key '" .. k .. "'; expected number")
+    end
+    self.vars[k] = v
+  end
+  return self
+end
+
+
+function tween:init()
+  for k, v in pairs(self.vars) do
+    local x = self.obj[k]
+    if type(x) ~= "number" then
+      error("bad value on object key '" .. k .. "'; expected number")
+    end
+    self.vars[k] = { start = x, diff = v - x }
+  end
+  self.inited = true
+end
+
+
+function tween:after(...)
+  local t
+  if select("#", ...) == 2 then
+    t = tween.new(self.obj, ...)
+  else
+    t = tween.new(...)
+  end
+  t.parent = self.parent
+  self:oncomplete(function() flux.f_add(self.parent, t) end)
+  return t
+end
+
+
+function tween:stop()
+  flux.remove(self.parent, self)
+end
+
+
+
+function flux.group()
+  return setmetatable({}, flux)
+end
+
+
+function flux:to(obj, dur, vars)
+  return flux.f_add(self, tween.new(obj, dur, vars))
+end
+
+
+function flux:update(deltatime)
+  for i = #self, 1, -1 do
+    local t = self[i]
+    if t._delay > 0 then
+      t._delay = t._delay - deltatime
+    else
+      if not t.inited then
+        flux.clear(self, t.obj, t.vars)
+        t:init()
+      end
+      if t._onstart then
+        t._onstart()
+        t._onstart = nil
+      end
+      t.progress = t.progress + t.rate * deltatime
+      local p = t.progress
+      local x = p >= 1 and 1 or flux.easing[t._ease](p)
+      for k, v in pairs(t.vars) do
+        t.obj[k] = v.start + x * v.diff
+      end
+      if t._onupdate then t._onupdate() end
+      if p >= 1 then
+        flux.remove(self, i)
+        if t._oncomplete then t._oncomplete() end
+      end
+    end
+  end
+end
+
+
+function flux:clear(obj, vars)
+  for t in pairs(self[obj]) do
+    if t.inited then
+      for k in pairs(vars) do t.vars[k] = nil end
+    end
+  end
+end
+
+
+function flux:f_add(tween)
+  -- Add to object table, create table if it does not exist
+  local obj = tween.obj
+  self[obj] = self[obj] or {}
+  self[obj][tween] = true
+  -- Add to array
+  table.insert(self, tween)
+  tween.parent = self
+  return tween
+end
+
+
+function flux:remove(x)
+  if type(x) == "number" then
+    -- Remove from object table, destroy table if it is empty
+    local obj = self[x].obj
+    self[obj][self[x]] = nil
+    if not next(self[obj]) then self[obj] = nil end
+    -- Remove from array
+    self[x] = self[#self]
+    return table.remove(self)
+  end
+  for i, v in ipairs(self) do
+    if v == x then
+      return flux.remove(self, i)
+    end
+  end
+end
+
+
+function get_flux()
+	local your_flux = {
+	  to      = function(...) return flux.to(flux.tweens, ...) end,
+	  update  = function(...) return flux.update(flux.tweens, ...) end,
+	  remove  = function(...) return flux.remove(flux.tweens, ...) end,
+	}
+	setmetatable(your_flux, flux)
+	return your_flux
+
+end
+
+
+:: handle.lua
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 18:07:02",revision=105]]
+
+handle = {
+	x=75,
+	y=20,
+	draw=function(self)
+		spr(16, self.x, self.y)
+	end,
+	update=function(self)
+	end,
+	pull=function(self)
+		if self.y == 20 then
+			flux.to(self, 0.6, { y = 60 }):ease("quadin"):oncomplete(
+				function()
+					notify("handle bottom")
+					flux.to(self, 1, {y = 20}):ease("backin")
+				end
+			)
+		end
+	end,
+}
+:: main.lua
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 18:07:02",revision=680]]
+
+include "flux.lua"
 include "classic.lua"
 include "face.lua"
 include "reel.lua"
+include "handle.lua"
 
 W, H = 100, 100
+
+
+flux = get_flux()
+mx, my, mb = nil, nil, nil
+m_delay = 0
+
+local last_time = time()
+local dt = 0
 
 canvas = {}
 canvas = userdata("u8", W, H)
@@ -155,17 +423,40 @@ function _init()
 
 end
 
+function _update()
+	if btnp(1) then
+		handle:pull()
+	end
+
+	mx,my,mb = mouse()
+	mx = flr(mx/2)
+	my = flr(my/2)
+	update_dt()
+  	flux.update(dt)
+	reel_1:update()
+	reel_2:update()
+	reel_3:update()
+end
+
 function _draw()
 	cls()
 	
 	set_draw_target(canvas)
+	cls()
+	
+	clip(10, 20, 62, 18)
+	
 	
 	--spr(8, 10, 20)
 	--spr(1, 11, 21)
 	reel_1:draw()
 	reel_2:draw()
 	reel_3:draw()
-	
+	---rectfill(10, 19, 10+61, 19-15, 0) -- hide top
+	---rectfill(10, 38, 10+61, 38+13, 0) -- hide bottom
+	clip()
+
+	handle:draw()
 	
 	set_draw_target()
 	
@@ -176,14 +467,21 @@ function _draw()
 	--print("cpu: " .. stat(1), 0, 0, 7)
 	--print("mem: " .. stat(0), 0, 8, 7)
 	
- 	--print("mem: " .. stat(0) .. "kb", 10, 0, 8)
-   --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
+ 	print("mem: " .. stat(0) .. "kb", 10, 0, 8)
+   print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 	
-
+	--print(mx .. "," .. my, 0, 0, 7)
 
 end
+
+
+function update_dt()
+	local t = time()
+  	dt = t - last_time
+  	last_time = t
+end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 17:05:09",revision=91]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 18:07:02",revision=261]]
 
 local face_data = {
 	{},
@@ -209,6 +507,12 @@ function Reel:new(x, y)
 		
 	}
 	set_upfaces(self)
+end
+
+function Reel:update()
+	for f in all(self.faces) do 
+		f:update()
+	end
 end
 
 function Reel:draw()
@@ -257,10 +561,11 @@ function Slot:draw()
 end
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxNzowNToxMCIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzQ4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMyOCIsd29ya3NwYWNl
-X2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2Nh
-dGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAi
-LHdvcmtzcGFjZV9pbmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4
-PTR9fV1d
+NC0xOSAxODowNzowMiIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzM4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMzMCIsd29ya3NwYWNl
+X2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjMTQiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9j
+YXRpb249ImZsdXgubHVhIzIyNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iaGFuZGxl
+Lmx1YSMxMiIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3Bh
+Y2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9pbmRleD0zfSx7bG9j
+YXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
 :: [eoc]
