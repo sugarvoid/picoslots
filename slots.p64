@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxMyIscmV2aXNpb249NjAxXV1sejQAZwIAAOcyAADzIXtbMF09e2JtcD1weHUA
+NC0xOSAyMjoxMjo1MSIscmV2aXNpb249NzI2XV1sejQAZwIAAOcyAADzIXtbMF09e2JtcD1weHUA
 QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A-xMYE8Aj
 ACOAAyojgEojUGojQIoTQIoTMJpQenB6cFqwKvAYUgAd-xISWAA4MGgPGEggaA5IIFgOWCDIIMhA
 mFCYYHiAWKA4sBhTAB--DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOgAy8b
@@ -18,26 +18,26 @@ DF4MAAx_HAIAzwwADF4MEBw_HDA8IE8ACy8xNYEAHg8xAP------------------------------
 -----------------------------6VQbT04fX0=
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxNCJdXQ==
+NC0xOSAyMjoxMjo1MSJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxMyIscmV2aXNpb249NTc5XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+NC0xOSAyMjoxMjo1MSIscmV2aXNpb249Njk1XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
 KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
 CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxNCJdXQ==
+NC0xOSAyMjoxMjo1MSJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxMyIscmV2aXNpb249NTc3XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+NC0xOSAyMjoxMjo1MSIscmV2aXNpb249NjkzXV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
 Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
 Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
 -70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxNCJdXQ==
+NC0xOSAyMjoxMjo1MSJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -108,33 +108,67 @@ end
 
 
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 21:10:13",revision=430]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 22:12:51",revision=585]]
 Face = Object:extend()
+
+local FACE_STR = {
+	"lemon",
+	"heart",
+	"bell",
+	"clover",
+	"bar",
+	"dimond",
+	"melon",
+	"seven"
+}
 
 top = -60
 bottom = 68
 
 function Face:new(reel, img, y)
+	self.parent = reel
 	self.img = img
 	self.x = reel.x + 1
 	self.y = y
 	self.in_play = true
+	self.center = {x=self.x+8,y=0}
 end
 
 function Face:draw()
 	if self.y >= 5 and self.y <= 35 then
 		spr(self.img, self.x, self.y)
+		pset(self.center.x, self.center.y, 31)
 	end
 end
 
 function Face:update()
-	self.y += 1
+	self.y += 2
 	if self.y >= bottom then
 		self.y = top
 	end
+	self.center.y = self.y + 8
 end
 
+function Face:in_zone()
+    if self.center.x < self.parent.hitbox.x + self.parent.hitbox.w and
+        self.center.x > self.parent.hitbox.x and
+        self.y < self.parent.hitbox.y + self.parent.hitbox.h and
+        self.y > self.parent.hitbox.y then
+        return true
+    else
+        return false
+    end
+end
 
+function Face:snap()
+	notify("im snapping")
+	local dist = (self.parent.center.y+1)
+	flux.to(self, 0.2, {y = dist})
+end
+
+function get_face_string(num)
+	return FACE_STR[num]
+end
 :: flux.lua
 --[[pod_format="raw",created="2025-04-19 17:37:55",modified="2025-04-19 21:10:06",revision=216]]
 --
@@ -365,7 +399,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 21:10:13",revision=258]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 22:12:51",revision=380]]
 
 handle = {
 	x=75,
@@ -391,7 +425,7 @@ handle = {
 	end,
 }
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 21:10:13",revision=834]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 22:12:51",revision=977]]
 
 include "flux.lua"
 include "classic.lua"
@@ -441,6 +475,14 @@ end
 function _update()
 	if btnp(3) then
 		handle:pull()
+	end
+	
+	if key("1") then
+		stop_reel(1)
+	elseif key("2") then
+		stop_reel(2)
+	elseif key("3") then
+		stop_reel(3)
 	end
 
 	mx,my,mb = mouse()
@@ -502,14 +544,36 @@ function _draw()
 	
 	--print(mx .. "," .. my, 0, 0, 7)
 	
+	print(reel_1.face_str, 20, 90, 7)
+	print(reel_2.face_str, 65, 90, 7)
+	print(reel_3.face_str, 110, 90, 7)
+	
 
 end
 
 function start_reels()
-	
 	reel_1.spinning = true
 	reel_2.spinning = true
 	reel_3.spinning = true
+	
+
+	reel_1.face_str = ""
+	reel_2.face_str = ""
+	reel_3.face_str = ""
+	
+end
+
+function stop_reel(num)
+	if num == 1 then
+		reel_1.spinning = false
+		reel_1:check_faces()
+	elseif num == 2 then
+		reel_2.spinning = false
+		reel_2:check_faces()
+	elseif num == 3 then
+		reel_3.spinning = false
+		reel_3:check_faces()
+	end
 end
 
 function update_dt()
@@ -522,7 +586,7 @@ function pad_zeros(num, zeros)
 	return string.format("%0".. zeros .. "d", num)
 end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 21:10:13",revision=387]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 22:12:51",revision=544]]
 
 local face_data = {
 	{},
@@ -549,6 +613,11 @@ function Reel:new(x, y)
 	}
 	set_upfaces(self)
 	self.spinning = false
+	self.hitbox = {x=0,y=0,w=16,h=16}
+	self.center = {x=self.x+8, y=self.y+8}
+	self.closest_face = {}
+	self.closest_dist = 99
+	self.face_str = ""
 end
 
 function Reel:update()
@@ -565,6 +634,7 @@ function Reel:draw()
 		f:draw()
 	end
 	spr(bg_spr, self.x, self.y)
+	pset(self.center.x, self.center.y, 2)
 end
 
 function Reel:spawn_next_face()
@@ -577,6 +647,19 @@ function set_upfaces(reel)
 		local f = Face(reel, i, start_y -(i - 1) * 16)
 		add(reel.faces, f)
 	end
+end
+
+function Reel:check_faces()
+	self.closest_dist = 99
+	for f in all(self.faces) do
+		local dist = abs(f.center.y - self.center.y)
+		if dist < self.closest_dist then
+			self.closest_face = f
+			self.closest_dist = dist
+		end
+	end
+	notify(tostr(self.closest_face.img))
+	self.face_str = get_face_string(self.closest_face.img)
 end
 :: slot.lua
 --[[pod_format="raw",created="2025-04-19 15:58:28",modified="2025-04-19 16:25:00",revision=96]]
@@ -604,10 +687,10 @@ function Slot:draw()
 end
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMToxMDoxNCIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzExNSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjMSIsd29ya3NwYWNl
-X2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjMSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2Nh
-dGlvbj0iaGFuZGxlLmx1YSMxNSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAu
-Z2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9p
-bmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
+NC0xOSAyMjoxMjo1MSIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzEyNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjNjQiLHdvcmtzcGFj
+ZV9pbmRleD0xfSx7bG9jYXRpb249ImZhY2UubHVhIzU4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
+Y2F0aW9uPSJoYW5kbGUubHVhIzE5Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngv
+MC5nZngiLHdvcmtzcGFjZV9pbmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNl
+X2luZGV4PTN9LHtsb2NhdGlvbj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
 :: [eoc]
