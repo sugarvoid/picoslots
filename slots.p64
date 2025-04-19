@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiIscmV2aXNpb249NDgzXV1sejQAYQIAAOYyAADzIXtbMF09e2JtcD1weHUA
+NC0xOSAxODoyNjo0NiIscmV2aXNpb249NTI5XV1sejQAYQIAAOYyAADzIXtbMF09e2JtcD1weHUA
 QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A-xMYE8Aj
 ACOAAyojgEojUGojQIoTQIoTMJpQenB6cFqwKvAYUgAd-xISWAA4MGgPGEggaA5IIFgOWCDIIMhA
 mFCYYHiAWKA4sBhTAB--DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOgAy8b
@@ -18,26 +18,26 @@ DF4MAAx_HAIAzwwADF4MEBw_HDA8IIAAHg8xAP--------------------------------------
 ---------------------8RQbT04fX0=
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiJdXQ==
+NC0xOSAxODoyNjo0NiJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiIscmV2aXNpb249NDY3XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+NC0xOSAxODoyNjo0NiIscmV2aXNpb249NTExXV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
 KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
 CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiJdXQ==
+NC0xOSAxODoyNjo0NiJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiIscmV2aXNpb249NDY1XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+NC0xOSAxODoyNjo0NiIscmV2aXNpb249NTA5XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
 Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
 Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
 -70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiJdXQ==
+NC0xOSAxODoyNjo0NiJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -108,7 +108,7 @@ end
 
 
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 18:07:02",revision=317]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 18:26:46",revision=361]]
 Face = Object:extend()
 
 top = -60
@@ -136,7 +136,7 @@ end
 
 
 :: flux.lua
---[[pod_format="raw",created="2025-04-19 17:37:55",modified="2025-04-19 18:07:02",revision=108]]
+--[[pod_format="raw",created="2025-04-19 17:37:55",modified="2025-04-19 18:26:46",revision=151]]
 --
 -- flux
 --
@@ -365,7 +365,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 18:07:02",revision=105]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 18:26:46",revision=156]]
 
 handle = {
 	x=75,
@@ -379,7 +379,7 @@ handle = {
 		if self.y == 20 then
 			flux.to(self, 0.6, { y = 60 }):ease("quadin"):oncomplete(
 				function()
-					notify("handle bottom")
+					start_reels()
 					flux.to(self, 1, {y = 20}):ease("backin")
 				end
 			)
@@ -387,7 +387,7 @@ handle = {
 	end,
 }
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 18:07:02",revision=680]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 18:26:46",revision=741]]
 
 include "flux.lua"
 include "classic.lua"
@@ -404,6 +404,8 @@ m_delay = 0
 
 local last_time = time()
 local dt = 0
+local reel_timer = 0
+local reels_started = false
 
 canvas = {}
 canvas = userdata("u8", W, H)
@@ -436,6 +438,18 @@ function _update()
 	reel_1:update()
 	reel_2:update()
 	reel_3:update()
+	
+if reels_started then
+	reel_timer += 1
+	for t in ipairs(reel_timers) do
+		if not t.triggered and totalTime >= t.delay then
+			t.reel.spinning = true
+			t.triggered = true
+		end
+	end
+end
+
+
 end
 
 function _draw()
@@ -467,13 +481,18 @@ function _draw()
 	--print("cpu: " .. stat(1), 0, 0, 7)
 	--print("mem: " .. stat(0), 0, 8, 7)
 	
- 	print("mem: " .. stat(0) .. "kb", 10, 0, 8)
-   print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
+ 	--print("mem: " .. stat(0) .. "kb", 10, 0, 8)
+   --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 	
 	--print(mx .. "," .. my, 0, 0, 7)
 
 end
 
+function start_reels()
+	reel_1.spinning = true
+	reel_2.spinning = true
+	reel_3.spinning = true
+end
 
 function update_dt()
 	local t = time()
@@ -481,7 +500,7 @@ function update_dt()
   	last_time = t
 end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 18:07:02",revision=261]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 18:26:46",revision=319]]
 
 local face_data = {
 	{},
@@ -507,11 +526,14 @@ function Reel:new(x, y)
 		
 	}
 	set_upfaces(self)
+	self.spinning = false
 end
 
 function Reel:update()
-	for f in all(self.faces) do 
-		f:update()
+	if self.spinning then
+		for f in all(self.faces) do 
+			f:update()
+		end
 	end
 end
 
@@ -530,8 +552,7 @@ end
 function set_upfaces(reel)
 	local start_y = reel.y +1
 	for i=1, 8 do
-		print( i )
-		local f = Face(reel, i, start_y-i*16)
+		local f = Face(reel, i, start_y -(i - 1) * 16)
 		add(reel.faces, f)
 	end
 end
@@ -561,11 +582,11 @@ function Slot:draw()
 end
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAxODowNzowMiIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzM4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMzMCIsd29ya3NwYWNl
+NC0xOSAxODoyNjo0NiIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzEzIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSM1MiIsd29ya3NwYWNl
 X2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjMTQiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9j
 YXRpb249ImZsdXgubHVhIzIyNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iaGFuZGxl
-Lmx1YSMxMiIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3Bh
+Lmx1YSMxNCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3Bh
 Y2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9pbmRleD0zfSx7bG9j
 YXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
 :: [eoc]
