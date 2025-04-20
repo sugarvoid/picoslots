@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiIscmV2aXNpb249MTE5Nl1dbHo0AGcCAADnMgAA8yF7WzBdPXtibXA9cHh1
+NC0yMCAyMzozNTowNSIscmV2aXNpb249MTIyMF1dbHo0AGcCAADnMgAA8yF7WzBdPXtibXA9cHh1
 AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIAMt5PTAsem9vbT04fSw_AP8TGBPA
 IwAjgAMqI4BKI1BqI0CKE0CKEzCaUHpwenBasCrwGFIAHf8SElgAODBoDxhIIGgOSCBYDlggyCDI
 QJhQmGB4gFigOLAYUwAf-w8HKbA5sAkgCYB5cIlQmVCZUKlAqTC5MClgGUCp8CJOAB3wJxZDoAMv
@@ -18,20 +18,20 @@ EA1eDQANfh0CAM8NAA1eDRAdPh0wPSBPAAsvMTWBAB4PMQD-----------------------------
 ------------------------------_lUG09OH19
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiJdXQ==
+NC0yMCAyMzozNTowNiJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiIscmV2aXNpb249MTE1N11dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
+NC0yMCAyMzozNTowNSIscmV2aXNpb249MTE4MV1dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
 YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
 MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCwem9vbT0wLjI1fX0=
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiJdXQ==
+NC0yMCAyMzozNTowNiJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiIscmV2aXNpb249MTE1OF1dbHo0AB8BAACTCgAA-zBweHUAAygAAAQABA9A
+NC0yMCAyMzozNTowNSIscmV2aXNpb249MTE4Ml1dbHo0AB8BAACTCgAA-zBweHUAAygAAAQABA9A
 EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
 EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
 --_9H-8BAKzzDcgPQAAPEEAPJw--Dyn--y0ADQD9LQ4NDv0t8HAbAPUJMA8yDzQNDzcPNQ85-Skg
@@ -39,7 +39,7 @@ DSD9KS4NLv0pIQDxCDQPOQ81DzsPNw88Dz4PO-0ocP0ofv0oIADlCAACIA8o-S8A-S8H-S8zAIM5
 -S8B-S8PEBMAQQog-bJLASBMAx8AKf2wWAFMBAMABBQADwEA-8ZQ-----7g=
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAyMzoyMjo1MiJdXQ==
+NC0yMCAyMzozNTowNiJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -110,7 +110,7 @@ end
 
 
 :: clock.lua
---[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-20 23:22:52",revision=344]]
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-20 23:35:05",revision=368]]
 Trigger = Object:extend()
 
 function Trigger:new(callback, seconds, is_repeat)
@@ -166,7 +166,7 @@ function Clock:restart()
     self.seconds = 0
 end
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-20 23:22:52",revision=1072]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-20 23:35:05",revision=1096]]
 Face = Object:extend()
 
 local FACE_STR = {
@@ -438,7 +438,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-20 23:22:52",revision=850]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-20 23:35:05",revision=874]]
 
 handle = {
 	x=75,
@@ -464,7 +464,7 @@ handle = {
 	end,
 }
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-20 23:22:52",revision=1677]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-20 23:35:05",revision=1719]]
 
 include "flux.lua"
 include "classic.lua"
@@ -537,8 +537,8 @@ cash = 123
 --	
 --	}
 
-canvas = {}
-canvas = userdata("u8", W, H)
+--canvas = {}
+--canvas = userdata("u8", W, H)
 
 reels = {}
 
@@ -549,6 +549,7 @@ function _init()
 		width      = 100,
 		height     = 100,
 		resizeable = false,
+		--title = "$" .. tostr(cash),
 		title      = "Slots",
 	}
 	
@@ -579,14 +580,6 @@ function _update()
 			--handle:pull()
 			pull_handle()
 		end
-		
---		if _keyp("1") then
---			stop_reel(1)
---		elseif _keyp("2") then
---			stop_reel(2)
---		elseif _keyp("3") then
---			stop_reel(3)
---		end
 	end
 	
 	if _keyp("a") then
@@ -598,10 +591,7 @@ function _update()
 	my = flr(my/2)
 	update_dt()
   	flux.update(dt)
-	--reel_1:update()
-	--reel_2:update()
-	--reel_3:update()
-	
+
 	foreach(reels, function(obj) obj:update() end )
 	
 	
@@ -614,59 +604,43 @@ function _update()
 			end
 		end
 	end
-	if not key() then
-		--key_delay = 0
-	end
-	--if auto_mode then
-		foreach(clocks, function(obj) obj:update() end )
-		
+
+	foreach(clocks, function(obj) obj:update() end )
 	
-		--TODO: Clean up once I get it working
-		if clock_pull.seconds >= 5 then
-			clock_pull.seconds = 0
-			auto_pull()
-		end
-		
-		if clock_stop_1.seconds == 2 then
-			clock_stop_1:stop()
-			--reel_1:stop()
-			stop_reel(1)
-
-		end
-		if clock_stop_2.seconds == 3 then
-			clock_stop_2:stop()
-			--reel_2:stop()
-			stop_reel(2)
-
-		end
-		if clock_stop_3.seconds == 4 then
-			clock_stop_3:stop()
-			--reel_3:stop()
-			stop_reel(3)
-
-		end
-		
-	--end
-	
-	if are_reels_spinning() then
-		
-	else
-		sfx(-1,2)
+	if clock_pull.seconds >= 5 then
+		clock_pull.seconds = 0
+		pull_handle()
 	end
+	
+	if clock_stop_1.seconds == 2 then
+		clock_stop_1:stop()
+		stop_reel(1)
+	end
+	if clock_stop_2.seconds == 3 then
+		clock_stop_2:stop()
+		stop_reel(2)
+	end
+	if clock_stop_3.seconds == 4 then
+		clock_stop_3:stop()
+		stop_reel(3)
+	end
+	
+	if not are_reels_spinning() then
+		--sfx(-1,2)
+	end
+	
 end
 
 function _draw()
 	cls()
+	
 	--set_draw_target(canvas)
 	--cls()
 	
 	clip(10, 20, 62, 18)
-
 	reel_1:draw()
 	reel_2:draw()
 	reel_3:draw()
-	---rectfill(10, 19, 10+61, 19-15, 0) -- hide top
-	---rectfill(10, 38, 10+61, 38+13, 0) -- hide bottom
 	clip()
 
 	handle:draw()
@@ -679,26 +653,14 @@ function _draw()
 	
 	--set_draw_target()
 	--sspr(canvas, 0, 0, 100, 100, 0, 0, 100, 100)
-	--print("bet", 30, 80, 7)
 
  	--print("mem: " .. stat(0) .. "kb", 10, 0, 8)
    --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 	
-	--print(mx .. "," .. my, 0, 0, 7)
-	
-	--print(reel_1.face_str, 20, 90, 7)
-	--print(reel_2.face_str, 65, 90, 7)
-	--print(reel_3.face_str, 110, 90, 7)
-	--foreach(reels, function(obj) obj:draw_reel_str() end )
-	
-
-	--print("Down:    pull", 30, 150, 7)
-	--print("1, 2, 3: stop", 30, 160, 7)
-	--print("A:       auto", 30, 170, 7)
 	
 	if show_payout then
-		print("Payout  ".. tostr(payout), 8, 5, 7)
-		print("$", 42, 4, 7)
+		print("Payout  ".. tostr(payout), 9, 55, 7)
+		print("$", 43, 54, 7)
 	end
 end
 
@@ -723,11 +685,13 @@ function stop_reel(num)
 		results[3] = reel_3.face
 	end
 	if not are_reels_spinning() and has_spun then
+		sfx(-1,2)
 		has_spun = false
 		show_payout = true
 		payout = get_payout(results)
 		--cash:update_val(pay)
 		cash = mid(0, cash + payout, 999999)
+		-- -- window{title = "$" .. tostr(cash)}
 	end
 end
 
@@ -798,7 +762,7 @@ function update_player_cash()
 	store("slots_cash.pod", cash)
 end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-20 23:22:52",revision=1048]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-20 23:35:05",revision=1072]]
 
 Reel = Object:extend()
 
@@ -899,9 +863,9 @@ NzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAxMDcwNzA2MDYwNjA2MDYwNjA2MDYwNjA3MDcwNzAx
 MDEwNzA3MDYwNjA2MDYwNjA2MDYwNjA2MDcwNzA2MDEwMTA3MDcwNzA3MDcwNzA3MDcwNzA3MDcw
 NzA2MDEwMDAxMDYwNjA2MDYwNjA2MDYwNjA2MDYwNjA2MDEwMDAwMDEwMTAxMDEwMTAxMDEwMTAx
 MDEwMTAxMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIpLG1vZGlmaWVk
-PSIyMDI1LTA0LTIwIDIzOjIyOjUyIixub3Rlcz0iIixydW50aW1lPTE2LHNhbmRib3g9ZmFsc2Us
+PSIyMDI1LTA0LTIwIDIzOjM1OjA2Iixub3Rlcz0iIixydW50aW1lPTE2LHNhbmRib3g9ZmFsc2Us
 dGl0bGU9IlNsb3RzIix2ZXJzaW9uPSIiLHdvcmtzcGFjZXM9e3tsb2NhdGlvbj0ibWFpbi5sdWEj
-MTg2Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMxIix3b3Jrc3BhY2Vf
+MTYyIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMxIix3b3Jrc3BhY2Vf
 aW5kZXg9MX0se2xvY2F0aW9uPSJmYWNlLmx1YSM0MCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2Nh
 dGlvbj0iaGFuZGxlLmx1YSMxNCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iY2xvY2su
 bHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImdmeC8wLmdmeCIsd29ya3NwYWNl
