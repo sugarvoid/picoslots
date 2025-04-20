@@ -4,40 +4,40 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTkxXV1sejQAZwIAAOcyAADzIXtbMF09e2JtcD1weHUA
-QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A-xMYE8Aj
-ACOAAyojgEojUGojQIoTQIoTMJpQenB6cFqwKvAYUgAd-xISWAA4MGgPGEggaA5IIFgOWCDIIMhA
-mFCYYHiAWKA4sBhTAB--DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOgAy8b
-E2AzPhNAM04DDgMwAy4DLhMOEyADLgMOIy4DIAMeM04DMCMeEy4TUAMuQ2ADPgOQBAB-Ex4ToDPw
-BnEAHfAKIcrwAzdgFyAHEAcgFxAnEAcAFyAXEAcABwoAURAnECcQDgBhAAcQFzA3CABCJyAXICAA
-bwfwA7rwEnIAHfAVI5xADC8cDB4MLhwQDE4cTgwgDD4MTgwwDD4MPgxQDC4MPgxgHgD-CAxwDB4M
-HgyQDA4MDgywHA4MsCzQDPAIbwAd-z0HTxtwPjsuIC6LDiAOa0cQHjs3KAcQDisnSBcOAA4bF1gX
-Cw4ADgsXWBcbDgAOF0gnKw4ADgc4J0sOEAcIN1seECd7HhAuWz5AfvAF6wAe-wwIcBhAqECoQAhQ
-KMAYwBjAKLAooDigOLAo8BlMABmPEhIE9gPwABYDABkv9gOuAB0f8DEA-w-xAwoKBCA9MB0-Fx0Q
-DV4NAA1_HQIAzw0ADV4NEB0_HTA9IE8ACy8xNYEAHg8xAP------------------------------
------------------------------6VQbT04fX0=
+NC0yMCAxNjoxOToxNiIscmV2aXNpb249MTAyOF1dbHo0AGcCAADnMgAA8yF7WzBdPXtibXA9cHh1
+AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIAMt5PTAsem9vbT04fSw_AP8TGBPA
+IwAjgAMqI4BKI1BqI0CKE0CKEzCaUHpwenBasCrwGFIAHf8SElgAODBoDxhIIGgOSCBYDlggyCDI
+QJhQmGB4gFigOLAYUwAf-w8HKbA5sAkgCYB5cIlQmVCZUKlAqTC5MClgGUCp8CJOAB3wJxZDoAMv
+GxNgMz4TQDNOAw4DMAMuAy4TDhMgAy4DDiMuAyADHjNOAzAjHhMuE1ADLkNgAz4DkAQAfxMeE6Az
+8AZxAB3wCiHK8AM3YBcgBxAHIBcQJxAHABcgFxAHAAcKAFEQJxAnEA4AYQAHEBcwNwgAQicgFyAg
+AG8H8AO68BJyAB3wFSOcQAwvHAweDC4cEAxOHE4MIAw_DE4MMAw_DD4MUAwuDD4MYB4A-wgMcAwe
+DB4MkAwODA4MsBwODLAs0AzwCG8AHf89B08bcD47LiAuiw4gDmtHEB47NygHEA4rJ0gXDgAOGxdY
+FwsOAA4LF1gXGw4ADhdIJysOAA4HOCdLDhAHCDdbHhAnex4QLls_QH7wBesAHv8MCHAYQKhAqEAI
+UCjAGMAYwCiwKKA4oDiwKPAZTAAZjxISBPYD8AAWAwAZL-YDrgAdH-AxAP8P8QMKCgQgPTAdPxcd
+EA1eDQANfh0CAM8NAA1eDRAdPh0wPSBPAAsvMTWBAB4PMQD-----------------------------
+------------------------------_lUG09OH19
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNSJdXQ==
+NC0yMCAxNjoxOToxNiJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTUzXV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+NC0yMCAxNjoxOToxNiIscmV2aXNpb249OTkwXV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
 KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
 CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNSJdXQ==
+NC0yMCAxNjoxOToxNiJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTUxXV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+NC0yMCAxNjoxOToxNiIscmV2aXNpb249OTg4XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
 Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
 Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
 -70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNSJdXQ==
+NC0yMCAxNjoxOToxNiJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -108,7 +108,7 @@ end
 
 
 :: clock.lua
---[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-20 15:54:04",revision=141]]
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-20 16:19:16",revision=177]]
 Trigger = Object:extend()
 
 function Trigger:new(callback, seconds, is_repeat)
@@ -164,7 +164,7 @@ function Clock:restart()
     self.seconds = 0
 end
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-20 15:54:04",revision=873]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-20 16:19:16",revision=909]]
 Face = Object:extend()
 
 local FACE_STR = {
@@ -435,7 +435,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-20 15:54:04",revision=642]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-20 16:19:16",revision=683]]
 
 handle = {
 	x=75,
@@ -449,6 +449,7 @@ handle = {
 	end,
 	pull=function(self)
 		if self.y == 20 then
+			--cash:update_val(-cost)
 			cash = mid(0, cash - cost, 999999)
 			flux.to(self, 0.6, { y = 60}):ease("quadin"):oncomplete(
 				function()
@@ -460,7 +461,7 @@ handle = {
 	end,
 }
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-20 15:54:04",revision=1365]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-20 16:19:16",revision=1425]]
 
 include "flux.lua"
 include "classic.lua"
@@ -507,7 +508,28 @@ local PAYOUTS_2 = {
 auto_mode = false
 
 cost = 5
-cash = 123
+cash = 123 
+
+--{
+--	value = 123, 
+--	new_val = 123,
+--	tic=0,
+--	update_val=function(self,v)
+--		self.new_val = self.value + v
+--	end,
+--	update=function(self)
+--		self.tic +=1
+--		if self.tic >= 1 then
+--			if self.value < self.new_val then
+--				self.value += 1
+--			elseif self.value > self.new_val then
+--				self.value -= 1
+--			end
+--			self.tic = 0
+--		end
+--	end,
+--	
+--	}
 
 canvas = {}
 canvas = userdata("u8", W, H)
@@ -559,7 +581,6 @@ function _update()
 			stop_reel(3)
 		end
 	end
-	
 	
 	if _keyp("a") then
 		toggle_auto_mode()
@@ -689,7 +710,8 @@ function stop_reel(num)
 	if not are_reels_spinning() then
 		notify("check payout")
 		local pay = get_payout(results)
-		cash += pay
+		--cash:update_val(pay)
+		cash = mid(0, cash + pay, 999999)
 	end
 end
 
@@ -747,7 +769,7 @@ function get_payout(r)
 	end
 end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-20 15:54:04",revision=842]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-20 16:19:16",revision=879]]
 
 Reel = Object:extend()
 
@@ -835,11 +857,11 @@ function Slot:draw()
 end
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMCAxNTo1NDowNSIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzE4OCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjMTMiLHdvcmtzcGFj
+NC0yMCAxNjoxOToxNiIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzIwMiIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjMTMiLHdvcmtzcGFj
 ZV9pbmRleD0xfSx7bG9jYXRpb249ImZhY2UubHVhIzIxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
-Y2F0aW9uPSJoYW5kbGUubHVhIzgiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImNsb2Nr
-Lmx1YSM0MyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3Bh
-Y2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9pbmRleD0zfSx7bG9j
-YXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
+Y2F0aW9uPSJoYW5kbGUubHVhIzE1Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJjbG9j
+ay5sdWEjNDMiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImdmeC8wLmdmeCIsd29ya3Nw
+YWNlX2luZGV4PTJ9LHtsb2NhdGlvbj0ibWFwLzAubWFwIix3b3Jrc3BhY2VfaW5kZXg9M30se2xv
+Y2F0aW9uPSJzZngvMC5zZngiLHdvcmtzcGFjZV9pbmRleD00fX1dXQ==
 :: [eoc]
