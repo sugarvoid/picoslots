@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSIscmV2aXNpb249NzI2XV1sejQAZwIAAOcyAADzIXtbMF09e2JtcD1weHUA
+NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTkxXV1sejQAZwIAAOcyAADzIXtbMF09e2JtcD1weHUA
 QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A-xMYE8Aj
 ACOAAyojgEojUGojQIoTQIoTMJpQenB6cFqwKvAYUgAd-xISWAA4MGgPGEggaA5IIFgOWCDIIMhA
 mFCYYHiAWKA4sBhTAB--DwcpsDmwCSAJgHlwiVCZUJlQqUCpMLkwKWAZQKnwIk4AHfAnFkOgAy8b
@@ -13,31 +13,31 @@ BnEAHfAKIcrwAzdgFyAHEAcgFxAnEAcAFyAXEAcABwoAURAnECcQDgBhAAcQFzA3CABCJyAXICAA
 bwfwA7rwEnIAHfAVI5xADC8cDB4MLhwQDE4cTgwgDD4MTgwwDD4MPgxQDC4MPgxgHgD-CAxwDB4M
 HgyQDA4MDgywHA4MsCzQDPAIbwAd-z0HTxtwPjsuIC6LDiAOa0cQHjs3KAcQDisnSBcOAA4bF1gX
 Cw4ADgsXWBcbDgAOF0gnKw4ADgc4J0sOEAcIN1seECd7HhAuWz5AfvAF6wAe-wwIcBhAqECoQAhQ
-KMAYwBjAKLAooDigOLAo8BlMABmPEhIE-APwABwDABkv-AOuAB0f8DEA-w-xAwoKBCA8MBw-HRwQ
-DF4MAAx_HAIAzwwADF4MEBw_HDA8IE8ACy8xNYEAHg8xAP------------------------------
+KMAYwBjAKLAooDigOLAo8BlMABmPEhIE9gPwABYDABkv9gOuAB0f8DEA-w-xAwoKBCA9MB0-Fx0Q
+DV4NAA1_HQIAzw0ADV4NEB0_HTA9IE8ACy8xNYEAHg8xAP------------------------------
 -----------------------------6VQbT04fX0=
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSJdXQ==
+NC0yMCAxNTo1NDowNSJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSIscmV2aXNpb249Njk1XV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
+NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTUzXV1sejQAawAAAFsQAADwCHt7Ym1wPXVzZXJkYXRh
 KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
 CADSeT0wLHRpbGVfaD0xNgoAEHcKALB6b29tPTAuMjV9fQ==
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSJdXQ==
+NC0yMCAxNTo1NDowNSJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSIscmV2aXNpb249NjkzXV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+NC0yMCAxNTo1NDowNCIscmV2aXNpb249OTUxXV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
 Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
 Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
 -70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSJdXQ==
+NC0yMCAxNTo1NDowNSJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -107,19 +107,75 @@ function Object:__call(...)
 end
 
 
+:: clock.lua
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-20 15:54:04",revision=141]]
+Trigger = Object:extend()
+
+function Trigger:new(callback, seconds, is_repeat)
+    self.callback = nil
+    self.sec = nil
+    self.is_repeat = nil
+end
+
+-----------------------
+
+Clock = Object:extend()
+
+function Clock:new()
+    self.seconds = 0
+    self.t = 0
+    self.is_running = false
+    self.triggers = nil
+end
+
+function Clock:add_trigger(callback, seconds, is_repeat)
+    local _trig = Trigger(callback, seconds, is_repeat)
+    if self.triggers == nil then
+        self.triggers = {}
+    end
+    table.insert(self.triggers, _trig)
+end
+
+function Clock:tick()
+    self.seconds = self.seconds + 1
+    self.t = 0
+end
+
+function Clock:update()
+    if self.is_running then
+        self.t = self.t + 1
+        if self.t >= 60 then
+            self:tick()
+        end
+    end
+end
+
+function Clock:stop()
+	self:restart()
+    self.is_running = false
+end
+
+function Clock:start()
+    self.is_running = true
+end
+
+function Clock:restart()
+    self.t = 0
+    self.seconds = 0
+end
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-19 22:12:51",revision=585]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-20 15:54:04",revision=873]]
 Face = Object:extend()
 
 local FACE_STR = {
-	"lemon",
-	"heart",
-	"bell",
-	"clover",
-	"bar",
-	"dimond",
-	"melon",
-	"seven"
+	{"lemon",10},
+	{"heart",8},
+	{"bell",9},
+	{"clover",27},
+	{"bar",10},
+	{"dimond",28},
+	{"melon",11},
+	{"seven",8},
 }
 
 top = -60
@@ -130,44 +186,24 @@ function Face:new(reel, img, y)
 	self.img = img
 	self.x = reel.x + 1
 	self.y = y
-	self.in_play = true
-	self.center = {x=self.x+8,y=0}
+	self.speed = 4
 end
 
 function Face:draw()
 	if self.y >= 5 and self.y <= 35 then
 		spr(self.img, self.x, self.y)
-		pset(self.center.x, self.center.y, 31)
 	end
 end
 
 function Face:update()
-	self.y += 2
+	self.y += self.speed
 	if self.y >= bottom then
 		self.y = top
 	end
-	self.center.y = self.y + 8
-end
-
-function Face:in_zone()
-    if self.center.x < self.parent.hitbox.x + self.parent.hitbox.w and
-        self.center.x > self.parent.hitbox.x and
-        self.y < self.parent.hitbox.y + self.parent.hitbox.h and
-        self.y > self.parent.hitbox.y then
-        return true
-    else
-        return false
-    end
-end
-
-function Face:snap()
-	notify("im snapping")
-	local dist = (self.parent.center.y+1)
-	flux.to(self, 0.2, {y = dist})
 end
 
 function get_face_string(num)
-	return FACE_STR[num]
+	return FACE_STR[num][1], FACE_STR[num][2]
 end
 :: flux.lua
 --[[pod_format="raw",created="2025-04-19 17:37:55",modified="2025-04-19 21:10:06",revision=216]]
@@ -399,7 +435,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-19 22:12:51",revision=380]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-20 15:54:04",revision=642]]
 
 handle = {
 	x=75,
@@ -408,7 +444,6 @@ handle = {
 	draw=function(self)
 		rect(self.x+4, self.y+5, self.x+5, 45, 13)
 		spr(16, self.x, self.y)
-		--circfill(self.x+4, self.y, self.radius, 12)
 	end,
 	update=function(self)
 	end,
@@ -425,10 +460,11 @@ handle = {
 	end,
 }
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-19 22:12:51",revision=977]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-20 15:54:04",revision=1365]]
 
 include "flux.lua"
 include "classic.lua"
+include "clock.lua"
 include "face.lua"
 include "reel.lua"
 include "handle.lua"
@@ -444,6 +480,31 @@ local last_time = time()
 local dt = 0
 local reel_timer = 0
 local reels_started = false
+local key_delay = 0
+
+local clock_pull = Clock()
+local clock_stop_1 = Clock()
+local clock_stop_2 = Clock()
+local clock_stop_3 = Clock()
+
+local clocks = {}
+add(clocks, clock_pull)
+add(clocks, clock_stop_1)
+add(clocks, clock_stop_2)
+add(clocks, clock_stop_3)
+
+results = {0,0,0}
+
+local PAYOUTS_3 = {
+	100,200,300,400,500,600,700,800
+}
+
+local PAYOUTS_2 = {
+	10,20,30,40,50,60,70,80
+}
+
+
+auto_mode = false
 
 cost = 5
 cash = 123
@@ -454,17 +515,28 @@ canvas = userdata("u8", W, H)
 reels = {}
 
 function _init()
+	poke(0x5f5c, 255)
+	poke(0x5f5d, 255)
 	window {
 		width      = 200,
 		height     = 200,
 		resizeable = false,
 		title      = "Slots",
-		--fullscreen = false
 	}
 	
-	reel_1 = Reel(10, 20)
-	reel_2 = Reel(32, 20)
-	reel_3 = Reel(54, 20)
+	reel_1 = Reel(10, 20, {x=20, y=90})
+	reel_2 = Reel(32, 20, {x=65, y=90})
+	reel_3 = Reel(54, 20, {x=110, y=90})
+	
+
+	--print(reel_1.face_str, 20, 90, 7)
+	--print(reel_2.face_str, 65, 90, 7)
+	--print(reel_3.face_str, 110, 90, 7)
+	
+	add(reels, reel_1)
+	add(reels, reel_2)
+	add(reels, reel_3)
+	
 
 end
 
@@ -473,16 +545,24 @@ function draw_obj()
 end
 
 function _update()
-	if btnp(3) then
-		handle:pull()
+	
+	if not auto_mode then
+		if btnp(3) then
+			handle:pull()
+		end
+		
+		if _keyp("1") then
+			stop_reel(1)
+		elseif _keyp("2") then
+			stop_reel(2)
+		elseif _keyp("3") then
+			stop_reel(3)
+		end
 	end
 	
-	if key("1") then
-		stop_reel(1)
-	elseif key("2") then
-		stop_reel(2)
-	elseif key("3") then
-		stop_reel(3)
+	
+	if _keyp("a") then
+		toggle_auto_mode()
 	end
 
 	mx,my,mb = mouse()
@@ -490,34 +570,64 @@ function _update()
 	my = flr(my/2)
 	update_dt()
   	flux.update(dt)
-	reel_1:update()
-	reel_2:update()
-	reel_3:update()
+	--reel_1:update()
+	--reel_2:update()
+	--reel_3:update()
 	
-if reels_started then
-	reel_timer += 1
-	for t in ipairs(reel_timers) do
-		if not t.triggered and totalTime >= t.delay then
-			t.reel.spinning = true
-			t.triggered = true
+	foreach(reels, function(obj) obj:update() end )
+	
+	
+	if reels_started then
+		reel_timer += 1
+		for t in ipairs(reel_timers) do
+			if not t.triggered and totalTime >= t.delay then
+				t.reel.spinning = true
+				t.triggered = true
+			end
 		end
 	end
-end
+	if not key() then
+		--key_delay = 0
+	end
+	if auto_mode then
+		foreach(clocks, function(obj) obj:update() end )
+		
+	
+		--TODO: Clean up once I get it working
+		if clock_pull.seconds >= 5 then
+			clock_pull.seconds = 0
+			auto_pull()
+		end
+		
+		if clock_stop_1.seconds == 2 then
+			clock_stop_1:stop()
+			--reel_1:stop()
+			stop_reel(1)
 
+		end
+		if clock_stop_2.seconds == 3 then
+			clock_stop_2:stop()
+			--reel_2:stop()
+			stop_reel(2)
 
+		end
+		if clock_stop_3.seconds == 4 then
+			clock_stop_3:stop()
+			--reel_3:stop()
+			stop_reel(3)
+
+		end
+		
+	end
 end
 
 function _draw()
 	cls()
-	
 	set_draw_target(canvas)
 	cls()
 	
 	clip(10, 20, 62, 18)
-	
-	
-	--spr(8, 10, 20)
-	--spr(1, 11, 21)
+
 	reel_1:draw()
 	reel_2:draw()
 	reel_3:draw()
@@ -526,53 +636,60 @@ function _draw()
 	clip()
 
 	handle:draw()
-	
 	print("$", 2, 89, 7)
 	print(pad_zeros(cash, 6), 8, 90, 7)
 	
-	set_draw_target()
+	if auto_mode then
+		print("AUTO", 40, 3, 7)
+	end
 	
+	set_draw_target()
 	sspr(canvas, 0, 0, 100, 100, 0, 0, 200, 200)
 	--print("bet", 30, 80, 7)
-	--blit(canvas, get_draw_target(), 0, 0, 0, 0, 200,200 )
-	
-	--print("cpu: " .. stat(1), 0, 0, 7)
-	--print("mem: " .. stat(0), 0, 8, 7)
-	
+
  	--print("mem: " .. stat(0) .. "kb", 10, 0, 8)
    --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 	
 	--print(mx .. "," .. my, 0, 0, 7)
 	
-	print(reel_1.face_str, 20, 90, 7)
-	print(reel_2.face_str, 65, 90, 7)
-	print(reel_3.face_str, 110, 90, 7)
+	--print(reel_1.face_str, 20, 90, 7)
+	--print(reel_2.face_str, 65, 90, 7)
+	--print(reel_3.face_str, 110, 90, 7)
+	foreach(reels, function(obj) obj:draw_reel_str() end )
 	
 
+	print("Down:    pull", 130, 150, 7)
+	print("1, 2, 3: stop", 130, 160, 7)
+	print("A:       auto", 130, 170, 7)
+	
+	print("payout: $".. tostr(get_payout(results)), 40, 110, 7)
 end
 
 function start_reels()
-	reel_1.spinning = true
-	reel_2.spinning = true
-	reel_3.spinning = true
-	
-
-	reel_1.face_str = ""
-	reel_2.face_str = ""
-	reel_3.face_str = ""
-	
+	results = {0,0,0}
+	foreach(reels, function(obj) obj:spin() end ) 
 end
 
 function stop_reel(num)
 	if num == 1 then
-		reel_1.spinning = false
-		reel_1:check_faces()
+		reel_1:stop()
+		results[1] = reel_1.face
+		--reel_1:check_faces()
 	elseif num == 2 then
-		reel_2.spinning = false
-		reel_2:check_faces()
+		reel_2:stop()
+		results[2] = reel_2.face
+		--reel_2.spinning = false
+		--reel_2:check_faces()
 	elseif num == 3 then
-		reel_3.spinning = false
-		reel_3:check_faces()
+		reel_3:stop()
+		results[3] = reel_3.face
+		--reel_3.spinning = false
+		--reel_3:check_faces()
+	end
+	if not are_reels_spinning() then
+		notify("check payout")
+		local pay = get_payout(results)
+		cash += pay
 	end
 end
 
@@ -585,39 +702,75 @@ end
 function pad_zeros(num, zeros)
 	return string.format("%0".. zeros .. "d", num)
 end
-:: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-19 22:12:51",revision=544]]
 
-local face_data = {
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-}
+function toggle_auto_mode()
+	auto_mode = not auto_mode
+	if auto_mode then
+		if not are_reels_spinning() then
+			auto_pull()
+		end
+		clock_pull:start()
+	end
+end
+
+function are_reels_spinning()
+	return reel_1.spinning or reel_2.spinning or reel_3.spinning
+end
+
+function auto_pull() 
+	handle:pull()
+	clock_stop_1:start()-- = Clock()
+	clock_stop_2:start()-- = Clock()
+	clock_stop_3:start()-- = Clock()
+end
+
+function _keyp(k)
+    if keyp(k) and key_delay <= 0 then
+        key_delay = 20
+        return true
+    else
+        key_delay = mid(0, key_delay - 1, 21)
+    end
+end
+
+function get_payout(r)
+	if r[1] == 0 or r[2] == 0 or r[3] == 0 then
+		return 0
+	end
+	if r[1] == r [2] and r[2] == r[3] then
+		return PAYOUTS_3[r[1]]
+	elseif r[1] == r[2] or r[2] == r[3] or r[1] == r[3] then
+		local match = r[1] == r[2] and r[1] or r[2] == r[3] and r[2] or r[1]
+		return PAYOUTS_2[match] or 0
+	else
+		return 0
+	end
+end
+:: reel.lua
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-20 15:54:04",revision=842]]
 
 Reel = Object:extend()
 
 local bg_spr = 9
 
-function Reel:new(x, y)
+function Reel:new(x, y, str_pos)
 	self.img = 1
 	self.x = x
 	self.y = y
 	self.reel_y = 0 
-	self.faces = {
-		
-	}
+	self.faces = {}
 	set_upfaces(self)
 	self.spinning = false
-	self.hitbox = {x=0,y=0,w=16,h=16}
-	self.center = {x=self.x+8, y=self.y+8}
-	self.closest_face = {}
-	self.closest_dist = 99
 	self.face_str = ""
+	self.face_str_pos = str_pos
+	self.str_col = 7
+	self.face = 3 
+end
+
+function Reel:stop()
+	self.spinning = false
+	self.face = flr(rnd(8)) + 1 
+	self.face_str, self.str_col = get_face_string(self.face)
 end
 
 function Reel:update()
@@ -629,16 +782,19 @@ function Reel:update()
 end
 
 function Reel:draw()
-	--spr(self.img, self.x+1, self.y+1)
-	for f in all(self.faces) do 
-		f:draw()
+	if not self.spinning then
+		spr(self.face, self.x+1, self.y+1)
+	else
+		for f in all(self.faces) do 
+			f:draw()
+		end
 	end
+	
 	spr(bg_spr, self.x, self.y)
-	pset(self.center.x, self.center.y, 2)
 end
 
-function Reel:spawn_next_face()
-	
+function Reel:draw_reel_str()
+	print(self.face_str, self.face_str_pos.x, self.face_str_pos.y, self.str_col)
 end
 
 function set_upfaces(reel)
@@ -649,17 +805,9 @@ function set_upfaces(reel)
 	end
 end
 
-function Reel:check_faces()
-	self.closest_dist = 99
-	for f in all(self.faces) do
-		local dist = abs(f.center.y - self.center.y)
-		if dist < self.closest_dist then
-			self.closest_face = f
-			self.closest_dist = dist
-		end
-	end
-	notify(tostr(self.closest_face.img))
-	self.face_str = get_face_string(self.closest_face.img)
+function Reel:spin()
+	self.spinning = true
+	self.face_str = ""
 end
 :: slot.lua
 --[[pod_format="raw",created="2025-04-19 15:58:28",modified="2025-04-19 16:25:00",revision=96]]
@@ -687,10 +835,11 @@ function Slot:draw()
 end
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0xOSAyMjoxMjo1MSIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzEyNyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjNjQiLHdvcmtzcGFj
-ZV9pbmRleD0xfSx7bG9jYXRpb249ImZhY2UubHVhIzU4Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
-Y2F0aW9uPSJoYW5kbGUubHVhIzE5Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngv
-MC5nZngiLHdvcmtzcGFjZV9pbmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNl
-X2luZGV4PTN9LHtsb2NhdGlvbj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
+NC0yMCAxNTo1NDowNSIscnVudGltZT0xNix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzE4OCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5sdWEjMTMiLHdvcmtzcGFj
+ZV9pbmRleD0xfSx7bG9jYXRpb249ImZhY2UubHVhIzIxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
+Y2F0aW9uPSJoYW5kbGUubHVhIzgiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImNsb2Nr
+Lmx1YSM0MyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3Bh
+Y2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9pbmRleD0zfSx7bG9j
+YXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
 :: [eoc]
