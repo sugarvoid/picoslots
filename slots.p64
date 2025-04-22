@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiIscmV2aXNpb249MTM5N11dbHo0ADMDAADGNAAA8yF7WzBdPXtibXA9cHh1
+NC0yMiAwMDozMDowMyIscmV2aXNpb249MTU3MV1dbHo0AFgDAADpNAAA8yF7WzBdPXtibXA9cHh1
 AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIAMt5PTAsem9vbT04fSw_AP8TGBPA
 IwAjgAMqI4BKI1BqI0CKE0CKEzCaUHpwenBasCrwGFIAHf8SElgAODBoDxhIIGgOSCBYDlggyCDI
 QJhQmGB4gFigOLAYUwAf-w8HKbA5sAkgCYB5cIlQmVCZUKlAqTC5MClgGUCp8CJOAB3wJxZDoAMv
@@ -13,29 +13,29 @@ GxNgMz4TQDNOAw4DMAMuAy4TDhMgAy4DDiMuAyADHjNOAzAjHhMuE1ADLkNgAz4DkAQAfxMeE6Az
 AG8H8AO68BJyAB3wFSOcQAwvHAweDC4cEAxOHE4MIAw_DE4MMAw_DD4MUAwuDD4MYB4A-wgMcAwe
 DB4MkAwODA4MsBwODLAs0AzwCG8AHf89B08bcD47LiAuiw4gDmtHEB47NygHEA4rJ0gXDgAOGxdY
 FwsOAA4LF1gXGw4ADhdIJysOAA4HOCdLDhAHCDdbHhAnex4QLls_QH7wBesAHv8MCHAYQKhAqEAI
-UCjAGMAYwCiwKKA4oDiwKPAZTAAZjxISBPYD8AAWAwAZL-YDYgAZtAgIBPACN7AHEAcwBAAvNxBB
-AB0-CjcwQQAnADABH-AxAKzxAwoKBCAxMBE-EBEQAV4BAAF_EQIAzwEAAV4BEBE_ETAxIE8ACy8x
-NYEAHg8xAP----------0MNFQATwOPYuYAbwLAYFAFBA-xwiQAgATw7wIA4JACgR-kYAL-AsBQBe
-gOBfERDdEF3gCwDyAA0QCgANEA2wDRANAAoQDRQAAAoAAhQAAB4AAhQAEzoSAB86JAAID0wAABRd
-agAv8CwFAATwEID9GZAGYAawDfAQDdAGYAagDfASDcAGYAaQDfAUDbAiAFAN8BYNoAkASf8QGKA9
-AA8FAA8-9i4w8AELHzYhAh4PMQD-----------------------------------------------9s
-UG09OH19
+UCjAGMAYwCiwKKA4oDiwKPAZTAAZjxISBPYD8AAWAwAZL-YDYgAZtAgIBPADFsAGEAYwBAAvNhBB
+AB0-CxZAQQAqZhA-EDBOIAIAHz5BABrvBAQEABkACRoZGgkAGQCrAR0f8DEASvEDCgoEIDEwET8Q
+ERABXgEAAX4RAgDPAQABXgEQET4RMDEgTwALLzE1gQAeDzEA-----------Qw0VABPA49i5gBvAs
+BgUAUED-HCJACABPDvAgDgkAKBH_RgAv8CwFAFrwAgjPEfAHBmAG4F0gDaANIF3QDABRDRAKAA0Q
+AFINAAoQDRQAAAoAAhQAAB4AAhQAEzoSAB86JAAID0wAAAdsAFrwCM3wB5MABQUAooD9GZAGYAaw
+DfA4APAAoA3wEg3ABmAGkA3wFA2wIgBQDfAWDaAJAEn-EBigPQAPBQAPP-YuMPoBCx82KwIeDzEA
+------------------------------------------------bFBtPTh9fQ==
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiJdXQ==
+NC0yMiAwMDozMDowMyJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiIscmV2aXNpb249MTMxOF1dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
+NC0yMiAwMDozMDowMyIscmV2aXNpb249MTQ2N11dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
 YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
 MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCwem9vbT0wLjI1fX0=
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiJdXQ==
+NC0yMiAwMDozMDowMyJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiIscmV2aXNpb249MTMxOF1dbHo0AB8BAACTCgAA-zBweHUAAygAAAQABA9A
+NC0yMiAwMDozMDowMyIscmV2aXNpb249MTQ2N11dbHo0AB8BAACTCgAA-zBweHUAAygAAAQABA9A
 EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
 EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
 --_9H-8BAKzzDcgPQAAPEEAPJw--Dyn--y0ADQD9LQ4NDv0t8HAbAPUJMA8yDzQNDzcPNQ85-Skg
@@ -43,7 +43,7 @@ DSD9KS4NLv0pIQDxCDQPOQ81DzsPNw88Dz4PO-0ocP0ofv0oIADlCAACIA8o-S8A-S8H-S8zAIM5
 -S8B-S8PEBMAQQog-bJLASBMAx8AKf2wWAFMBAMABBQADwEA-8ZQ-----7g=
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yMSAyMzozMzowNiJdXQ==
+NC0yMiAwMDozMDowMyJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -114,7 +114,7 @@ end
 
 
 :: clock.lua
---[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-21 23:33:06",revision=507]]
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-22 00:30:03",revision=654]]
 Trigger = Object:extend()
 
 function Trigger:new(callback, seconds, is_repeat)
@@ -169,8 +169,37 @@ function Clock:restart()
     self.t = 0
     self.seconds = 0
 end
+:: coin.lua
+--[[pod_format="raw",created="2025-04-22 00:25:21",modified="2025-04-22 00:30:03",revision=16]]
+
+
+
+Coin = Object:extend()
+
+all_coins = {}
+
+function Coin:new(x, y)
+	self.img = 13
+	self.x = x
+	self.y = y 
+end
+
+function Coin:draw()
+	spr(self.img, self.x, light_y)
+end
+
+function Coin:update()
+ 
+end
+
+function draw_lights()
+	foreach(all_coins, function(obj) obj:draw() end )
+end
+
+
+
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-21 23:33:06",revision=1234]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-22 00:30:03",revision=1380]]
 Face = Object:extend()
 
 local FACE_STR = {
@@ -442,7 +471,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-21 23:33:06",revision=1018]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-22 00:30:03",revision=1167]]
 
 handle = {
 	x=78,
@@ -455,9 +484,9 @@ handle = {
 	update=function(self)
 	end,
 	pull=function(self)
-		if self.y == 20 then
+		if self.y == 20 and cash >= curr_bet then
 			--cash:update_val(-cost)
-			cash = mid(0, cash - cost, 999999)
+			cash = mid(0, cash - curr_bet, 999999)
 			flux.to(self, 0.6, { y = 60}):ease("quadin"):oncomplete(
 				function()
 					start_reels()
@@ -468,20 +497,23 @@ handle = {
 	end,
 }
 :: light.lua
---[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-21 23:33:06",revision=9]]
+--[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-22 00:30:03",revision=175]]
+
+
+
 Light = Object:extend()
 
-local bg_spr = 9
+local light_y = 7
 
-function Light:new(x, y)
-	self.img = 1
+function Light:new(x)
+	self.img = 10
 	self.x = x
-	self.y = y
+	--self.y = y
 	self.on = false 
 end
 
 function Light:draw()
- 
+	spr(self.img, self.x, light_y)
 end
 
 function Light:update()
@@ -489,12 +521,25 @@ function Light:update()
 end
 
 function draw_lights()
+	foreach(all_lights, function(obj) obj:draw() end )
 end
+
+all_lights = {
+	Light(21),
+	Light(29),
+	Light(37),
+	Light(45),
+	Light(53),
+	Light(61),
+	Light(69),
+}
+
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-21 23:33:06",revision=1917]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",modified="2025-04-22 00:30:03",revision=2145]]
 
 include "flux.lua"
 include "classic.lua"
+include "light.lua"
 include "clock.lua"
 include "face.lua"
 include "reel.lua"
@@ -506,6 +551,7 @@ W, H = 200, 200
 flux = get_flux()
 mx, my, mb = nil, nil, nil
 m_delay = 0
+curr_bet = 5
 
 local last_time = time()
 local dt = 0
@@ -541,7 +587,7 @@ has_spun = false
 local show_payout = false
 
 cost = 5
-cash = 123 
+cash = 200
 
 --{
 --	value = 123, 
@@ -570,8 +616,8 @@ canvas = userdata("u8", W, H)
 reels = {}
 
 function _init()
-	poke(0x5f5c, 255)
-	poke(0x5f5d, 255)
+	poke(0x5f5c, 20)
+	poke(0x5f5d, 20)
 	window {
 		width      = 200,
 		height     = 200,
@@ -611,6 +657,12 @@ function _update()
 	
 	if _keyp("a") then
 		toggle_auto_mode()
+	end
+	
+	if btnp(1) then
+		curr_bet = mid(5, curr_bet + 5, 80)
+	elseif btnp(0) then
+		curr_bet = mid(5, curr_bet - 5, 80)
 	end
 
 	mx,my,mb = mouse()
@@ -665,20 +717,28 @@ function _draw()
 	cls()
 	
 	spr(64, 15, 15)
-	spr(10, 20, 8)
+	draw_lights()
+	
 	clip(20, 30, 62, 18)
 	reel_1:draw()
 	reel_2:draw()
 	reel_3:draw()
 	clip()
+	
+	spr(12, 78, 42)
 
 	handle:draw()
-	print("$", 5, 79, 7)
-	print(pad_zeros(cash, 6), 11, 80, 7)
+	print("$", 2, 91, 7)
+	print(pad_zeros(cash, 6), 8, 92, 7)
 	
 	if auto_mode then
-		print("AUTO", 40, 3, 7)
+		print("AUTO", 1, 92, 7)
 	end
+	
+	print(pad_zeros(curr_bet, 2), 45, 51, 7)
+	
+	spr(13, 55, 65)
+	
 	
 	--set_draw_target()
 	--sspr(canvas, 0, 0, 100, 100, 0, 0, 100, 100)
@@ -695,7 +755,9 @@ function _draw()
 	set_draw_target()
 	sspr(canvas, 0, 0, 100, 100, 0, 0, 200, 200)
 	
-	--set_draw_target()
+	set_draw_target()
+	
+
 end
 
 function start_reels()
@@ -776,6 +838,7 @@ function _keyp(k)
 end
 
 function get_payout(r)
+	--TODO: Figure out better payout math
 	if r[1] == 0 or r[2] == 0 or r[3] == 0 then
 		return 0
 	end
@@ -796,7 +859,7 @@ function update_player_cash()
 	store("slots_cash.pod", cash)
 end
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-21 23:33:06",revision=1216]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-22 00:30:03",revision=1362]]
 
 Reel = Object:extend()
 
@@ -897,13 +960,14 @@ NzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAxMDcwNzA2MDYwNjA2MDYwNjA2MDYwNjA3MDcwNzAx
 MDEwNzA3MDYwNjA2MDYwNjA2MDYwNjA2MDcwNzA2MDEwMTA3MDcwNzA3MDcwNzA3MDcwNzA3MDcw
 NzA2MDEwMDAxMDYwNjA2MDYwNjA2MDYwNjA2MDYwNjA2MDEwMDAwMDEwMTAxMDEwMTAxMDEwMTAx
 MDEwMTAxMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIpLG1vZGlmaWVk
-PSIyMDI1LTA0LTIxIDIzOjMzOjA2Iixub3Rlcz0iIixydW50aW1lPTE2LHNhbmRib3g9ZmFsc2Us
+PSIyMDI1LTA0LTIyIDAwOjMwOjAzIixub3Rlcz0iIixydW50aW1lPTE2LHNhbmRib3g9ZmFsc2Us
 dGl0bGU9IlNsb3RzIix2ZXJzaW9uPSIiLHdvcmtzcGFjZXM9e3tsb2NhdGlvbj0ibWFpbi5sdWEj
-MTc0Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMyIix3b3Jrc3BhY2Vf
+MjAyIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJyZWVsLmx1YSMyIix3b3Jrc3BhY2Vf
 aW5kZXg9MX0se2xvY2F0aW9uPSJmYWNlLmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0
-aW9uPSJoYW5kbGUubHVhIzMiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImNsb2NrLmx1
-YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJsaWdodC5sdWEjOSIsd29ya3NwYWNl
-X2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0
-aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFjZV9pbmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIs
-d29ya3NwYWNlX2luZGV4PTR9fV1d
+aW9uPSJoYW5kbGUubHVhIzE1Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJjbG9jay5s
+dWEjMSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0ibGlnaHQubHVhIzgiLHdvcmtzcGFj
+ZV9pbmRleD0xfSx7bG9jYXRpb249ImNvaW4ubHVhIzIzIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
+Y2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9pbmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1h
+cCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlvbj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5k
+ZXg9NH19XV0=
 :: [eoc]
