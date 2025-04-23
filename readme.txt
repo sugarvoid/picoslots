@@ -1,5 +1,6 @@
---[[pod_format="raw",created="2025-04-20 21:53:20",modified="2025-04-20 23:16:24",revision=2]]
+--[[pod_format="raw",created="2025-04-20 21:53:20",modified="2025-04-23 11:07:32",revision=3]]
 Controls:
 --------------- 
 Down: 	Pull handle
 A: 		Toggle auto mode
+F:			Toggle screen size
