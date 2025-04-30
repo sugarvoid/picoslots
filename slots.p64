@@ -4,7 +4,7 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSIscmV2aXNpb249MjU3MF1dbHo0AIkEAAByNgAA8yF7WzBdPXtibXA9cHh1
+NC0zMCAxNDoxODo1MiIscmV2aXNpb249MjYxM11dbHo0AIkEAAByNgAA8yF7WzBdPXtibXA9cHh1
 AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIANt5PTAsem9vbT0xNn0sPwDyGCY-
 H5AeMB5gDnAOQA6QDjAOkA4gDrAOEA4PFAiPGwgOIG8UDxs-FBQAb7AOIL7wEmQAHuQjOBA4QBgg
 GCAYMAiQCAQA-wlACHAIYAhQCHAIUAiACDAIoAgQCMAY8BdfAB73BAY5oAkwCYAJUAlgCXAJQAmQ
@@ -28,20 +28,20 @@ KAAWQHwAIn5KFgooChZKeAAPfQYPDzEA------------------------------------------_z
 UG09OH19
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSJdXQ==
+NC0zMCAxNDoxODo1MiJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSIscmV2aXNpb249MjM5NF1dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
+NC0zMCAxNDoxODo1MiIscmV2aXNpb249MjQzNV1dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
 YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
 MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCwem9vbT0wLjI1fX0=
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSJdXQ==
+NC0zMCAxNDoxODo1MiJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSIscmV2aXNpb249MjQwMF1dbHo0ACMBAAC0CgAA-zBweHUAAygAAAQABA9A
+NC0zMCAxNDoxODo1MiIscmV2aXNpb249MjQ0MV1dbHo0ACMBAAC0CgAA-zBweHUAAygAAAQABA9A
 EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
 EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
 --_9H-8BAKzzDcgPQAAPEEAPJw--Dyn--y0ADQD9LQ4NDv0t8HAbAPUJMA8yDzQNDzcPNQ85-Skg
@@ -49,7 +49,7 @@ DSD9KS4NLv0pIQDxCDQPOQ81DzsPNw88Dz4PO-0ocP0ofv0oIADlCAACIA8q-S8A-S8M-S8zAIM5
 -S8B-S8PEBMAcAog-bLwcAMbACD9sAkAHwQIABEU-wEAHHERAA8BAP-JUP----_4
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0yOSAxMzowMjo1MSJdXQ==
+NC0zMCAxNDoxODo1MiJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -120,7 +120,7 @@ end
 
 
 :: clock.lua
---[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-29 13:02:51",revision=1561]]
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-30 14:18:52",revision=1604]]
 Trigger = Object:extend()
 
 function Trigger:new(callback, seconds, is_repeat)
@@ -176,7 +176,7 @@ function Clock:restart()
     self.seconds = 0
 end
 :: coin.lua
---[[pod_format="raw",created="2025-04-22 00:25:21",modified="2025-04-29 13:02:51",revision=972]]
+--[[pod_format="raw",created="2025-04-22 00:25:21",modified="2025-04-30 14:18:52",revision=1014]]
 
 Coin = Object:extend()
 all_coins = {}
@@ -223,7 +223,7 @@ end
 
 
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-29 13:02:51",revision=2335]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-30 14:18:52",revision=2377]]
 Face = Object:extend()
 
 local FACE_STR = {
@@ -495,7 +495,7 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-29 13:02:51",revision=2096]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-30 14:18:52",revision=2139]]
 
 handle = {
 	x=78,
@@ -523,7 +523,7 @@ handle = {
 	end,
 }
 :: hud.lua
---[[pod_format="raw",created="2025-04-23 15:40:59",modified="2025-04-29 13:02:51",revision=619]]
+--[[pod_format="raw",created="2025-04-23 15:40:59",modified="2025-04-30 14:18:52",revision=662]]
 
 p_spr_1 = 75
 p_spr_2 = 75
@@ -597,7 +597,7 @@ function split_num(num_str)
 	return chars
 end
 :: light.lua
---[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-29 13:02:51",revision=1134]]
+--[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-30 14:18:52",revision=1176]]
 
 Light = Object:extend()
 
@@ -719,7 +719,7 @@ all_lights = {
 }
 
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",icon=userdata("u8",16,16,"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),lowcol_icon=false,modified="2025-04-29 13:02:51",revision=3398]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",icon=userdata("u8",16,16,"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),lowcol_icon=false,modified="2025-04-30 14:18:52",revision=3460]]
 
 include "flux.lua"
 include "classic.lua"
@@ -769,8 +769,12 @@ curr_bet = 5
 reels = {}
 stats_hud = { x = -60, is_showing=false}
 
--- player stats (mabye save these??) 
+-- player stats (mabye save these?? yes!) 
 total_spins = 0 
+total_spent = 0
+total_profit = 0
+two_kind = 0
+three_kind = 0
 cash = 200
 
 
@@ -821,7 +825,7 @@ function _update()
 			stats_hud.is_showing = false
 			store("/appdata/slots/player_stats.pod", stats_hud )
 		else
-			flux.to(stats_hud, 0.5, { x = 0}):ease("quadout")
+			flux.to(stats_hud, 0.5, { x = -2}):ease("quadout")
 			stats_hud.is_showing = true
 		end
 	elseif _keyp("f") then
@@ -899,9 +903,10 @@ function _draw()
 	
 	set_draw_target(canvas_stats)
 		cls()
-		print("\014 cash:  12", stats_hud.x, 0, 7)
-		print("\014 spent: 12", stats_hud.x, 8, 7)
-		print("\014 spins: 12", stats_hud.x, 16, 7)
+		print("\#3\014 cash:  12", stats_hud.x, 0, 7)
+		print("\#3\014 spent: 12", stats_hud.x, 7, 7)
+		print("\#3\014 spent: 12", stats_hud.x, 14, 7)
+		print("\#3\014 spins: 12", stats_hud.x, 21, 7)
 	set_draw_target()
 	
 	sspr(canvas, 0, 0, 100, 100, 0, 0, W, H)
@@ -1036,7 +1041,7 @@ function load_stats()
 end
 
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-29 13:02:51",revision=2282]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-30 14:18:52",revision=2324]]
 
 Reel = Object:extend()
 
@@ -1104,9 +1109,9 @@ NzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAxMDcwNzA2MDYwNjA2MDYwNjA2MDYwNjA3MDcwNzAx
 MDEwNzA3MDYwNjA2MDYwNjA2MDYwNjA2MDcwNzA2MDEwMTA3MDcwNzA3MDcwNzA3MDcwNzA3MDcw
 NzA2MDEwMDAxMDYwNjA2MDYwNjA2MDYwNjA2MDYwNjA2MDEwMDAwMDEwMTAxMDEwMTAxMDEwMTAx
 MDEwMTAxMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIpLGxvd2NvbF9p
-Y29uPXRydWUsbW9kaWZpZWQ9IjIwMjUtMDQtMjkgMTM6MDI6NTEiLG5vdGVzPSIiLHJ1bnRpbWU9
-MTYsc2FuZGJveD1mYWxzZSx0aXRsZT0iU2xvdHMiLHZlcnNpb249IiIsd29ya3NwYWNlcz17e2xv
-Y2F0aW9uPSJtYWluLmx1YSM4MyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5s
+Y29uPXRydWUsbW9kaWZpZWQ9IjIwMjUtMDQtMzAgMTQ6MTg6NTIiLG5vdGVzPSIiLHJ1bnRpbWU9
+MTcsc2FuZGJveD1mYWxzZSx0aXRsZT0iU2xvdHMiLHZlcnNpb249IiIsd29ya3NwYWNlcz17e2xv
+Y2F0aW9uPSJtYWluLmx1YSM1MCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0icmVlbC5s
 dWEjMSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZmFjZS5sdWEjMSIsd29ya3NwYWNl
 X2luZGV4PTF9LHtsb2NhdGlvbj0ibGlnaHQubHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9j
 YXRpb249ImNvaW4ubHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImhhbmRsZS5s
