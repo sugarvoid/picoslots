@@ -4,44 +4,44 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCIscmV2aXNpb249MjY1NV1dbHo0AIkEAAByNgAA8yF7WzBdPXtibXA9cHh1
+NC0zMCAyMjoxNDoxOCIscmV2aXNpb249MjkxMV1dbHo0AKUEAAB1NgAA8yF7WzBdPXtibXA9cHh1
 AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIANt5PTAsem9vbT0xNn0sPwDyGCY-
 H5AeMB5gDnAOQA6QDjAOkA4gDrAOEA4PFAiPGwgOIG8UDxs-FBQAb7AOIL7wEmQAHuQjOBA4QBgg
 GCAYMAiQCAQA-wlACHAIYAhQCHAIUAiACDAIoAgQCMAY8BdfAB73BAY5oAkwCYAJUAlgCXAJQAmQ
-CTAEAFQgCbAJEAQAb9nwBznwBmIAHvQCEzMAM1ADIAMAAyADQAMwAzAGAGETYBNgEyAGAAkYAP8D
-AyADDxsDIANQMw4zoA7gHvAHdAAe5SHa8AMnEBcABwAHQAcAAgAiQCcIAAAWABAgCADPJ0AHIBcQ
-J-AE2vAxZQAe4COcQAwgDBAMIBwQDEAcDABRMAxADDACABFQDgAQYB4A-wgMcAwQDBAMkAwADAAM
-sAwQDLAs0AzwCG8AHvEdGEOgAwADABNwIzADYAMQA4AfGAMOEANwDgADEA4AA3AOMA4QA2AOMC4D
-DlAMAFMADlBOMJcCbzAOoD7wBeMAH-cDqEAIgAhAeBAIsAgACMAIAAiwBAAxoBgAeQJPsCjwGVsA
-Go8SEgT2A-AAFgMAGS-2A2MACxk4YgC0CAgE8AMVwAUaBTAEACs1EEEAcy0wLjE4NzVHADAyLjYN
-AA_vAAEATQB0CxVABRAFMAQAD00AKpwQPxAwDhAeIA4CAE8QHiA_WQAm7wQEBAAaAAoQGhAKABoA
-6wEeH-BfARxBZgAGBQIAIw8QCQDPDGYMZgwWJRYAZgBmgAANGTJPAPcICgoEIDEwET8QERABDj8O
-DgEAAQ5dDhEEAAASAK89DgEQET4RMDEgXQAMHzXdACsPtQRSDnMA8BMpXxswPgAeAB8SQB4dHi0Q
-DSAeDRAdEA0QDUANEB0gHWAdDgAjcA0GAP8ADQAdkB0gDbANEA3AHfAVbgAdH-AxAP----------
-XMNFQATwOPUuYAXwLAUFAFBA-xwiQAgATw7wIA4JACgR-kYAL-AsBQBaQQjG8AcIAD8GoAYKADAD
-TgAeLAUA8BCA-htwBWAFsA7wEg6wBWAFoA7wFA6gBWAFkA7wFg6QIgBQDvAYDoAJADn8GoA8AA8F
-AA879S4wxgFkLTQuNDc1AgATONQBkDcuNTg5MzIxNwYAIjIz4gEKYAtgAwUEFxAHAgAvACd2DBp-
-AwUEJxBHEDUAIF8HABcQNzcAHVAHABcAN6cADzkAHT83ECduACBvEAcQNwA33AAgLxAHpQARD5YD
-KwDWAC8AR58AHx83QgEkTwAXABduAB8RAA4BDzgAHx-gMQB8gAsFBCcAJwA3eRIQMLwCERd9EgIO
-ABAn5gAPrw8b0QcHBHZAFhALEBYAKwAIAC9Adv4BGQBAAJFKFhoLGhYKKwoIAB9KQAAen0AWQBYA
-KAAWQHwAIn5KFgooChZKeAAPfQYPDzEA------------------------------------------_z
-UG09OH19
+CTAEAFQgCbAJEAQAb9nwBznwBmIAHvMCEzMAM1ADIAMAAyADQAMwAzAGANdQA2ATYBMgE3ADYANQ
+GAD-BkADIAMPGwMgA1AjAA4AI6AO4B7wB3YAHuUh2vADJxAXAAcAB0AHAAIAIkAnCAAAFgAQIAgA
+zydAByAXECfwBNrwMWUAHvEII5wwHCAMEAwgHBAMUAxADCAMMAxADDAGAAIOABBgHgD-CgxwDBAM
+EAyQDAAMAAywDAAMwAwADNAM8AhxAB7xHRhDoAMAAwATcCMwA2ADEAOAHxgDDhADcA4AAxAOAANw
+DjAOEANgDjAuAw5QDABTAA5QTjCbAm8wDqA_8AXlAB-3A6hACIAIQHgQCLAIAAjACAAIsAQAMaAY
+AH0CT7Ao8BlbABqPEhIE9gPwABYDABkv9gNjAAsZOGIAtAgIBPADFcAFGgUwBAArNRBBAHMtMC4x
+ODc1RwAwMi42DQAPrwABAE0AdAsVQAUQBTAEAA9NACqcED8QMA4QHiAOAgBPEB4gPlkAJu8EBAQA
+GgAKEBoQCgAaAOsBHh-wXwEcQWYABgUCACMPEAkAzwxmDGYMFiUWAGYAZoAADRkyTwD3CAoKBCAx
+MBE-EBEQAQ4-Dg4BAAEOXQ4RBAAAEgCvPQ4BEBE_ETAxIF0ADB813QArD7kECSJAE7kEAAYAH0C5
+BAI_Mw4ztwQPcwAR8BMpXxswPgAeAB8SQB4dHi0QDSAeDRAdEA0QDUANEB0gHWAdDgAjcA0GAP8A
+DQAdkB0gDbANEA3AHfAVbgAdH-AxAP----------XMNFQATwOPUuYAXwLAUFAFBA-xAiQAgATw7w
+IA4JACgR-kYAL-AsBQBaQQjG8AcIAD8GoAYKADADTgAeLAUA8BCA9RtwBWAFsA7wEg6wBWAFoA7w
+FA6gBWAFkA7wFg6QIgBQDvAYDoAJADn_GoA8AA8FAA879S4wxgFzMS4yNDkyNAIAA9MBoDE4Ljg4
+OTMyMTcGAB8y4QEBYAMFBBcQBwIALwAndQwafwMFBCcQRxA1ACBfBwAXEDc3AB1QBwAXADenAA85
+AB0-NxAnbgAgbxAHEDcAN9wAIC8QB6UAEQ_VAysA1gAvAEefAB8fN0IBJE8AFwAXbgAfEQAOAQ84
+AB8f4DEAfIALBQQnACcAN3oSEDC8AhEXfhICDgAQJ_YAD64PG9EHBwR2QBYQCxAWACsACAAvQHb_
+ARkAQACRShYaCxoWCisKCAAfSkAAHp9AFkAWACgAFkB8ACJ_ShYKKAoWSngAD3wGDw8xAP------
+------------------------------------s1BtPTh9fQ==
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCJdXQ==
+NC0zMCAyMjoxNDoxOCJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCIscmV2aXNpb249MjQ3N11dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
+NC0zMCAyMjoxNDoxOCIscmV2aXNpb249MjcyOF1dbHo0AGsAAABbEAAA8Ah7e2JtcD11c2VyZGF0
 YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
 MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCwem9vbT0wLjI1fX0=
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCJdXQ==
+NC0zMCAyMjoxNDoxOCJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUxOjM2Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCIscmV2aXNpb249MjQ4M11dbHo0ACMBAAC0CgAA-zBweHUAAygAAAQABA9A
+NC0zMCAyMjoxNDoxOCIscmV2aXNpb249MjczM11dbHo0ACMBAAC0CgAA-zBweHUAAygAAAQABA9A
 EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
 EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
 --_9H-8BAKzzDcgPQAAPEEAPJw--Dyn--y0ADQD9LQ4NDv0t8HAbAPUJMA8yDzQNDzcPNQ85-Skg
@@ -49,7 +49,7 @@ DSD9KS4NLv0pIQDxCDQPOQ81DzsPNw88Dz4PO-0ocP0ofv0oIADlCAACIA8q-S8A-S8M-S8zAIM5
 -S8B-S8PEBMAcAog-bLwcAMbACD9sAkAHwQIABEU-wEAHHERAA8BAP-JUP----_4
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTE5IDE0OjUyOjE3Iixtb2RpZmllZD0iMjAyNS0w
-NC0zMCAxNTo1NjozMCJdXQ==
+NC0zMCAyMjoxNDoxOCJdXQ==
 :: classic.lua
 --[[pod_format="raw",created="2025-04-13 15:00:11",modified="2025-04-18 03:30:20",revision=110]]
 --
@@ -120,7 +120,7 @@ end
 
 
 :: clock.lua
---[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-30 15:56:30",revision=1646]]
+--[[pod_format="raw",created="2025-04-20 14:09:58",modified="2025-04-30 22:14:18",revision=1893]]
 Trigger = Object:extend()
 
 function Trigger:new(callback, seconds, is_repeat)
@@ -176,7 +176,7 @@ function Clock:restart()
     self.seconds = 0
 end
 :: coin.lua
---[[pod_format="raw",created="2025-04-22 00:25:21",modified="2025-04-30 15:56:30",revision=1056]]
+--[[pod_format="raw",created="2025-04-22 00:25:21",modified="2025-04-30 22:14:18",revision=1306]]
 
 Coin = Object:extend()
 all_coins = {}
@@ -223,7 +223,7 @@ end
 
 
 :: face.lua
---[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-30 15:56:30",revision=2419]]
+--[[pod_format="raw",created="2025-04-19 16:03:43",modified="2025-04-30 22:14:18",revision=2666]]
 Face = Object:extend()
 
 local FACE_STR = {
@@ -495,14 +495,14 @@ end
 
 
 :: handle.lua
---[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-30 15:56:30",revision=2187]]
+--[[pod_format="raw",created="2025-04-19 17:45:36",modified="2025-04-30 22:14:18",revision=2441]]
 
 handle = {
 	x=78,
 	y=30,
 	radius = 4,
 	draw=function(self)
-		rect(self.x+4, self.y+5, self.x+5, 55, 13)
+		rect(self.x+4, self.y+5, self.x+5, 55, 6)
 		pal(14,0)
 		spr(16, self.x, self.y)
 		pal()
@@ -512,9 +512,9 @@ handle = {
 	pull=function(self)
 		
 		if self.y == 30 then
-			total_pulls+=1
-			cash = mid(0, cash - curr_bet, 999999)
-			total_spent += curr_bet
+			player_stats.total_pulls+=1
+			player_stats.cash = mid(0, player_stats.cash - curr_bet, 999999)
+			player_stats.total_spent += curr_bet
 			flux.to(self, 0.6, { y = 70}):ease("quadin"):oncomplete(
 				function()
 					start_reels()
@@ -525,7 +525,7 @@ handle = {
 	end,
 }
 :: hud.lua
---[[pod_format="raw",created="2025-04-23 15:40:59",modified="2025-04-30 15:56:30",revision=704]]
+--[[pod_format="raw",created="2025-04-23 15:40:59",modified="2025-04-30 22:14:18",revision=965]]
 
 p_spr_1 = 75
 p_spr_2 = 75
@@ -537,7 +537,7 @@ p_spr_4 = 75
 hud = {
 	draw=function(self)
 		print("$", 32, 0, 7)
-		print("\014" .. pad_zeros(cash, 6), 38, 2, 7)
+		print("\014" .. pad_zeros(player_stats.cash, 6), 38, 2, 7)
 		if show_payout then
 			spr(p_spr_1, 42, 31)
 			spr(p_spr_2, 42+4, 31)
@@ -599,7 +599,7 @@ function split_num(num_str)
 	return chars
 end
 :: light.lua
---[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-30 15:56:30",revision=1218]]
+--[[pod_format="raw",created="2025-04-21 23:26:22",modified="2025-04-30 22:14:18",revision=1466]]
 
 Light = Object:extend()
 
@@ -721,7 +721,7 @@ all_lights = {
 }
 
 :: main.lua
---[[pod_format="raw",created="2025-04-19 14:51:36",icon=userdata("u8",16,16,"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),lowcol_icon=false,modified="2025-04-30 15:56:30",revision=3524]]
+--[[pod_format="raw",created="2025-04-19 14:51:36",icon=userdata("u8",16,16,"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),lowcol_icon=false,modified="2025-04-30 22:14:18",revision=3860]]
 
 include "flux.lua"
 include "classic.lua"
@@ -770,15 +770,12 @@ payout = 0
 curr_bet = 5
 reels = {}
 stats_hud = { x = -60, is_showing=false}
+game_window = {x=0}
 
 -- player stats (mabye save these?? yes!) 
-total_pulls = 0 
-total_spent = 0
-total_earned = 0
-total_profit = 0
-two_kind = 0
-three_kind = 0
-cash = 200
+--player_stats = {}
+
+
 
 
 
@@ -787,6 +784,18 @@ local canvas_stats = userdata("u8", W, H)
 
 function _init()
 	mkdir("/appdata/slots")
+	player_stats = {
+		total_pulls = 0, 
+		total_spent = 0,
+		total_earned = 0,
+		total_profit = 0,
+		two_kind = 0,
+		three_kind = 0,
+		cash = 200,
+	}
+	--save_stats()
+	load_stats()
+	--player_stats = fetch("/appdata/slots/player_stats.pod")
 	poke(0x5f5c, 255)
 	poke(0x5f5d, 255)
 	window {
@@ -809,40 +818,50 @@ function _init()
 	add(reels, reel_3)
 	
 	toggle_window_size()
-	load_stats()
+	
 end
 
 function _update()
-	if not auto_mode then
-		if btnp(3) and not are_reels_spinning() and cash >= curr_bet then
-			pull_handle()
-		end
-	end
-	
-	if _keyp("a") then
-		toggle_auto_mode()
-	elseif _keyp("s") then
+
+	if _keyp("s") then
 		--toggle_stats()
 		if stats_hud.is_showing then
 			flux.to(stats_hud, 0.5, { x = -60}):ease("quadin")
+			flux.to(game_window, 0.5, { x = 0}):ease("quadin")
+			
 			stats_hud.is_showing = false
 			store("/appdata/slots/player_stats.pod", stats_hud )
 		else
 			flux.to(stats_hud, 0.5, { x = -2}):ease("quadout")
+			flux.to(game_window, 0.5, { x = W/2}):ease("quadout")
 			stats_hud.is_showing = true
 		end
-	elseif _keyp("f") then
+	end
+	
+	if _keyp("f") then
 		toggle_window_size()
 	end
-	
-	if btnp(1) and not are_reels_spinning() then
-		curr_bet = mid(5, curr_bet + 5, 80)
-	elseif btnp(0) and not are_reels_spinning() then
-		curr_bet = mid(5, curr_bet - 5, 80)
-	end
-	
-	if btnp(4) then
-		all_lights[2]:turn_on()
+
+	if not stats_hud.is_showing then
+		if not auto_mode then
+			if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
+				pull_handle()
+			end
+		end
+		
+		if _keyp("a") then
+			toggle_auto_mode()
+		end
+		
+		if btnp(1) and not are_reels_spinning() then
+			curr_bet = mid(5, curr_bet + 5, 80)
+		elseif btnp(0) and not are_reels_spinning() then
+			curr_bet = mid(5, curr_bet - 5, 80)
+		end
+		
+		if btnp(4) then
+			all_lights[2]:turn_on()
+		end
 	end
 
 	update_dt()
@@ -911,15 +930,15 @@ function _draw()
 	
 	set_draw_target(canvas_stats)
 		cls()
-		print("\#3\014     stats    ", stats_hud.x, 0, 7)
-		print("\#3\014 spent:  "..pad_zeros(total_spent,5), stats_hud.x, 7, 7)
-		print("\#3\014 profit: "..pad_zeros(total_profit,5), stats_hud.x, 14, 7)
-		print("\#3\014 pulls:  "..pad_zeros(total_pulls,5), stats_hud.x, 21, 7)
-		print("\#3\014 2-kind: "..pad_zeros(two_kind,5), stats_hud.x, 28, 7)
-		print("\#3\014 3-kind: "..pad_zeros(three_kind,5), stats_hud.x, 35, 7)
+		print("\#g\014     stats    ", stats_hud.x, 0, 7)
+		print("\#g\014 spent:  "..pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
+		print("\#g\014 profit: "..pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
+		print("\#g\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
+		print("\#g\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
+		print("\#g\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
 	set_draw_target()
 	
-	sspr(canvas, 0, 0, 100, 100, 0, 0, W, H)
+	sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
 	sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
 	
 end
@@ -951,9 +970,10 @@ function stop_reel(num)
 		payout = get_payout(results)
 		payout = payout * (curr_bet/5)
 		hud:update_payout_spr(payout)
-		cash = mid(0, cash + payout, 999999)
-		total_earned+=payout
-		total_profit = total_earned - total_spent 
+		player_stats.cash = mid(0, player_stats.cash + payout, 999999)
+		player_stats.total_earned+=payout
+		player_stats.total_profit = player_stats.total_earned - player_stats.total_spent 
+		save_stats()
 	end
 end
 
@@ -1014,14 +1034,14 @@ function get_payout(r)
 		sfx(2)
 		light_man.is_running=true
 		spawn_coin(10)
-		three_kind+=1
+		player_stats.three_kind+=1
 		return PAYOUTS_3[r[1]]
 	elseif r[1] == r[2] or r[2] == r[3] or r[1] == r[3] then
 		local match = r[1] == r[2] and r[1] or r[2] == r[3] and r[2] or r[1]
 		sfx(1)
 		light_man.is_running=true
 		spawn_coin(10)
-		two_kind+=1
+		player_stats.two_kind+=1
 		return PAYOUTS_2[match] or 0
 	else
 		sfx(0)
@@ -1029,9 +1049,9 @@ function get_payout(r)
 	end
 end
 
-function update_player_cash()
-	store("slots_cash.pod", cash)
-end
+--function update_player_cash()
+	--store("slots_cash.pod", cash)
+--end
 
 function update_title(num)
 	window{title="$" .. pad_zeros(num, 6)}
@@ -1043,19 +1063,47 @@ function toggle_window_size()
 		W, H = 200,200
 	else
 		W,H=100,100
+		
 	end
 	window {
 		width      = W,
 		height     = H
 		}
+	if stats_hud.is_showing then
+		game_window.x = W/2
+	end
 end
 
 function load_stats()
-	local a = fetch("/appdata/slots/player_stats.pod")
+	local data = fetch("/appdata/slots/player_stats.pod")
+	
+	if data == nil then
+		notify("nil.....")
+		player_stats = {
+			total_pulls = 0, 
+			total_spent = 0,
+			total_earned = 0,
+			total_profit = 0,
+			two_kind = 0,
+			three_kind = 0,
+			cash = 200,
+		}
+		save_stats()
+	else
+		
+		player_stats = data
+	end
+	
+
+end
+
+function save_stats()
+	notify("saving...")
+	store("/appdata/slots/player_stats.pod", player_stats)
 end
 
 :: reel.lua
---[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-30 15:56:30",revision=2366]]
+--[[pod_format="raw",created="2025-04-19 16:25:05",modified="2025-04-30 22:14:18",revision=2615]]
 
 Reel = Object:extend()
 
@@ -1123,15 +1171,15 @@ NzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAxMDcwNzA2MDYwNjA2MDYwNjA2MDYwNjA3MDcwNzAx
 MDEwNzA3MDYwNjA2MDYwNjA2MDYwNjA2MDcwNzA2MDEwMTA3MDcwNzA3MDcwNzA3MDcwNzA3MDcw
 NzA2MDEwMDAxMDYwNjA2MDYwNjA2MDYwNjA2MDYwNjA2MDEwMDAwMDEwMTAxMDEwMTAxMDEwMTAx
 MDEwMTAxMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIpLGxvd2NvbF9p
-Y29uPXRydWUsbW9kaWZpZWQ9IjIwMjUtMDQtMzAgMTU6NTY6MzAiLG5vdGVzPSIiLHJ1bnRpbWU9
+Y29uPXRydWUsbW9kaWZpZWQ9IjIwMjUtMDQtMzAgMjI6MTQ6MTgiLG5vdGVzPSIiLHJ1bnRpbWU9
 MTcsc2FuZGJveD1mYWxzZSx0aXRsZT0iU2xvdHMiLHZlcnNpb249IiIsd29ya3NwYWNlcz17e2xv
-Y2F0aW9uPSJtYWluLmx1YSMxODkiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249InJlZWwu
+Y2F0aW9uPSJtYWluLmx1YSMzNjciLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249InJlZWwu
 bHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImZhY2UubHVhIzEiLHdvcmtzcGFj
 ZV9pbmRleD0xfSx7bG9jYXRpb249ImxpZ2h0Lmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
 Y2F0aW9uPSJjb2luLmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJoYW5kbGUu
-bHVhIzE3Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJjbG9jay5sdWEjMSIsd29ya3Nw
-YWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iaHVkLmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xv
-Y2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9pbmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1h
-cCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlvbj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5k
-ZXg9NH19XV0=
+bHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImNsb2NrLmx1YSMxIix3b3Jrc3Bh
+Y2VfaW5kZXg9MX0se2xvY2F0aW9uPSJodWQubHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9j
+YXRpb249ImdmeC8wLmdmeCIsd29ya3NwYWNlX2luZGV4PTJ9LHtsb2NhdGlvbj0ibWFwLzAubWFw
+Iix3b3Jrc3BhY2VfaW5kZXg9M30se2xvY2F0aW9uPSJzZngvMC5zZngiLHdvcmtzcGFjZV9pbmRl
+eD00fX1dXQ==
 :: [eoc]
