@@ -4,3 +4,4 @@ Controls:
 Down: Pull handle
 A:    Toggle auto mode
 F:    Toggle screen size
+S:    Toggle stats
