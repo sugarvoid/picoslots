@@ -38,6 +38,7 @@ payout = 0
 curr_bet = 5
 reels = {}
 stats_hud = { x = -60, is_showing=false}
+-- bank_menu = { x = 160, is_showing=false}
 game_window = {x=0}
 
 -- player stats (mabye save these?? yes!) 
@@ -49,6 +50,7 @@ game_window = {x=0}
 
 local canvas = userdata("u8", W, H)
 local canvas_stats = userdata("u8", W, H)
+local canvas_bank = userdata("u8", W, H)
 
 function _init()
 	mkdir("/appdata/slots")
@@ -103,6 +105,21 @@ function _update()
 			flux.to(stats_hud, 0.5, { x = -2}):ease("quadout")
 			flux.to(game_window, 0.5, { x = W/2}):ease("quadout")
 			stats_hud.is_showing = true
+		end
+	end
+
+    if _keyp("b") then
+		--toggle_stats()
+		if bank_menu.is_showing then
+			flux.to(bank_menu, 0.5, { x = 160}):ease("quadin")
+			flux.to(game_window, 0.5, { x = 0}):ease("quadin")
+			
+			bank_menu.is_showing = false
+			--store("/appdata/slots/player_stats.pod", player_stats )
+		else
+			flux.to(bank_menu, 0.5, { x = 50}):ease("quadout")
+			flux.to(game_window, 0.5, { x = -W/2}):ease("quadout")
+			bank_menu.is_showing = true
 		end
 	end
 	
@@ -205,9 +222,23 @@ function _draw()
 		print("\#g\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
 		print("\#g\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
 	set_draw_target()
+
+    set_draw_target(canvas_bank)
+        cls()
+        bank_menu:draw()
+		--print("\#g\014   bank    ", bank_menu.x, 0, 7)
+		--print("\#g\014 get loan  ", bank_menu.x, 7, 7)
+		---print("\#g\014 pay loan  ", bank_menu.x, 14, 7)
+		--print("\#g\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), bank_menu.x, 21, 7)
+		--print("\#g\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), bank_menu.x, 28, 7)
+		--print("\#g\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), bank_menu.x, 35, 7)
+	set_draw_target()
+
+    
 	
 	sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
 	sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+    sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
 	
 end
 
