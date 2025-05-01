@@ -30,6 +30,19 @@ hud = {
 		if auto_mode and flr(time() * 2) % 2 == 0  then
 			print("AUTO", 1, 92, 7)
 		end
+
+        print("\014s", 1, 5, 7)
+        print("\014t", 1, 5+5+1, 7)
+        print("\014a", 1, 15+2, 7)
+        print("\014t", 1, 20+3, 7)
+        print("\014s", 1, 25+4, 7)
+
+
+
+        print("\014b", 96, 5, 7)
+        print("\014a", 96, 5+5+1, 7)
+        print("\014n", 96, 15+2, 7)
+        print("\014k", 96, 20+3, 7)
 	end,
 	update_payout_spr=function(self,num)
 		p_spr_1, p_spr_2, p_spr_3, p_spr_4 = number_to_spr(num)

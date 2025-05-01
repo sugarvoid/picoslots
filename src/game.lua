@@ -5,6 +5,8 @@ flux = get_flux()
 
 local W, H = 100, 100
 
+mx,my,mb = mouse()
+
 local last_time = time()
 local dt = 0
 local key_delay = 0
@@ -92,7 +94,7 @@ function _init()
 end
 
 function _update()
-
+    mx,my,mb = mouse()
 	if _keyp("s") then
 		--toggle_stats()
 		if stats_hud.is_showing then
@@ -103,7 +105,7 @@ function _update()
 			--store("/appdata/slots/player_stats.pod", player_stats )
 		else
 			flux.to(stats_hud, 0.5, { x = -2}):ease("quadout")
-			flux.to(game_window, 0.5, { x = W/2}):ease("quadout")
+			flux.to(game_window, 0.5, { x = (W/2)+10}):ease("quadout")
 			stats_hud.is_showing = true
 		end
 	end
@@ -178,6 +180,22 @@ function _update()
 end
 
 function _draw()
+
+    set_draw_target(canvas_stats)
+        
+		cls()
+        rectfill(stats_hud.x, 0, stats_hud.x+56, 7+50, 1)
+		--print("\014     stats    ", stats_hud.x, 0, 7)
+		print("\014 spent:  "..pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
+		print("\014 profit: "..pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
+		print("\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
+		print("\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
+		print("\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
+        rect(stats_hud.x, 0, stats_hud.x+56, 7+50, 7)
+
+
+	set_draw_target()
+    
 	cls()
 	set_draw_target(canvas)
 	cls()
@@ -213,15 +231,7 @@ function _draw()
 
 
 	
-	set_draw_target(canvas_stats)
-		cls()
-		print("\#g\014     stats    ", stats_hud.x, 0, 7)
-		print("\#g\014 spent:  "..pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
-		print("\#g\014 profit: "..pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
-		print("\#g\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
-		print("\#g\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
-		print("\#g\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
-	set_draw_target()
+	
 
     set_draw_target(canvas_bank)
         cls()
@@ -236,9 +246,13 @@ function _draw()
 
     
 	
-	sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
-	sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+	
+	
     sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
+    sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
+    sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+
+    print(mx, 0, 0, 7)
 	
 end
 
@@ -320,7 +334,7 @@ function _keyp(k)
         key_delay = 20
         return true
     else
-        key_delay = mid(0, key_delay - 1, 21)
+        key_delay = mid(0, key_delay - 0.5, 21)
     end
 end
 
