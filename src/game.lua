@@ -106,6 +106,7 @@ end
 
 function _update()
     mx, my, mb = mouse()
+    
 
 
     if mb == 1 then
@@ -129,7 +130,7 @@ function _update()
     end
 
     if _keyp("f") then
-        toggle_window_size()
+        --toggle_window_size()
     end
 
     if not stats_hud.is_showing then

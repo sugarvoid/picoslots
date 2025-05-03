@@ -4,7 +4,7 @@ function Tab:new(side, y, text)
     if side == "left" then
       self.x = 2
     else
-        self.x = 94
+        self.x = 95
     end
     self.color = 0
     
@@ -38,13 +38,13 @@ end
 
 function Tab:draw()
     if self.is_visible then
-        rectfill(self.x - 2, self.y - 2, (self.x - 2) + 7, (self.y-2) + self.h, self.color)
+        rectfill(self.x - 2, self.y - 2, (self.x - 2) + 6, (self.y-2) + self.h, self.color)
         for key, value in ipairs(self.text_table) do
             --for c in all(self.text_table) do
             key-=1
             print("\014" .. value, self.x, self.y + (6 * key), 7)
         end
-        rect(self.x - 2, self.y - 2, (self.x - 2) + 7, (self.y-2) + self.h, 7)
+        rect(self.x - 2, self.y - 2, (self.x - 2) + 6, (self.y-2) + self.h, 7)
     end
 end
 

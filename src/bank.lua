@@ -54,7 +54,7 @@ bank_panel = {
     end,
     slide_in=function(self)
         flux.to(self, 0.5, { x = 50 }):ease("quadout")
-        flux.to(self.tab, 0.5, { x = 45 }):ease("quadout")
+        flux.to(self.tab, 0.5, { x = 46 }):ease("quadout")
         self.is_showing = true
         stats_panel.tab.is_visible = false
         shop_panel.tab.is_visible = false
@@ -67,7 +67,7 @@ bank_panel = {
                 shop_panel.tab.is_visible = true
             end
         )
-        flux.to(self.tab, 0.5, { x = 94 }):ease("quadout")
+        flux.to(self.tab, 0.5, { x = 95 }):ease("quadout")
         
     end,
 }
