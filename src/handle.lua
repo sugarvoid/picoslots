@@ -17,7 +17,7 @@ handle = {
 		end
 	end,
 	update=function(self)
-		self.is_hovered = is_colliding(mx/2, my/2, self)
+		self.is_hovered = is_colliding(mx/mouse_offset, my/mouse_offset, self)
 	end,
 	pull=function(self)
 		

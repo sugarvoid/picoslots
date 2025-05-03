@@ -19,6 +19,8 @@ add(clocks, clock_stop_1)
 add(clocks, clock_stop_2)
 add(clocks, clock_stop_3)
 
+mouse_offset = 2
+
 local results = { 0, 0, 0 }
 
 local PAYOUTS_3 = {
@@ -130,7 +132,7 @@ function _update()
     end
 
     if _keyp("f") then
-        --toggle_window_size()
+        toggle_window_size()
     end
 
     if not stats_hud.is_showing then
@@ -455,14 +457,16 @@ function toggle_window_size()
     --todo: both will always be the same, do i need both varibles?
     if W == 100 then
         W, H = 200, 200
+        mouse_offset = 2
     else
         W, H = 100, 100
+        mouse_offset = 1
     end
     window {
         width  = W,
         height = H
     }
-    if stats_hud.is_showing then
+    if stats_panel.is_showing or shop_panel.is_showing then
         game_window.x = W / 2
     end
 end

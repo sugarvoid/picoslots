@@ -27,7 +27,7 @@ function Tab:new(side, y, text)
 end
 
 function Tab:update()
-    if is_colliding(mx/2, my/2, self) then
+    if is_colliding(mx/mouse_offset, my/mouse_offset, self) then
         self.color = 12
         self.is_hovered = true
     else
