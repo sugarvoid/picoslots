@@ -7,7 +7,7 @@ handle = {
 	radius = 4,
 	is_hovered = false,
 	draw=function(self)
-		
+		spr(12, 78, 52)
 		rect(self.x+4, self.y+5, self.x+5, 55, 6)
 		pal(14,0)
 		spr(16, self.x, self.y)

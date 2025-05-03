@@ -4,8 +4,8 @@ shop_panel = {
     tab = Tab("left", 60, "shop"),
     
     draw = function(self)
-        rectfill(self.x, self.y, self.x + 56, self.y + 40, 1)
-        --print("\014     stats    ", stats_hud.x, 0, 7)
+        rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
+        print("\014 click to buy    ", self.x, 52, 7)
         print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
         print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
         print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)

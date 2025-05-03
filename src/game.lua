@@ -40,16 +40,10 @@ curr_bet = 5
 reels = {}
 stats_hud = { x = -60, is_showing = false }
 -- bank_menu = { x = 160, is_showing=false}
-game_window = { x = 0 }
-
--- player stats (mabye save these?? yes!)
---player_stats = {}
+main_window = { x = 0 }
 
 
-
-
-
-local canvas = userdata("u8", W, H)
+local canvas_main = userdata("u8", W, H)
 local canvas_stats = userdata("u8", W, H)
 local canvas_bank = userdata("u8", W, H)
 local canvas_shop = userdata("u8", W, H)
@@ -59,10 +53,6 @@ local tabs = {}
 
 --local stat_tab = Tab("left", 5, "stats")
 --stat_tab.func = function() toggle_stats() end
-
-local shop_tab = Tab("left", 55, "shop")
-
-local bank_tab = Tab("right", 5, "bank")
 
 add(tabs, stats_panel.tab)
 add(tabs, shop_panel.tab)
@@ -107,7 +97,7 @@ function _init()
 end
 
 function _update()
-    mx, my, mb = mouse()
+    mx, my, mb, wheel_x, wheel_y = mouse()
     
 
 
@@ -146,15 +136,11 @@ function _update()
             toggle_auto_mode()
         end
 
-        if btnp(1) and not are_reels_spinning() then
-            curr_bet = mid(5, curr_bet + 5, 80)
-        elseif btnp(0) and not are_reels_spinning() then
-            curr_bet = mid(5, curr_bet - 5, 80)
-        end
-
-        if btnp(4) then
-            all_lights[2]:turn_on()
-        end
+       -- if btnp(1) and not are_reels_spinning() then
+        --    curr_bet = mid(5, curr_bet + 5, 80)
+        --elseif btnp(0) and not are_reels_spinning() then
+        --    curr_bet = mid(5, curr_bet - 5, 80)
+        --end
     end
 
     update_dt()
@@ -168,9 +154,7 @@ function _update()
     shop_panel:update()
 
     handle:update()
-    --stat_tab:update()
-    --shop_tab:update()
-    --bank_tab:update()
+
 
     foreach(reels, function(obj) obj:update() end)
     foreach(clocks, function(obj) obj:update() end)
@@ -197,82 +181,52 @@ end
 function toggle_stats()
     if stats_panel.is_showing then
         stats_panel:slide_out()
-        --flux.to(stats_pannel, 0.5, { x = -60 }):ease("quadin")
-        --flux.to(stats_pannel.stat_tab, 0.5, { x = 2 }):ease("quadin")
-        --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
-        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
-
-        --stats_hud.is_showing = false
-        --store("/appdata/slots/player_stats.pod", player_stats )
+        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
     else
         stats_panel:slide_in()
-        --flux.to(stats_hud, 0.5, { x = -2 }):ease("quadout")
-        --flux.to(stats_pannel, 0.5, { x = -2 }):ease("quadout")
-        --flux.to(stats_pannel.stat_tab, 0.5, { x = 56 }):ease("quadout")
-        flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
-        --stats_hud.is_showing = true
+        flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
     end
 end
 
 function toggle_shop()
     if shop_panel.is_showing then
         shop_panel:slide_out()
-        
-        --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
-        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
-
-
-        --store("/appdata/slots/player_stats.pod", player_stats )
+        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
     else
-  
         shop_panel:slide_in()
-        
-        flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
+        flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
     end
 end
 
 function toggle_bank()
-    --toggle_stats()
     if bank_panel.is_showing then
         bank_panel:slide_out()
-        --flux.to(bank_menu, 0.5, { x = 160 }):ease("quadin")
-        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
-
-        
-        --store("/appdata/slots/player_stats.pod", player_stats )
+        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
     else
-        --flux.to(bank_menu, 0.5, { x = 50 }):ease("quadout")
         bank_panel:slide_in()
-        flux.to(game_window, 0.5, { x = -W / 2 }):ease("quadout")
- 
+        flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
     end
 end
 
 function _draw()
-    set_draw_target(canvas_stats)
 
+    set_draw_target(canvas_stats)
     cls()
     stats_panel:draw()
-    --rectfill(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 1)
-    --print("\014     stats    ", stats_hud.x, 0, 7)
-    --print("\014 spent:  " .. pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
-    --print("\014 profit: " .. pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
-    --print("\014 pulls:  " .. pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
-    --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
-    --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
-    --rect(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 7)
-
 
     set_draw_target()
 
     cls()
-    set_draw_target(canvas)
+    set_draw_target(canvas_main)
     cls()
 
-    line(0, 80, 17, 80, 4)
+    -- brown tabletop
+    line(6, 80, 17, 80, 4)
     line(80, 80, 100, 80, 4)
 
+    -- slot machine
     spr(64, 15, 25)
+
     draw_lights()
     draw_coins()
 
@@ -282,30 +236,16 @@ function _draw()
     reel_3:draw()
     clip()
 
-    spr(12, 78, 52)
 
     handle:draw()
-
-    -- print("\014" .. pad_zeros(curr_bet, 2), 46, 62, 7)
-
-
-    --print("mem: " .. stat(0) .. "kb", 10, 0, 8)
-    --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
-
     hud:draw()
-    
-    -- stat_tab:draw()
-    
 
-
-
-    set_draw_target()
-
+    -- set_draw_target()
 
     set_draw_target(canvas_bank)
     cls()
     bank_panel:draw()
-    set_draw_target()
+    --set_draw_target()
 
 
     set_draw_target(canvas_shop)
@@ -315,12 +255,11 @@ function _draw()
 
 
 
-
-
     sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
-    sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
+    sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
     sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
     sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
+
 end
 
 function start_reels()
@@ -371,7 +310,16 @@ function on_mouse_click(x, y)
         end
     end
 
-    if handle.is_hovered and not stats_hud.is_showing then
+    if bank_panel.is_showing then
+        for l in all(bank_panel.labels) do
+            if l.is_hovered then
+                l:was_clicked()
+                return
+            end
+        end
+    end
+
+    if handle.is_hovered and main_window.x == 0 then
         if not are_reels_spinning() and player_stats.cash >= curr_bet then
             pull_handle()
         end
@@ -445,9 +393,6 @@ function get_payout(r)
     end
 end
 
---function update_player_cash()
---store("slots_cash.pod", cash)
---end
 
 function update_title(num)
     window { title = "$" .. pad_zeros(num, 6) }
@@ -467,7 +412,7 @@ function toggle_window_size()
         height = H
     }
     if stats_panel.is_showing or shop_panel.is_showing then
-        game_window.x = W / 2
+        main_window.x = W / 2
     end
 end
 

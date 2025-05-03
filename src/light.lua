@@ -99,8 +99,6 @@ light_man = {
 	end,
 }
 
-
-
 function do_small_lights()
 	local action = light_small_actions[light_man.seconds]
 	if action then

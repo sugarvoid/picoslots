@@ -31,13 +31,14 @@ function Tab:update()
         self.color = 12
         self.is_hovered = true
     else
-        self.color = 1
+        self.color = 0
         self.is_hovered = false
     end
 end
 
 function Tab:draw()
     if self.is_visible then
+
         rectfill(self.x - 2, self.y - 2, (self.x - 2) + 6, (self.y-2) + self.h, self.color)
         for key, value in ipairs(self.text_table) do
             --for c in all(self.text_table) do

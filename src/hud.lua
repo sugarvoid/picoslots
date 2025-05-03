@@ -5,7 +5,7 @@ p_spr_3 = 75
 p_spr_4 = 75
 
 
-player_stats = {cash = 0}
+--player_stats = {cash = 0}
 
 hud = {
 	draw=function(self)
@@ -30,27 +30,6 @@ hud = {
 		if auto_mode and flr(time() * 2) % 2 == 0  then
 			print("\014auto", 1, 92, 7)
 		end
-
-        --rect(-1,3,7,35,7)
-        --print("\014s", 1, 5, 7)
-        --print("\014t", 1, 5+5+1, 7)
-        --print("\014a", 1, 15+2, 7)
-        --print("\014t", 1, 20+3, 7)
-        --print("\014s", 1, 25+4, 7)
-
-
-        --rect(-1,43,7,70,7)
-        --print("\014s", 1, 45, 7)
-        --print("\014h", 1, 45+5+1, 7)
-        --print("\014o", 1, 45+5+5+2, 7)
-        --print("\014p", 1, 45+5+5+5+3, 7)
-
-
-
-        --print("\014b", 96, 5, 7)
-        --print("\014a", 96, 5+5+1, 7)
-        --print("\014n", 96, 15+2, 7)
-        --print("\014k", 96, 20+3, 7)
 	end,
 	update_payout_spr=function(self,num)
 		p_spr_1, p_spr_2, p_spr_3, p_spr_4 = number_to_spr(num)
