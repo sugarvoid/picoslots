@@ -5,7 +5,7 @@
 <br>
 
 ## Controls
---------------- 
+
 |Key| Action|
 |:-----:|:-----:|
 |Down| Pull handle|
@@ -13,6 +13,6 @@
 |F|    Toggle screen size |
 |S|    Toggle stats |
 
-# Libraries  Used
+## Libraries  Used
 - [flux](https://github.com/rxi/flux)
 - [classic](https://github.com/Sheepolution/classic)

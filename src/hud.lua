@@ -5,8 +5,6 @@ p_spr_3 = 75
 p_spr_4 = 75
 
 
---player_stats = {cash = 0}
-
 hud = {
 	draw=function(self)
 		print("$", 32, 0, 7)
@@ -31,7 +29,7 @@ hud = {
 			print("\014auto", 1, 92, 7)
 		end
 	end,
-	update_payout_spr=function(self,num)
+	update_payout_spr=function(self, num)
 		p_spr_1, p_spr_2, p_spr_3, p_spr_4 = number_to_spr(num)
 	end,
 }
