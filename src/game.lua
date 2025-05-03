@@ -68,15 +68,15 @@ add(tabs, bank_panel.tab)
 
 function _init()
     mkdir("/appdata/slots")
-    player_stats = {
-        total_pulls = 0,
-        total_spent = 0,
-        total_earned = 0,
-        total_profit = 0,
-        two_kind = 0,
-        three_kind = 0,
-        cash = 200,
-    }
+    -- player_stats = {
+    --     total_pulls = 0,
+    --     total_spent = 0,
+    --     total_earned = 0,
+    --     total_profit = 0,
+    --     two_kind = 0,
+    --     three_kind = 0,
+    --     cash = 200,
+    -- }
     --save_stats()
     load_stats()
     --player_stats = fetch("/appdata/slots/player_stats.pod")
@@ -93,9 +93,9 @@ function _init()
         --icon=get_spr(15)
     }
 
-    reel_1 = Reel(20, 40)
-    reel_2 = Reel(40, 40)
-    reel_3 = Reel(60, 40)
+    reel_1 = Reel(20, 42)
+    reel_2 = Reel(40, 42)
+    reel_3 = Reel(60, 42)
 
     add(reels, reel_1)
     add(reels, reel_2)
@@ -273,7 +273,7 @@ function _draw()
     draw_lights()
     draw_coins()
 
-    clip(20, 40, 58, 18)
+    clip(20, 42, 58, 20)
     reel_1:draw()
     reel_2:draw()
     reel_3:draw()
@@ -283,7 +283,7 @@ function _draw()
 
     handle:draw()
 
-    print("\014" .. pad_zeros(curr_bet, 2), 46, 62, 7)
+    -- print("\014" .. pad_zeros(curr_bet, 2), 46, 62, 7)
 
 
     --print("mem: " .. stat(0) .. "kb", 10, 0, 8)
@@ -476,7 +476,7 @@ function load_stats()
         three_kind = 0,
         cash = 200,
         --- testing ---
-        debt = 500000,
+        debt = 420165,
         date = { y = 0, m = 0, d = 0 },
     }
 end

@@ -17,16 +17,16 @@ hud = {
 			spr(p_spr_3, 42+8, 31)
 			spr(p_spr_4, 42+8+4, 31)
 		end
-		spr(81,58,61)
-		spr(83,34,61)
+		--spr(81,58,61)
+		--spr(83,34,61)
 		
-		if btnp(1) then
-			spr(84,58,61)
-		end
+		--if btnp(1) then
+		--	spr(84,58,61)
+		--end
 		
-		if btnp(0) then
-			spr(82,34,61)
-		end
+		--if btnp(0) then
+		--	spr(82,34,61)
+		--end
 		if auto_mode and flr(time() * 2) % 2 == 0  then
 			print("\014auto", 1, 92, 7)
 		end
