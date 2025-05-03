@@ -8,7 +8,7 @@ local last_time = time()
 local dt = 0
 local key_delay = 0
 
-local VERSION = 2
+local VERSION = 3
 
 local clock_pull = Clock()
 local clock_stop_1 = Clock()
@@ -42,8 +42,7 @@ debt_paid = false
 payout = 0
 curr_bet = 5
 reels = {}
-stats_hud = { x = -60, is_showing = false }
--- bank_menu = { x = 160, is_showing=false}
+
 main_window = { x = 0 }
 
 
@@ -63,19 +62,14 @@ add(tabs, shop_panel.tab)
 add(tabs, bank_panel.tab)
 
 function _init()
-    mkdir("/appdata/slots")
-    -- player_stats = {
-    --     total_pulls = 0,
-    --     total_spent = 0,
-    --     total_earned = 0,
-    --     total_profit = 0,
-    --     two_kind = 0,
-    --     three_kind = 0,
-    --     cash = 200,
-    -- }
-    --save_stats()
+    local folder_there, _, _ = fstat("/appdata/slots")
+
+    if not folder_there then
+        mkdir("/appdata/slots")
+    end
+
     load_stats()
-    --player_stats = fetch("/appdata/slots/player_stats.pod")
+
     poke(0x5f5c, 255)
     poke(0x5f5d, 255)
     window {
@@ -86,7 +80,6 @@ function _init()
         fullscreen = false,
         x          = 260,
         y          = 50,
-        --icon=get_spr(15)
     }
 
     reel_1 = Reel(20, 42)
@@ -101,9 +94,7 @@ function _init()
 end
 
 function _update()
-    mx, my, mb, wheel_x, wheel_y = mouse()
-    
-
+    mx, my, mb, _, wheel_y = mouse()
 
     if mb == 1 then
         if m_delay == 0 then
@@ -132,7 +123,7 @@ function _update()
         toggle_window_size()
     end
 
-    if not stats_hud.is_showing then
+    if main_window.x == 0 then
         if not auto_mode then
             if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
                 pull_handle()
@@ -142,12 +133,6 @@ function _update()
         if _keyp("a") then
             toggle_auto_mode()
         end
-
-       -- if btnp(1) and not are_reels_spinning() then
-        --    curr_bet = mid(5, curr_bet + 5, 80)
-        --elseif btnp(0) and not are_reels_spinning() then
-        --    curr_bet = mid(5, curr_bet - 5, 80)
-        --end
     end
 
     update_dt()
@@ -216,19 +201,19 @@ function toggle_bank()
 end
 
 function _draw()
-
+    cls()
     if not debt_paid then
+
+        -- Stats Canvas --
         set_draw_target(canvas_stats)
         cls()
         stats_panel:draw()
 
-        set_draw_target()
 
-        cls()
+        -- Main Canvas --
         set_draw_target(canvas_main)
         cls()
 
-        -- brown tabletop
         line(6, 80, 17, 80, 4)
         line(80, 80, 100, 80, 4)
 
@@ -244,33 +229,31 @@ function _draw()
         reel_3:draw()
         clip()
 
-
         handle:draw()
         hud:draw()
 
-        -- set_draw_target()
-
+        -- Bank Canvas -- 
         set_draw_target(canvas_bank)
         cls()
         bank_panel:draw()
-        --set_draw_target()
 
 
+        -- Shop Canvas -- 
         set_draw_target(canvas_shop)
         cls()
         shop_panel:draw()
+
+
         set_draw_target()
-
-
-
         sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
         sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
         sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
         sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
 
-    else
+        -- print(string.format("%.2f", stat(1)*100) .. "% cpu", 0, 190, 7 )
 
-        cls()
+
+    else
         print("Debt paid", 30, 50, 7)
     end
 
@@ -433,8 +416,18 @@ function toggle_window_size()
 end
 
 function load_stats()
-    player_stats = fetch("/appdata/slots/save_data.pod") or {
-        version = 2,
+    local data = fetch("/appdata/slots/save_data.pod")
+
+    if not data or data.version < VERSION then
+        player_stats = create_new_save()
+    else
+        player_stats = data
+    end
+end
+
+function create_new_save()
+    return {
+        version = 3,
         total_pulls = 0,
         total_spent = 0,
         total_earned = 0,
@@ -442,7 +435,7 @@ function load_stats()
         two_kind = 0,
         three_kind = 0,
         cash = 200,
-        debt = 420165,
+        debt = 42160,
         date = { y = 0, m = 0, d = 0 },
     }
 end

@@ -26,46 +26,11 @@ bank_panel = {
     end,
     draw=function(self)
         self.tab:draw()
-        
         rectfill(self.x, 0, self.x+50, 45, 0)
         print("\014    loan ", self.x, 2, 7)
-		--print("\014 get   ", self.x, 9, 7)
-		--print("\014 pay   ", self.x, 16, 7)
         self.lbl_get:draw()
         self.lbl_pay:draw()
-		--print("\#g\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), bank_menu.x, 21, 7)
-
-    --     spr(24, self.x + 5, 16+7)
-    --     print("\0140", self.x + 5, 16+13, 7)
-    --     spr(32, self.x + 5, 16+7+12)
-
-    --     spr(24, self.x + 5+5, 16+7)
-    --     print("\0140", self.x + 5+5, 16+13, 7)
-    --     spr(32, self.x + 5+5, 16+7+12)
-
-    --    -- spr(24, self.x + 5, 16+7)
-    --     --print("\0140", self.x + 5, 16+13, 7)
-    --     --spr(32, self.x + 5, 16+7+12)
-
-    --     spr(24, self.x + 5+5+5, 16+7)
-    --     print("\0140", self.x + 5+5+5, 16+13, 7)
-    --     spr(32, self.x + 5+5+5, 16+7+12)
-
-    --     spr(24, self.x + 5+5+5+5, 16+7)
-    --     print("\0140", self.x + 5+5+5+5, 16+13, 7)
-    --     spr(32, self.x + 5+5+5+5, 16+7+12)
-
-    --     spr(24, self.x + 5+5+5+5+5, 16+7)
-    --     print("\0140", self.x + 5+5+5+5+5, 16+13, 7)
-    --     spr(32, self.x + 5+5+5+5+5, 16+7+12)
-
-    --     spr(24, self.x + 5+5+5+5+5+5, 16+7)
-    --     print("\0140", self.x + 5+5+5+5+5+5, 16+13, 7)
-    --     spr(32, self.x + 5+5+5+5+5+5, 16+7+12)
-
-
         print("\014" .. tostr(pad_zeros(self.transaction_value, 4)) .. " scroll", self.x + 3, 12, 7)
-
         rect(self.x, 0, self.x+50, 45, 7)
     end,
     slide_in=function(self)
@@ -85,7 +50,6 @@ bank_panel = {
             end
         )
         flux.to(self.tab, 0.5, { x = 95 }):ease("quadout")
-        
     end,
 
     get_money=function (self)
@@ -97,7 +61,6 @@ bank_panel = {
             sfx(8)
         end
         self.transaction_value = 0
-        
     end,
     pay_money=function (self)
         if self.transaction_value > 0 then
@@ -118,8 +81,6 @@ bank_panel = {
 }
 
 bank_panel.tab.func = function() toggle_bank() end
-
-
 
 bank_panel.lbl_get.callback = function() bank_panel:get_money() end
 bank_panel.lbl_pay.callback = function() bank_panel:pay_money() end
