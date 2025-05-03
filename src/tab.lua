@@ -28,7 +28,7 @@ end
 
 function Tab:update()
     if is_colliding(mx/2, my/2, self) then
-        self.color = 3
+        self.color = 12
         self.is_hovered = true
     else
         self.color = 0

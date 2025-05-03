@@ -194,7 +194,7 @@ function toggle_stats()
         flux.to(stats_display, 0.5, { x = -60 }):ease("quadin")
         flux.to(stats_display.stat_tab, 0.5, { x = 2 }):ease("quadin")
         --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
-        --flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
+        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
 
         stats_hud.is_showing = false
         --store("/appdata/slots/player_stats.pod", player_stats )
@@ -202,7 +202,7 @@ function toggle_stats()
         --flux.to(stats_hud, 0.5, { x = -2 }):ease("quadout")
         flux.to(stats_display, 0.5, { x = -2 }):ease("quadout")
         flux.to(stats_display.stat_tab, 0.5, { x = 56 }):ease("quadout")
-       -- flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
+        flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
         stats_hud.is_showing = true
     end
 end
@@ -226,14 +226,15 @@ function _draw()
     set_draw_target(canvas_stats)
 
     cls()
-    rectfill(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 1)
+    stats_display:draw()
+    --rectfill(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 1)
     --print("\014     stats    ", stats_hud.x, 0, 7)
-    print("\014 spent:  " .. pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
-    print("\014 profit: " .. pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
-    print("\014 pulls:  " .. pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
-    print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
-    print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
-    rect(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 7)
+    --print("\014 spent:  " .. pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
+    --print("\014 profit: " .. pad_zeros(player_stats.total_profit, 5), stats_hud.x, 14, 7)
+    --print("\014 pulls:  " .. pad_zeros(player_stats.total_pulls, 5), stats_hud.x, 21, 7)
+    --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), stats_hud.x, 28, 7)
+    --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), stats_hud.x, 35, 7)
+    --rect(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 7)
 
 
     set_draw_target()
@@ -266,7 +267,7 @@ function _draw()
     --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 
     hud:draw()
-    stats_display:draw()
+    
     -- stat_tab:draw()
     shop_tab:draw()
     bank_tab:draw()
@@ -347,7 +348,7 @@ function on_mouse_click(x, y)
         end
     end
 
-    if handle.is_hovered then
+    if handle.is_hovered and not stats_hud.is_showing then
         if not are_reels_spinning() and player_stats.cash >= curr_bet then
             pull_handle()
         end
