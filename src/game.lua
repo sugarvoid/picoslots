@@ -50,6 +50,7 @@ game_window = { x = 0 }
 local canvas = userdata("u8", W, H)
 local canvas_stats = userdata("u8", W, H)
 local canvas_bank = userdata("u8", W, H)
+local canvas_shop = userdata("u8", W, H)
 
 
 local tabs = {}
@@ -60,11 +61,10 @@ local tabs = {}
 local shop_tab = Tab("left", 55, "shop")
 
 local bank_tab = Tab("right", 5, "bank")
-bank_tab.func = function() toggle_bank() end
 
-add(tabs, stats_display.stat_tab)
-add(tabs, shop_tab)
-add(tabs, bank_tab)
+add(tabs, stats_panel.tab)
+add(tabs, shop_panel.tab)
+add(tabs, bank_panel.tab)
 
 function _init()
     mkdir("/appdata/slots")
@@ -160,12 +160,14 @@ function _update()
     update_lights()
     light_man:update()
 
-    stats_display:update()
+    stats_panel:update()
+    bank_panel:update()
+    shop_panel:update()
 
     handle:update()
     --stat_tab:update()
-    shop_tab:update()
-    bank_tab:update()
+    --shop_tab:update()
+    --bank_tab:update()
 
     foreach(reels, function(obj) obj:update() end)
     foreach(clocks, function(obj) obj:update() end)
@@ -190,35 +192,56 @@ function _update()
 end
 
 function toggle_stats()
-    if stats_hud.is_showing then
-        flux.to(stats_display, 0.5, { x = -60 }):ease("quadin")
-        flux.to(stats_display.stat_tab, 0.5, { x = 2 }):ease("quadin")
+    if stats_panel.is_showing then
+        stats_panel:slide_out()
+        --flux.to(stats_pannel, 0.5, { x = -60 }):ease("quadin")
+        --flux.to(stats_pannel.stat_tab, 0.5, { x = 2 }):ease("quadin")
         --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
         flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
 
-        stats_hud.is_showing = false
+        --stats_hud.is_showing = false
         --store("/appdata/slots/player_stats.pod", player_stats )
     else
+        stats_panel:slide_in()
         --flux.to(stats_hud, 0.5, { x = -2 }):ease("quadout")
-        flux.to(stats_display, 0.5, { x = -2 }):ease("quadout")
-        flux.to(stats_display.stat_tab, 0.5, { x = 56 }):ease("quadout")
+        --flux.to(stats_pannel, 0.5, { x = -2 }):ease("quadout")
+        --flux.to(stats_pannel.stat_tab, 0.5, { x = 56 }):ease("quadout")
         flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
-        stats_hud.is_showing = true
+        --stats_hud.is_showing = true
+    end
+end
+
+function toggle_shop()
+    if shop_panel.is_showing then
+        shop_panel:slide_out()
+        
+        --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
+        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
+
+
+        --store("/appdata/slots/player_stats.pod", player_stats )
+    else
+  
+        shop_panel:slide_in()
+        
+        flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
     end
 end
 
 function toggle_bank()
     --toggle_stats()
-    if bank_menu.is_showing then
-        flux.to(bank_menu, 0.5, { x = 160 }):ease("quadin")
+    if bank_panel.is_showing then
+        bank_panel:slide_out()
+        --flux.to(bank_menu, 0.5, { x = 160 }):ease("quadin")
         flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
 
-        bank_menu.is_showing = false
+        
         --store("/appdata/slots/player_stats.pod", player_stats )
     else
-        flux.to(bank_menu, 0.5, { x = 50 }):ease("quadout")
+        --flux.to(bank_menu, 0.5, { x = 50 }):ease("quadout")
+        bank_panel:slide_in()
         flux.to(game_window, 0.5, { x = -W / 2 }):ease("quadout")
-        bank_menu.is_showing = true
+ 
     end
 end
 
@@ -226,7 +249,7 @@ function _draw()
     set_draw_target(canvas_stats)
 
     cls()
-    stats_display:draw()
+    stats_panel:draw()
     --rectfill(stats_hud.x, 0, stats_hud.x + 56, 7 + 50, 1)
     --print("\014     stats    ", stats_hud.x, 0, 7)
     --print("\014 spent:  " .. pad_zeros(player_stats.total_spent, 5), stats_hud.x, 7, 7)
@@ -269,26 +292,22 @@ function _draw()
     hud:draw()
     
     -- stat_tab:draw()
-    shop_tab:draw()
-    bank_tab:draw()
+    
+
+
+
     set_draw_target()
-
-
-
-
-
-
 
 
     set_draw_target(canvas_bank)
     cls()
-    bank_menu:draw()
-    --print("\#g\014   bank    ", bank_menu.x, 0, 7)
-    --print("\#g\014 get loan  ", bank_menu.x, 7, 7)
-    ---print("\#g\014 pay loan  ", bank_menu.x, 14, 7)
-    --print("\#g\014 pulls:  "..pad_zeros(player_stats.total_pulls, 5), bank_menu.x, 21, 7)
-    --print("\#g\014 2-kind: "..pad_zeros(player_stats.two_kind, 5), bank_menu.x, 28, 7)
-    --print("\#g\014 3-kind: "..pad_zeros(player_stats.three_kind, 5), bank_menu.x, 35, 7)
+    bank_panel:draw()
+    set_draw_target()
+
+
+    set_draw_target(canvas_shop)
+    cls()
+    shop_panel:draw()
     set_draw_target()
 
 
@@ -298,6 +317,7 @@ function _draw()
     sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
     sspr(canvas, 0, 0, 100, 100, game_window.x, 0, W, H)
     sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+    sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
 end
 
 function start_reels()

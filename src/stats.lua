@@ -1,7 +1,7 @@
-stats_display = {
+stats_panel = {
     x = -60,
     y = 0,
-    stat_tab = Tab("left", 5, "stats"),
+    tab = Tab("left", 5, "stats"),
     
     draw = function(self)
         rectfill(self.x, 0, self.x + 56, 7 + 42, 1)
@@ -12,13 +12,33 @@ stats_display = {
         print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
         print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
         rect(self.x, 0, self.x + 56, 7 + 42, 7)
-        self.stat_tab:draw()
+        self.tab:draw()
     end,
 
     update=function(self)
         --self.stat_tab.x = self.x + 5
-        self.stat_tab:update()
+        self.tab:update()
+    end,
+
+    slide_in=function(self)
+        flux.to(self, 0.5, { x = -2 }):ease("quadout")
+        flux.to(self.tab, 0.5, { x = 56 }):ease("quadout")
+        self.is_showing = true
+        shop_panel.tab.is_visible = false
+        bank_panel.tab.is_visible = false
+    end,
+    slide_out=function(self)
+        flux.to(self, 0.5, { x = -60 }):ease("quadin"):oncomplete(
+            function ()
+                self.is_showing = false
+               -- stats_display.stat_tab.is_visible = true
+                shop_panel.tab.is_visible = true
+                bank_panel.tab.is_visible = true
+            end
+        )
+        flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")
+        
     end,
 }
 
-stats_display.stat_tab.func = function() toggle_stats() end
+stats_panel.tab.func = function() toggle_stats() end
