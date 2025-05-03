@@ -54,15 +54,15 @@ local canvas_bank = userdata("u8", W, H)
 
 local tabs = {}
 
-local stat_tab = Tab("left", 5, "stats")
-stat_tab.func = function() toggle_stats() end
+--local stat_tab = Tab("left", 5, "stats")
+--stat_tab.func = function() toggle_stats() end
 
-local shop_tab = Tab("left", 50, "shop")
+local shop_tab = Tab("left", 55, "shop")
 
 local bank_tab = Tab("right", 5, "bank")
 bank_tab.func = function() toggle_bank() end
 
-add(tabs, stat_tab)
+add(tabs, stats_display.stat_tab)
 add(tabs, shop_tab)
 add(tabs, bank_tab)
 
@@ -160,8 +160,10 @@ function _update()
     update_lights()
     light_man:update()
 
+    stats_display:update()
 
-    stat_tab:update()
+    handle:update()
+    --stat_tab:update()
     shop_tab:update()
     bank_tab:update()
 
@@ -189,14 +191,18 @@ end
 
 function toggle_stats()
     if stats_hud.is_showing then
-        flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
-        flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
+        flux.to(stats_display, 0.5, { x = -60 }):ease("quadin")
+        flux.to(stats_display.stat_tab, 0.5, { x = 2 }):ease("quadin")
+        --flux.to(stats_hud, 0.5, { x = -60 }):ease("quadin")
+        --flux.to(game_window, 0.5, { x = 0 }):ease("quadin")
 
         stats_hud.is_showing = false
         --store("/appdata/slots/player_stats.pod", player_stats )
     else
-        flux.to(stats_hud, 0.5, { x = -2 }):ease("quadout")
-        flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
+        --flux.to(stats_hud, 0.5, { x = -2 }):ease("quadout")
+        flux.to(stats_display, 0.5, { x = -2 }):ease("quadout")
+        flux.to(stats_display.stat_tab, 0.5, { x = 56 }):ease("quadout")
+       -- flux.to(game_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
         stats_hud.is_showing = true
     end
 end
@@ -260,7 +266,8 @@ function _draw()
     --print("cpu: " .. stat(1) * 100 .. "%", 10, 8, 8)
 
     hud:draw()
-    stat_tab:draw()
+    stats_display:draw()
+    -- stat_tab:draw()
     shop_tab:draw()
     bank_tab:draw()
     set_draw_target()
@@ -338,6 +345,13 @@ function on_mouse_click(x, y)
             t:was_clicked()
             return
         end
+    end
+
+    if handle.is_hovered then
+        if not are_reels_spinning() and player_stats.cash >= curr_bet then
+            pull_handle()
+        end
+        return
     end
 end
 
@@ -447,7 +461,6 @@ function load_stats()
 end
 
 function save_stats()
-    notify("saving...")
     store("/appdata/slots/player_stats.pod", player_stats)
 end
 

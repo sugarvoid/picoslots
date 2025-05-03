@@ -28,7 +28,7 @@ hud = {
 			spr(82,34,61)
 		end
 		if auto_mode and flr(time() * 2) % 2 == 0  then
-			print("AUTO", 1, 92, 7)
+			print("\014auto", 1, 92, 7)
 		end
 
         --rect(-1,3,7,35,7)

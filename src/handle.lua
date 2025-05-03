@@ -2,14 +2,22 @@
 handle = {
 	x=78,
 	y=30,
+	w=9,
+	h=9,
 	radius = 4,
+	is_hovered = false,
 	draw=function(self)
+		
 		rect(self.x+4, self.y+5, self.x+5, 55, 6)
 		pal(14,0)
 		spr(16, self.x, self.y)
 		pal()
+		if self.is_hovered then
+			rect(self.x, self.y, self.x + 9, self.y+9, 8)
+		end
 	end,
 	update=function(self)
+		self.is_hovered = is_colliding(mx/2, my/2, self)
 	end,
 	pull=function(self)
 		
