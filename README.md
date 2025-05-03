@@ -4,9 +4,15 @@
 ![gameplay](https://github.com/sugarvoid/picoslots/blob/main/gameplay.gif)
 <br>
 
-Controls:
+## Controls
 --------------- 
-Down: Pull handle
-A:    Toggle auto mode
-F:    Toggle screen size
-S:    Toggle stats
+|Key| Action|
+|:-----:|:-----:|
+|Down| Pull handle|
+|A|  Toggle auto mode |
+|F|    Toggle screen size |
+|S|    Toggle stats |
+
+# Libraries  Used
+- [flux](https://github.com/rxi/flux)
+- [classic](https://github.com/Sheepolution/classic)
