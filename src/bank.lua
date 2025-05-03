@@ -1,10 +1,4 @@
 
-
-
-bank = {
-
-}
-
 bank_panel = {
     x = 100, 
     y=0,
@@ -14,11 +8,11 @@ bank_panel = {
     labels = {},
     transaction_value = 0,
     lbl_get = Label.new("get", 0, 28, 7),
-    lbl_pay =  Label.new("pay", 0, 28+7, 7),
+    lbl_pay =  Label.new("pay", 0, 28, 7),
     update=function (self)
         self.tab:update()
-        self.lbl_get.x = self.x + 3
-        self.lbl_pay.x = self.x + 3
+        self.lbl_get.x = self.x + 5
+        self.lbl_pay.x = self.x + 25
         
         if self.is_showing then
             self.lbl_get:update()
@@ -33,8 +27,8 @@ bank_panel = {
     draw=function(self)
         self.tab:draw()
         
-        rectfill(self.x, 0, self.x+50, 56, 0)
-        print("\014  loan ", self.x, 2, 7)
+        rectfill(self.x, 0, self.x+50, 45, 0)
+        print("\014    loan ", self.x, 2, 7)
 		--print("\014 get   ", self.x, 9, 7)
 		--print("\014 pay   ", self.x, 16, 7)
         self.lbl_get:draw()
@@ -70,9 +64,9 @@ bank_panel = {
     --     spr(32, self.x + 5+5+5+5+5+5, 16+7+12)
 
 
-        print("\014" .. tostr(pad_zeros(self.transaction_value, 4)), self.x + 13, 12, 7)
+        print("\014" .. tostr(pad_zeros(self.transaction_value, 4)) .. " scroll", self.x + 3, 12, 7)
 
-        rect(self.x, 0, self.x+50, 56, 7)
+        rect(self.x, 0, self.x+50, 45, 7)
     end,
     slide_in=function(self)
         flux.to(self, 0.5, { x = 50 }):ease("quadout")
@@ -109,6 +103,11 @@ bank_panel = {
         if self.transaction_value > 0 then
             player_stats.cash -= self.transaction_value
             player_stats.debt -= self.transaction_value
+
+            if player_stats.debt <= 0 then
+                debt_paid = true
+            end
+
             sfx(7)
         else
             sfx(8)

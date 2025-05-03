@@ -8,6 +8,8 @@ local last_time = time()
 local dt = 0
 local key_delay = 0
 
+local VERSION = 2
+
 local clock_pull = Clock()
 local clock_stop_1 = Clock()
 local clock_stop_2 = Clock()
@@ -34,6 +36,8 @@ local PAYOUTS_2 = {
 auto_mode = false
 has_spun = false
 show_payout = false
+
+debt_paid = false
 
 payout = 0
 curr_bet = 5
@@ -114,7 +118,10 @@ function _update()
 
     if _keyp("s") then
         toggle_stats()
-        
+    end
+
+    if _keyp("q") then
+        toggle_shop()
     end
 
     if _keyp("b") then
@@ -210,55 +217,62 @@ end
 
 function _draw()
 
-    set_draw_target(canvas_stats)
-    cls()
-    stats_panel:draw()
+    if not debt_paid then
+        set_draw_target(canvas_stats)
+        cls()
+        stats_panel:draw()
 
-    set_draw_target()
+        set_draw_target()
 
-    cls()
-    set_draw_target(canvas_main)
-    cls()
+        cls()
+        set_draw_target(canvas_main)
+        cls()
 
-    -- brown tabletop
-    line(6, 80, 17, 80, 4)
-    line(80, 80, 100, 80, 4)
+        -- brown tabletop
+        line(6, 80, 17, 80, 4)
+        line(80, 80, 100, 80, 4)
 
-    -- slot machine
-    spr(64, 15, 25)
+        -- slot machine
+        spr(64, 15, 25)
 
-    draw_lights()
-    draw_coins()
+        draw_lights()
+        draw_coins()
 
-    clip(20, 42, 58, 20)
-    reel_1:draw()
-    reel_2:draw()
-    reel_3:draw()
-    clip()
-
-
-    handle:draw()
-    hud:draw()
-
-    -- set_draw_target()
-
-    set_draw_target(canvas_bank)
-    cls()
-    bank_panel:draw()
-    --set_draw_target()
+        clip(20, 42, 58, 20)
+        reel_1:draw()
+        reel_2:draw()
+        reel_3:draw()
+        clip()
 
 
-    set_draw_target(canvas_shop)
-    cls()
-    shop_panel:draw()
-    set_draw_target()
+        handle:draw()
+        hud:draw()
+
+        -- set_draw_target()
+
+        set_draw_target(canvas_bank)
+        cls()
+        bank_panel:draw()
+        --set_draw_target()
+
+
+        set_draw_target(canvas_shop)
+        cls()
+        shop_panel:draw()
+        set_draw_target()
 
 
 
-    sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
-    sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
-    sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
-    sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
+        sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
+        sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
+        sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+        sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
+
+    else
+
+        cls()
+        print("Debt paid", 30, 50, 7)
+    end
 
 end
 
@@ -413,11 +427,14 @@ function toggle_window_size()
     }
     if stats_panel.is_showing or shop_panel.is_showing then
         main_window.x = W / 2
+    elseif bank_panel.is_showing then
+        main_window.x = -W / 2
     end
 end
 
 function load_stats()
-    player_stats = fetch("/appdata/slots/player_stats.pod") or {
+    player_stats = fetch("/appdata/slots/save_data.pod") or {
+        version = 2,
         total_pulls = 0,
         total_spent = 0,
         total_earned = 0,
@@ -425,14 +442,13 @@ function load_stats()
         two_kind = 0,
         three_kind = 0,
         cash = 200,
-        --- testing ---
         debt = 420165,
         date = { y = 0, m = 0, d = 0 },
     }
 end
 
 function save_stats()
-    store("/appdata/slots/player_stats.pod", player_stats)
+    store("/appdata/slots/save_data.pod", player_stats)
 end
 
 function is_colliding(m_x, m_y, box)

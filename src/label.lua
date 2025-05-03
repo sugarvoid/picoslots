@@ -14,7 +14,7 @@ function Label.new(text, x, y, col)
 	local foo = print(text, 0, 0)
 	set_draw_target()
 	_l.interactive=true
-	_l.w=foo
+	_l.w=foo - 3
     _l.h = 5
     _l.x = x
     _l.y = y

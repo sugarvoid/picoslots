@@ -13,7 +13,7 @@ handle = {
 		spr(16, self.x, self.y)
 		pal()
 		if self.is_hovered then
-			rect(self.x, self.y, self.x + 9, self.y+9, 8)
+			-- rect(self.x, self.y, self.x + 9, self.y+9, 8)
 		end
 	end,
 	update=function(self)
