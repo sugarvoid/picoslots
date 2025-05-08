@@ -31,6 +31,7 @@ shop_panel = {
     end,
 
     slide_in=function(self)
+        sfx(5)
         flux.to(self, 0.5, { x = -2 }):ease("quadout")
         flux.to(self.tab, 0.5, { x = 56 }):ease("quadout")
         self.is_showing = true
@@ -38,6 +39,7 @@ shop_panel = {
         bank_panel.tab.is_visible = false
     end,
     slide_out=function(self)
+        sfx(9)
         flux.to(self, 0.5, { x = -60 }):ease("quadin"):oncomplete(
             function ()
                 self.is_showing = false

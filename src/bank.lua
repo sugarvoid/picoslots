@@ -50,6 +50,7 @@ bank_panel = {
         rect(self.x, 0, self.x + 50, 45, 7)
     end,
     slide_in = function(self)
+        sfx(5)
         flux.to(self, 0.5, { x = 50 }):ease("quadout")
         flux.to(self.tab, 0.5, { x = 46 }):ease("quadout")
         self.is_showing = true
@@ -57,6 +58,7 @@ bank_panel = {
         shop_panel.tab.is_visible = false
     end,
     slide_out = function(self)
+        sfx(9)
         flux.to(self, 0.5, { x = 100 }):ease("quadout"):oncomplete(
             function()
                 self.is_showing = false

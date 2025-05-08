@@ -50,6 +50,6 @@ function Tab:draw()
 end
 
 function Tab:was_clicked()
-    sfx(5)
+    --sfx(5)
     self.func()
 end
