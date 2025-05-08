@@ -2,6 +2,10 @@ shop_panel = {
     x = -60,
     y = 50,
     tab = Tab("left", 60, "shop"),
+
+
+    lbl_ite = Label.new("get", 0, 28, 7),
+    lbl_pay = Label.new("pay", 0, 28, 7),
     
     draw = function(self)
         rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
