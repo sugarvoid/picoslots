@@ -316,6 +316,15 @@ function on_mouse_click(x, y)
         end
     end
 
+    if shop_panel.is_showing then
+        for l in all(shop_panel.labels) do
+            if l.is_hovered then
+                l:was_clicked()
+                return
+            end
+        end
+    end
+
     if handle.is_hovered and main_window.x == 0 then
         if not are_reels_spinning() and player_stats.cash >= curr_bet then
             pull_handle()

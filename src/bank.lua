@@ -23,10 +23,11 @@ bank_panel = {
         self.lbl_less.x = self.x + 30
 
         if self.is_showing then
-            self.lbl_get:update()
-            self.lbl_pay:update()
-            self.lbl_more:update()
-            self.lbl_less:update()
+            foreach(self.labels, function(obj) obj:update() end )
+            --self.lbl_get:update()
+            --self.lbl_pay:update()
+            --self.lbl_more:update()
+            --self.lbl_less:update()
             --if wheel_y > 0 then
             --    self.transaction_value = mid(0, self.transaction_value + 100, 4000)
             --elseif wheel_y < 0 then
@@ -38,11 +39,13 @@ bank_panel = {
         self.tab:draw()
         rectfill(self.x, 0, self.x + 50, 45, 0)
         print("\014    loan ", self.x, 2, 7)
-        self.lbl_get:draw()
-        self.lbl_pay:draw()
 
-        self.lbl_more:draw()
-        self.lbl_less:draw()
+        foreach(self.labels, function(obj) obj:draw() end )
+        --self.lbl_get:draw()
+        --self.lbl_pay:draw()
+
+        --self.lbl_more:draw()
+        --self.lbl_less:draw()
         print("\014" .. tostr(pad_zeros(self.transaction_value, 4)), self.x + 16, 12, 7)
         rect(self.x, 0, self.x + 50, 45, 7)
     end,

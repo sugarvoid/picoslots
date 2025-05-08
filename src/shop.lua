@@ -3,16 +3,18 @@ shop_panel = {
     y = 50,
     tab = Tab("left", 60, "shop"),
 
-
-    lbl_ite = Label.new("get", 0, 28, 7),
-    lbl_pay = Label.new("pay", 0, 28, 7),
+    labels = {},
+    lbl_item_1 = Label.new("item 1   200", 0, 60, 7),
+    lbl_item_2 = Label.new("item 2   300", 0, 67, 7),
+    lbl_item_3 = Label.new("item 3   000", 0, 67+7, 7),
     
     draw = function(self)
         rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
         print("\014 click to buy    ", self.x, 52, 7)
-        print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
-        print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
-        print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)
+        --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
+       -- print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
+       -- print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)
+        foreach(self.labels, function(obj) obj:draw() end )
         --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
         --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
         rect(self.x, self.y, self.x + 56, self.y + 40, 7)
@@ -22,6 +24,10 @@ shop_panel = {
     update=function(self)
         --self.stat_tab.x = self.x + 5
         self.tab:update()
+        self.lbl_item_1.x = self.x + 5
+        self.lbl_item_2.x = self.x + 5
+        self.lbl_item_3.x = self.x + 5
+        foreach(self.labels, function(obj) obj:update() end )
     end,
 
     slide_in=function(self)
@@ -43,6 +49,21 @@ shop_panel = {
         flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")
         
     end,
+    buy_item=function(self,item_idx)
+        --notify("buying item")
+        notify("buying item " .. tostr(item_idx))
+    end
 }
 
 shop_panel.tab.func = function() toggle_shop() end
+
+
+shop_panel.lbl_item_1.callback = function() shop_panel:buy_item(1) end
+shop_panel.lbl_item_2.callback = function() shop_panel:buy_item(2) end
+shop_panel.lbl_item_3.callback = function() shop_panel:buy_item(3) end
+
+
+add(shop_panel.labels, shop_panel.lbl_item_1)
+add(shop_panel.labels, shop_panel.lbl_item_2)
+add(shop_panel.labels, shop_panel.lbl_item_3)
+
