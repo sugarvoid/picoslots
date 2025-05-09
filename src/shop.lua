@@ -6,7 +6,8 @@ shop_panel = {
     labels = {},
     lbl_item_1 = Label.new("item 1   200", 0, 60, 7),
     lbl_item_2 = Label.new("item 2   300", 0, 67, 7),
-    lbl_item_3 = Label.new("item 3   000", 0, 67+7, 7),
+    lbl_item_3 = Label.new("reset   000", 0, 67+7, 7),
+    lbl_item_4 = Label.new("sell soul", 0, 67+7+9, 7),
     
     draw = function(self)
         rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
@@ -23,11 +24,13 @@ shop_panel = {
 
     update=function(self)
         --self.stat_tab.x = self.x + 5
+        foreach(self.labels, function(obj) obj:update() end )
         self.tab:update()
         self.lbl_item_1.x = self.x + 5
         self.lbl_item_2.x = self.x + 5
         self.lbl_item_3.x = self.x + 5
-        foreach(self.labels, function(obj) obj:update() end )
+        self.lbl_item_4.x = self.x + 5
+        
     end,
 
     slide_in=function(self)
@@ -37,6 +40,7 @@ shop_panel = {
         self.is_showing = true
         stats_panel.tab.is_visible = false
         bank_panel.tab.is_visible = false
+        work_panel.tab.is_visible = false
     end,
     slide_out=function(self)
         sfx(9)
@@ -44,6 +48,7 @@ shop_panel = {
             function ()
                 self.is_showing = false
                 stats_panel.tab.is_visible = true
+                work_panel.tab.is_visible = true
                -- shop_pannel.tab.is_visible = true
                 bank_panel.tab.is_visible = true
             end
@@ -54,6 +59,10 @@ shop_panel = {
     buy_item=function(self,item_idx)
         --notify("buying item")
         notify("buying item " .. tostr(item_idx))
+        if item_idx == 3 then
+            player_stats = create_new_save()
+            notify("resetting game...")
+        end
     end
 }
 
@@ -63,9 +72,11 @@ shop_panel.tab.func = function() toggle_shop() end
 shop_panel.lbl_item_1.callback = function() shop_panel:buy_item(1) end
 shop_panel.lbl_item_2.callback = function() shop_panel:buy_item(2) end
 shop_panel.lbl_item_3.callback = function() shop_panel:buy_item(3) end
+shop_panel.lbl_item_4.callback = function() shop_panel:buy_item(4) end
 
 
 add(shop_panel.labels, shop_panel.lbl_item_1)
 add(shop_panel.labels, shop_panel.lbl_item_2)
 add(shop_panel.labels, shop_panel.lbl_item_3)
+add(shop_panel.labels, shop_panel.lbl_item_4)
 

@@ -28,6 +28,7 @@ stats_panel = {
         self.is_showing = true
         shop_panel.tab.is_visible = false
         bank_panel.tab.is_visible = false
+        work_panel.tab.is_visible = false
     end,
     slide_out=function(self)
         sfx(9)
@@ -37,6 +38,7 @@ stats_panel = {
                -- stats_display.stat_tab.is_visible = true
                 shop_panel.tab.is_visible = true
                 bank_panel.tab.is_visible = true
+                work_panel.tab.is_visible = true
             end
         )
         flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")

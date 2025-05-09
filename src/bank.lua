@@ -56,6 +56,7 @@ bank_panel = {
         self.is_showing = true
         stats_panel.tab.is_visible = false
         shop_panel.tab.is_visible = false
+        work_panel.tab.is_visible = false
     end,
     slide_out = function(self)
         sfx(9)
@@ -64,6 +65,7 @@ bank_panel = {
                 self.is_showing = false
                 stats_panel.tab.is_visible = true
                 shop_panel.tab.is_visible = true
+                work_panel.tab.is_visible = true
                 self.transaction_value = 0
             end
         )

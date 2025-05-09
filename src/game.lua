@@ -47,9 +47,11 @@ main_window = { x = 0 }
 
 
 local canvas_main = userdata("u8", W, H)
+
 local canvas_stats = userdata("u8", W, H)
 local canvas_bank = userdata("u8", W, H)
 local canvas_shop = userdata("u8", W, H)
+local canvas_work = userdata("u8", W, H)
 
 
 local tabs = {}
@@ -60,6 +62,7 @@ local tabs = {}
 add(tabs, stats_panel.tab)
 add(tabs, shop_panel.tab)
 add(tabs, bank_panel.tab)
+add(tabs, work_panel.tab)
 
 function _init()
     local folder_there, _, _ = fstat("/appdata/slots")
@@ -94,7 +97,7 @@ function _init()
 end
 
 function _update()
-    mx, my, mb, _, wheel_y = mouse()
+    mx, my, mb = mouse()
 
     if mb == 1 then
         if m_delay == 0 then
@@ -144,6 +147,7 @@ function _update()
     stats_panel:update()
     bank_panel:update()
     shop_panel:update()
+    work_panel:update()
 
     handle:update()
 
@@ -200,6 +204,16 @@ function toggle_bank()
     end
 end
 
+function toggle_work()
+    if work_panel.is_showing then
+        work_panel:slide_out()
+        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
+    else
+        work_panel:slide_in()
+        flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+    end
+end
+
 function _draw()
     cls()
     if not debt_paid then
@@ -237,11 +251,19 @@ function _draw()
         cls()
         bank_panel:draw()
 
+        
+
 
         -- Shop Canvas -- 
         set_draw_target(canvas_shop)
         cls()
         shop_panel:draw()
+
+        -- Work Canvas -- 
+        set_draw_target(canvas_work)
+        cls()
+  
+        work_panel:draw()
 
 
         set_draw_target()
@@ -249,8 +271,9 @@ function _draw()
         sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
         sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
         sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
+        sspr(canvas_work, 0, 0, 100, 100, 0, 0, W, H)
 
-        -- print(string.format("%.2f", stat(1)*100) .. "% cpu", 0, 190, 7 )
+        print(string.format("%.2f", stat(1)*100) .. "% cpu", 0, 190, 7 )
 
 
     else
@@ -444,7 +467,7 @@ function create_new_save()
         two_kind = 0,
         three_kind = 0,
         cash = 200,
-        debt = 42160,
+        debt = 22100,
         date = { y = 0, m = 0, d = 0 },
     }
 end
@@ -462,4 +485,9 @@ function is_colliding(m_x, m_y, box)
     else
         return false
     end
+end
+
+
+function get_panel_item_x(panel_x, offset)
+    return panel_x + offset
 end
