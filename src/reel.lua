@@ -18,13 +18,13 @@ function Reel:stop()
 	if self.spinning then
 		sfx(4)
 		self.spinning = false
-		self.face = flr(rnd(8)) + 1 
+		self.face = flr(rnd(8)) + 1
 	end
 end
 
 function Reel:update()
 	if self.spinning then
-		for f in all(self.faces) do 
+		for f in all(self.faces) do
 			f:update()
 		end
 	end

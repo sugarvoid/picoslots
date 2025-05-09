@@ -37,43 +37,38 @@ work_panel = {
     
     draw = function(self)
         self.tab:draw()
-        rectfill(self.x, 30, self.x + 50, 85, 0)
- 
-        --print("\014 click to buy    ", self.x, 52, 7)
-        --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
-       -- print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
-       -- print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)
-        foreach(self.labels, function(obj) obj:draw() end )
-        --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
-        --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
-       -- rect(self.x, self.y, self.x + 56, self.y + 40, 7)
-        --self.tab:draw()
-        rect(self.x, 30, self.x + 50, 85, 7)
+        if self.is_active then
+            rectfill(100, 30, 150, 85, 0)
+            foreach(self.labels, function(obj) obj:draw() end )
+            rect(100, 30, 150, 85, 7)
+        end
     end,
 
     update=function(self)
         self.tab:update()
-        --self.stat_tab.x = self.x + 5
-        foreach(self.labels, function(obj) obj:update() end )
-        --self.tab:update()
-        self.lbl_7.x = self.x + 14
-        self.lbl_8.x = self.x + 14+12
-        self.lbl_9.x = self.x + 14+12+12
+        if self.is_active then
+            --self.stat_tab.x = self.x + 5
+            foreach(self.labels, function(obj) obj:update() end )
+            --self.tab:update()
+            self.lbl_7.x = self.x + 14
+            self.lbl_8.x = self.x + 14+12
+            self.lbl_9.x = self.x + 14+12+12
 
-        self.lbl_4.x = self.x + 14
-        self.lbl_5.x = self.x + 14+12
-        self.lbl_6.x = self.x + 14+12+12
+            self.lbl_4.x = self.x + 14
+            self.lbl_5.x = self.x + 14+12
+            self.lbl_6.x = self.x + 14+12+12
 
-        self.lbl_1.x = self.x + 14
-        self.lbl_2.x = self.x + 14+12
-        self.lbl_3.x = self.x + 14+12+12
+            self.lbl_1.x = self.x + 14
+            self.lbl_2.x = self.x + 14+12
+            self.lbl_3.x = self.x + 14+12+12
 
-        self.lbl_0.x = self.x + 14
-        self.lbl_o.x = self.x + 14+12
-        self.lbl_x.x = self.x + 14+12+12
+            self.lbl_0.x = self.x + 14
+            self.lbl_o.x = self.x + 14+12
+            self.lbl_x.x = self.x + 14+12+12
 
-        self.lbl_question.x  = self.x + 5 
-        self.lbl_answer.x  = self.x + 5+30
+            self.lbl_question.x  = self.x + 5 
+            self.lbl_answer.x  = self.x + 5+30
+        end
 
 
         --self.lbl_item_1.x = self.x + 5
@@ -111,7 +106,7 @@ work_panel = {
     end
 }
 
-work_panel.tab.func = function() tab_clicked(bank_panel) end
+work_panel.tab.func = function() tab_clicked(work_panel) end
 
 work_panel.lbl_o.callback = function() work_panel:btn_pressed(11) end
 work_panel.lbl_x.callback = function() work_panel:btn_pressed(12) end

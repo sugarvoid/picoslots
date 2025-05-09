@@ -24,7 +24,7 @@ bank_panel = {
         --self.lbl_more.x = self.x + 5
         --self.lbl_less.x = self.x + 30
 
-        if self.is_showing then
+        if self.is_active then
             foreach(self.labels, function(obj) obj:update() end )
             --self.lbl_get:update()
             --self.lbl_pay:update()
@@ -39,11 +39,13 @@ bank_panel = {
     end,
     draw = function(self)
         self.tab:draw()
-        rectfill(100, 0, 150, 45, 0)
-        print("\014    loan ", 100, 2, 7)
-        foreach(self.labels, function(obj) obj:draw() end )
-        print("\014" .. tostr(pad_zeros(self.transaction_value, 4)), 116, 12, 7)
-        rect(100, 0, 150, 45, 7)
+        if self.is_active then
+            rectfill(100, 0, 150, 45, 0)
+            print("\014    loan ", 100, 2, 7)
+            foreach(self.labels, function(obj) obj:draw() end )
+            print("\014" .. tostr(pad_zeros(self.transaction_value, 4)), 116, 12, 7)
+            rect(100, 0, 150, 45, 7)
+        end
     end,
     -- slide_in = function(self)
     --     sfx(5)

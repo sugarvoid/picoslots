@@ -12,16 +12,19 @@ shop_panel = {
     lbl_item_4 = Label("sell soul", -55, 67+7+9, 7),
     
     draw = function(self)
-        rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
-        print("\014 click to buy    ", self.x, 52, 7)
-        --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
-       -- print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
-       -- print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)
-        foreach(self.labels, function(obj) obj:draw() end )
-        --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
-        --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
-        rect(self.x, self.y, self.x + 56, self.y + 40, 7)
         self.tab:draw()
+        if self.is_active then
+            rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
+            print("\014 click to buy    ", self.x, 52, 7)
+            --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
+        -- print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
+        -- print("\014 reset:  " .. pad_zeros(0, 5), self.x, 67+7, 7)
+            foreach(self.labels, function(obj) obj:draw() end )
+            --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
+            --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
+            rect(self.x, self.y, self.x + 56, self.y + 40, 7)
+        end
+        
     end,
 
     update=function(self)

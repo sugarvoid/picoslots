@@ -58,7 +58,7 @@ local canvas_main = userdata("u8", 100, 100)
 local cpu = 0
 
 
-local canvas_empty = userdata("u8", W, H)
+--local canvas_empty = userdata("u8", W, H)
 
 
 local tabs = {}
@@ -118,15 +118,19 @@ function _update()
 
 
     if _keyp("s") then
-        toggle_stats()
+        tab_clicked(shop_panel)
     end
 
-    if _keyp("q") then
-        toggle_shop()
+    if _keyp("i") then
+        tab_clicked(stats_panel)
     end
 
     if _keyp("b") then
-        toggle_bank()
+        tab_clicked(bank_panel)
+    end
+
+    if _keyp("e") then
+        tab_clicked(work_panel)
     end
 
     if _keyp("f") then
@@ -143,7 +147,7 @@ function _update()
     if main_window.x == 0 then
         if not auto_mode then
             --if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
-            --    pull_handle()
+                --pull_handle()
             --end
         end
 
@@ -258,7 +262,7 @@ function tab_clicked(clicked_panel)
         end
     else
         pan_home()
-        clicked_panel.is_active = false
+        --clicked_panel.is_active = false
     end
 end
 
@@ -270,7 +274,14 @@ end
 function pan_home()
     if true then
         --bank_panel:slide_out()
-        flux.to(cam_pos, 0.5, { x = 0 }):ease("quadin")
+        flux.to(cam_pos, 0.5, { x = 0 }):ease("quadin"):oncomplete(
+            function()
+                shop_panel.is_active = false
+                bank_panel.is_active = false
+                stats_panel.is_active = false
+                work_panel.is_active = false
+            end
+        )
     else
         --bank_panel:slide_in()
         --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
@@ -333,47 +344,14 @@ function _draw()
         reel_1:draw()
         reel_2:draw()
         reel_3:draw()
-        --clip()
 
         handle:draw()
         hud:draw()
-
-
-        
-        
-
-        -- Bank Canvas -- 
-        --set_draw_target(canvas_bank)
-        --cls()
         bank_panel:draw()
-
-        -- Shop Canvas -- 
-        --set_draw_target(canvas_shop)
-        --cls()
         shop_panel:draw()
-
-        -- Work Canvas -- 
-        --set_draw_target(canvas_work)
-        --cls()
         work_panel:draw()
-
-        spr(25, get_mouse_pos())
-
-        
-
-
         set_draw_target()
-        --sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
         sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
-
-
-       -- sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
-        --sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
-        --sspr(canvas_work, 0, 0, 100, 100, 0, 0, W, H)
-
-        
-
-
     else
         print("Debt paid", 30, 50, 7)
     end
