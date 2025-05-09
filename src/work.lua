@@ -7,6 +7,8 @@ work_panel = {
     y = 0,
 
     tab = Tab(88, 93, 50), --"right", 50, "work"),
+    side="right",
+    is_active=false,
 
     labels = {},
 
@@ -109,7 +111,7 @@ work_panel = {
     end
 }
 
-work_panel.tab.func = function() toggle_work() end
+work_panel.tab.func = function() tab_clicked(bank_panel) end
 
 work_panel.lbl_o.callback = function() work_panel:btn_pressed(11) end
 work_panel.lbl_x.callback = function() work_panel:btn_pressed(12) end

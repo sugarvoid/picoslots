@@ -2,7 +2,7 @@ flux = get_flux()
 
 local W, H = 100, 100
 
-mx, my, mb = mouse()
+local mx, my, mb = mouse()
 
 local last_time = time()
 local dt = 0
@@ -207,58 +207,64 @@ end
 
 
 
-function toggle_stats()
-    if stats_panel.is_showing then
-        stats_panel:slide_out()
-        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
-    else
-        stats_panel:slide_in()
-        flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
-    end
-end
+-- function toggle_stats()
+--     if stats_panel.is_showing then
+--         stats_panel:slide_out()
+--         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
+--     else
+--         stats_panel:slide_in()
+--         flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
+--     end
+-- end
 
-function toggle_shop()
-    if shop_panel.is_showing then
-        shop_panel:slide_out()
-        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
-    else
-        shop_panel:slide_in()
-        flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
-    end
-end
+-- function toggle_shop()
+--     if shop_panel.is_showing then
+--         shop_panel:slide_out()
+--         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
+--     else
+--         shop_panel:slide_in()
+--         flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
+--     end
+-- end
 
-function toggle_bank()
-    if bank_panel.is_showing then
-        bank_panel:slide_out()
-        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
-    else
-        bank_panel:slide_in()
-        flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
-    end
-end
+-- function toggle_bank()
+--     if bank_panel.is_showing then
+--         bank_panel:slide_out()
+--         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
+--     else
+--         bank_panel:slide_in()
+--         flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+--     end
+-- end
 
-function toggle_work()
-    if work_panel.is_active then
-        work_panel:slide_out()
-        flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
-    else
-        work_panel:slide_in()
-        flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
-    end
-end
+-- function toggle_work()
+--     if work_panel.is_active then
+--         work_panel:slide_out()
+--         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
+--     else
+--         work_panel:slide_in()
+--         flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+--     end
+-- end
 
 function tab_clicked(clicked_panel)
     if not clicked_panel.is_active then 
         if clicked_panel.side == "left" then 
             clicked_panel.is_active = true
             pan_left()
+        elseif clicked_panel.side == "right" then 
+            clicked_panel.is_active = true
+            pan_right()
         end
     else
-            pan_home()
-            clicked_panel.is_active = false
-
+        pan_home()
+        clicked_panel.is_active = false
     end
+end
 
+function hide_panels()
+   --TODO: Add
+   -- this will hide all the other panels when one is clicked
 end
 
 function pan_home()
@@ -374,7 +380,7 @@ function _draw()
 
 
 
-    print(stat(1), 0+cam_pos.x, 190+cam_pos.y, 7 )
+    print(stat(1), (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
     --window { title = tostr(stat(1)) }
 
 end
@@ -427,7 +433,7 @@ function on_mouse_click(x, y)
         end
     end
 
-    if bank_panel.is_showing then
+    if bank_panel.is_active then
         for l in all(bank_panel.labels) do
             if l.is_hovered then
                 l:was_clicked()
@@ -445,7 +451,7 @@ function on_mouse_click(x, y)
         end
     end
 
-    if work_panel.is_showing then
+    if work_panel.is_active then
         for l in all(work_panel.labels) do
             if l.is_hovered then
                 l:was_clicked()
@@ -454,7 +460,7 @@ function on_mouse_click(x, y)
         end
     end
 
-    if handle.is_hovered and main_window.x == 0 then
+    if handle.is_hovered and cam_pos.x == 0 then
         if not are_reels_spinning() and player_stats.cash >= curr_bet then
             pull_handle()
         end
@@ -581,8 +587,7 @@ function save_stats()
 end
 
 
+-- function get_panel_item_x(panel_x, offset)
+--     return panel_x + offset
+-- end
 
-
-function get_panel_item_x(panel_x, offset)
-    return panel_x + offset
-end

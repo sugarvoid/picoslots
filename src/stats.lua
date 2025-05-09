@@ -2,6 +2,9 @@ stats_panel = {
     x = -60,
     y = 0,
     tab = Tab(91, 0, 7),
+
+    side="left",
+    is_active=false,
     
     draw = function(self)
         rectfill(self.x, 0, self.x + 56, 7 + 42, 0)
@@ -45,4 +48,4 @@ stats_panel = {
     end,
 }
 
-stats_panel.tab.func = function() toggle_stats() end
+stats_panel.tab.func = function() tab_clicked(stats_panel) end
