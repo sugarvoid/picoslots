@@ -23,6 +23,8 @@ add(clocks, clock_stop_3)
 
 mouse_offset = 2
 
+cam_pos = {x=0, y=0}
+
 local results = { 0, 0, 0 }
 
 local PAYOUTS_3 = {
@@ -46,12 +48,12 @@ reels = {}
 main_window = { x = 0 }
 
 
-local canvas_main = userdata("u8", W, H)
+local canvas_main = userdata("u8", 100, 100)
 
-local canvas_stats = userdata("u8", W, H)
-local canvas_bank = userdata("u8", W, H)
-local canvas_shop = userdata("u8", W, H)
-local canvas_work = userdata("u8", W, H)
+--local canvas_stats = userdata("u8", W, H)
+--local canvas_bank = userdata("u8", W, H)
+--local canvas_shop = userdata("u8", W, H)
+--local canvas_work = userdata("u8", W, H)
 
 local cpu = 0
 
@@ -131,11 +133,18 @@ function _update()
         toggle_window_size()
     end
 
+
+    if btn(2) then cam_pos.y-=1  end
+    if btn(3) then cam_pos.y+=1  end
+    if btn(0) then cam_pos.x-=1  end
+    if btn(1) then cam_pos.x+=1  end
+
+
     if main_window.x == 0 then
         if not auto_mode then
-            if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
-                pull_handle()
-            end
+            --if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
+            --    pull_handle()
+            --end
         end
 
         if _keyp("a") then
@@ -181,14 +190,20 @@ function _update()
 
     --update_title(string.format("%.2f", stat(1)*100) .. "% cpu")
 
-    cpu = string.format("%.2f", stat(1)*100) .. "% cpu"
-    cpu = stat(1)
+    --cpu = string.format("%.2f", stat(1)*100) .. "% cpu"
+    --cpu = stat(1)
 
 
 
     
 end
 
+
+function get_mouse_pos()
+    local _x, _y = mouse()
+    --return (mx-cam_pos.x)*mouse_offset, (my-cam_pos.y)*mouse_offset
+    return _x/mouse_offset+cam_pos.x, _y/mouse_offset+cam_pos.y
+end
 
 
 
@@ -234,17 +249,26 @@ end
 
 function _draw()
     cls()
+
     if not debt_paid then
 
         -- Stats Canvas --
-        set_draw_target(canvas_stats)
-        cls()
-        stats_panel:draw()
-
+        --set_draw_target(canvas_stats)
+        --cls()
+        
+        
 
         -- Main Canvas --
         set_draw_target(canvas_main)
         cls()
+
+        camera(cam_pos.x, cam_pos.y)
+
+        
+
+        stats_panel:draw()
+
+        
 
         line(6, 80, 17, 80, 4)
         line(80, 80, 100, 80, 4)
@@ -255,11 +279,11 @@ function _draw()
         draw_lights()
         draw_coins()
 
-        clip(20, 42, 58, 20)
+        --clip(20, 42, 58, 20)
         reel_1:draw()
         reel_2:draw()
         reel_3:draw()
-        clip()
+        --clip()
 
         handle:draw()
         hud:draw()
@@ -269,27 +293,33 @@ function _draw()
         
 
         -- Bank Canvas -- 
-        set_draw_target(canvas_bank)
-        cls()
+        --set_draw_target(canvas_bank)
+        --cls()
         bank_panel:draw()
 
         -- Shop Canvas -- 
-        set_draw_target(canvas_shop)
-        cls()
+        --set_draw_target(canvas_shop)
+        --cls()
         shop_panel:draw()
 
         -- Work Canvas -- 
-        set_draw_target(canvas_work)
-        cls()
+        --set_draw_target(canvas_work)
+        --cls()
         work_panel:draw()
+
+        spr(25, get_mouse_pos())
+
+        
 
 
         set_draw_target()
-        sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
-        sspr(canvas_main, 0, 0, 100, 100, main_window.x, 0, W, H)
-        sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
-        sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
-        sspr(canvas_work, 0, 0, 100, 100, 0, 0, W, H)
+        --sspr(canvas_bank, 0, 0, 100, 100, 0, 0, W, H)
+        sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
+
+
+       -- sspr(canvas_stats, 0, 0, 100, 100, 0, 0, W, H)
+        --sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
+        --sspr(canvas_work, 0, 0, 100, 100, 0, 0, W, H)
 
         
 
@@ -298,7 +328,10 @@ function _draw()
         print("Debt paid", 30, 50, 7)
     end
 
-    print(stat(1), 0, 190, 7 )
+
+
+    print(stat(1), 0+cam_pos.x, 190+cam_pos.y, 7 )
+    --window { title = tostr(stat(1)) }
 
 end
 
@@ -503,16 +536,7 @@ function save_stats()
     store("/appdata/slots/save_data.pod", player_stats)
 end
 
-function is_colliding(m_x, m_y, box)
-    if m_x < box.x + box.w and
-        m_x > box.x and
-        m_y < box.y + box.h and
-        m_y > box.y then
-        return true
-    else
-        return false
-    end
-end
+
 
 
 function get_panel_item_x(panel_x, offset)

@@ -31,6 +31,7 @@ function Reel:update()
 end
 
 function Reel:draw()
+	clip(self.x-cam_pos.x, self.y-cam_pos.y, 18, 18)
 	if not self.spinning then
 		spr(self.face, self.x+1, self.y+1)
 	else
@@ -38,6 +39,7 @@ function Reel:draw()
 			f:draw()
 		end
 	end
+	clip()
 	
 	spr(bg_spr, self.x, self.y)
 end
