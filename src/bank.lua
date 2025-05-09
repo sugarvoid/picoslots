@@ -1,16 +1,16 @@
 bank_panel = {
     x = 100,
     y = 0,
-    tab = Tab("right", 5, "bank"),
+    tab = Tab(89, 93, 7),
     items = {},
     is_showing = false,
     labels = {},
     transaction_value = 0,
-    lbl_get = Label.new("get", 0, 28, 7),
-    lbl_pay = Label.new("pay", 0, 28, 7),
+    lbl_get = Label("get", 0, 28, 7),
+    lbl_pay = Label("pay", 0, 28, 7),
 
-    lbl_more = Label.new(" + ", 0, 12, 7),
-    lbl_less = Label.new(" - ", 0, 12, 7),
+    lbl_more = Label(" + ", 0, 12, 7),
+    lbl_less = Label(" - ", 0, 12, 7),
 
     update = function(self)
         self.tab:update()

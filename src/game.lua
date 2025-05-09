@@ -238,12 +238,56 @@ function toggle_bank()
 end
 
 function toggle_work()
-    if work_panel.is_showing then
+    if work_panel.is_active then
         work_panel:slide_out()
         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
     else
         work_panel:slide_in()
         flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+    end
+end
+
+function tab_clicked(clicked_panel)
+    if not clicked_panel.is_active then 
+        if clicked_panel.side == "left" then 
+            clicked_panel.is_active = true
+            pan_left()
+        end
+    else
+            pan_home()
+            clicked_panel.is_active = false
+
+    end
+
+end
+
+function pan_home()
+    if true then
+        --bank_panel:slide_out()
+        flux.to(cam_pos, 0.5, { x = 0 }):ease("quadin")
+    else
+        --bank_panel:slide_in()
+        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+    end
+end
+
+function pan_left()
+    if true then
+        --bank_panel:slide_out()
+        flux.to(cam_pos, 0.5, { x = -60 }):ease("quadin")
+    else
+        --bank_panel:slide_in()
+        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
+    end
+end
+
+function pan_right()
+    if true then
+        --bank_panel:slide_out()
+        flux.to(cam_pos, 0.5, { x = 60 }):ease("quadin")
+    else
+        --bank_panel:slide_in()
+        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
     end
 end
 
@@ -270,7 +314,7 @@ function _draw()
 
         
 
-        line(6, 80, 17, 80, 4)
+        line(0, 80, 17, 80, 4)
         line(80, 80, 100, 80, 4)
 
         -- slot machine
@@ -392,7 +436,7 @@ function on_mouse_click(x, y)
         end
     end
 
-    if shop_panel.is_showing then
+    if shop_panel.is_active then
         for l in all(shop_panel.labels) do
             if l.is_hovered then
                 l:was_clicked()

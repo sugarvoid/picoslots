@@ -1,7 +1,7 @@
 stats_panel = {
     x = -60,
     y = 0,
-    tab = Tab("left", 5, "stats"),
+    tab = Tab(91, 0, 7),
     
     draw = function(self)
         rectfill(self.x, 0, self.x + 56, 7 + 42, 0)

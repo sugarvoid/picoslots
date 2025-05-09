@@ -1,13 +1,15 @@
 shop_panel = {
     x = -60,
     y = 50,
-    tab = Tab("left", 60, "shop"),
+    tab = Tab(90, 0, 50, 7, 27),
+    side="left",
+    is_active=false,
 
     labels = {},
-    lbl_item_1 = Label.new("item 1   200", 0, 60, 7),
-    lbl_item_2 = Label.new("item 2   300", 0, 67, 7),
-    lbl_item_3 = Label.new("reset   000", 0, 67+7, 7),
-    lbl_item_4 = Label.new("sell soul", 0, 67+7+9, 7),
+    lbl_item_1 = Label("item a $200", -55, 60, 7),
+    lbl_item_2 = Label("item b $300", -55, 67, 7),
+    lbl_item_3 = Label("reset  $000", -55, 67+7, 7),
+    lbl_item_4 = Label("sell soul", -55, 67+7+9, 7),
     
     draw = function(self)
         rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
@@ -26,10 +28,10 @@ shop_panel = {
         --self.stat_tab.x = self.x + 5
         foreach(self.labels, function(obj) obj:update() end )
         self.tab:update()
-        self.lbl_item_1.x = self.x + 5
-        self.lbl_item_2.x = self.x + 5
-        self.lbl_item_3.x = self.x + 5
-        self.lbl_item_4.x = self.x + 5
+        --self.lbl_item_1.x = self.x + 5
+        --self.lbl_item_2.x = self.x + 5
+        --self.lbl_item_3.x = self.x + 5
+        --self.lbl_item_4.x = self.x + 5
         
     end,
 
@@ -66,7 +68,7 @@ shop_panel = {
     end
 }
 
-shop_panel.tab.func = function() toggle_shop() end
+shop_panel.tab.func = function() tab_clicked(shop_panel) end
 
 
 shop_panel.lbl_item_1.callback = function() shop_panel:buy_item(1) end

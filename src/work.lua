@@ -6,30 +6,32 @@ work_panel = {
     x = 100,
     y = 0,
 
-    tab = Tab("right", 50, "work"),
+    tab = Tab(88, 93, 50), --"right", 50, "work"),
 
     labels = {},
 
-    lbl_0 = Label.new(" 0 ", 0, 70, 7),
-    lbl_o = Label.new(" o ", 0, 70, 7),
-    lbl_x = Label.new(" x ", 0, 70, 7),
+    lbl_0 = Label(" 0 ", 0, 70, 7),
+    lbl_o = Label(" o ", 0, 70, 7),
+    lbl_x = Label(" x ", 0, 70, 7),
 
-    lbl_1 = Label.new(" 1 ", 0, 60, 7),
-    lbl_2 = Label.new(" 2 ", 0, 60, 7),
-    lbl_3 = Label.new(" 3 ", 0, 60, 7),
-
-
-    lbl_4 = Label.new(" 4 ", 10, 52, 7),
-    lbl_5 = Label.new(" 5 ", 18, 52, 7),
-    lbl_6 = Label.new(" 6 ", 26, 52, 7),
-
-    lbl_7 = Label.new(" 7 ", 10, 45, 7),
-    lbl_8 = Label.new(" 8 ", 18, 45, 7),
-    lbl_9 = Label.new(" 9 ", 26, 45, 7),
+    lbl_1 = Label(" 1 ", 0, 60, 7),
+    lbl_2 = Label(" 2 ", 0, 60, 7),
+    lbl_3 = Label(" 3 ", 0, 60, 7),
 
 
-    lbl_question = Label.new("01+02= ", 26, 35, 7),
-    lbl_answer = Label.new("03", 26, 35, 7),
+    lbl_4 = Label(" 4 ", 10, 52, 7),
+    lbl_5 = Label(" 5 ", 18, 52, 7),
+    lbl_6 = Label(" 6 ", 26, 52, 7),
+
+    lbl_7 = Label(" 7 ", 10, 45, 7),
+    lbl_8 = Label(" 8 ", 18, 45, 7),
+    lbl_9 = Label(" 9 ", 26, 45, 7),
+
+
+    lbl_question = Label("01+02= ", 26, 35, 7),
+    lbl_answer = Label("03", 26, 35, 7),
+
+    
     
     draw = function(self)
         self.tab:draw()
@@ -123,6 +125,9 @@ work_panel.lbl_7.callback = function() work_panel:btn_pressed() end
 work_panel.lbl_8.callback = function() work_panel:btn_pressed() end
 work_panel.lbl_9.callback = function() work_panel:btn_pressed() end
 
+work_panel.lbl_question.is_static = true
+work_panel.lbl_answer.is_static = true
+
 
 
 add(work_panel.labels, work_panel.lbl_item_1)
@@ -141,6 +146,8 @@ add(work_panel.labels, work_panel.lbl_x)
 
 add(work_panel.labels, work_panel.lbl_question)
 add(work_panel.labels, work_panel.lbl_answer)
+
+
 
 
 

@@ -1,45 +1,50 @@
 
-Label={}
-Label.__index=Label
+--Label={}
+--Label.__index=Label
+
+Label = Object:extend()
 
 
 
  set_draw_target(userdata("u8", 1, 1))
 
-function Label.new(text, x, y, col)
-    local _l = setmetatable({},Label)
+function Label:new(text, x, y, col)
+
 	
-    _l.w = 35--print(text, 0, -20)
+    self.w = 35--print(text, 0, -20)
     --set_draw_target(userdata("u8", 1, 1))
 	local foo = print(text, 0, 0)
 	set_draw_target()
-	_l.interactive=true
-	_l.w=foo - 3
-    _l.h = 5
-    _l.x = x
-    _l.y = y
-    _l.text = text
-    _l.col = col
-    _l.default_col = col
-    _l.hover_col = col
-    _l.is_hovered = false
-    _l.callback=function() error("Add a function")  end
-    return _l
+	self.interactive=true
+	self.is_static=false
+	self.w=foo - 3
+    self.h = 5
+    self.x = x
+    self.y = y
+    self.text = text
+    self.col = col
+    self.default_col = col
+    self.hover_col = col
+    self.is_hovered = false
+    self.callback=function() error("Add a function")  end
 end
 
 function Label:update()
-	if is_colliding_lbl(mx/mouse_offset, my/mouse_offset, self) then
-		self.is_hovered = true
-		self.col = 12
-	else
-		self.col = self.default_col
-		self.is_hovered = false
+	if not self.is_static then
+		if is_colliding(self, get_mouse_pos()) then
+			self.is_hovered = true
+			self.col = 12
+		else
+			self.col = self.default_col
+			self.is_hovered = false
+		end
 	end
 	
 	--self:check_clicked()
 end
 
 function Label:was_clicked()
+	sfx(2)
 	self:callback()
 end
 

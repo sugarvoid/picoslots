@@ -1,29 +1,16 @@
 Tab = Object:extend()
 
-function Tab:new(side, y, text)
-    if side == "left" then
-      self.x = 2
-    else
-        self.x = 95
-    end
-    self.color = 0
-    
+function Tab:new(img, x, y)
+    self.img = img
+    self.color = 7
+    self.x = x
     self.y = y
-    self.h = 0
-    self.text = text
-    self.text_table = {}
-    self.value = 0
-    self.btn_up = {}
-    self.btn_down = {}
-    for c in text:gmatch(".") do
-        table.insert(self.text_table, c)
-        self.h += 7
-    end
+    self.h = 27
+    self.w = 7
     self.is_hovered = false
     self.is_visible = true
-    self.w = 8
+    
     self.func = function () end
-    --notify(#self.text_table)
 end
 
 function Tab:update()
@@ -31,19 +18,16 @@ function Tab:update()
         self.color = 12
         self.is_hovered = true
     else
-        self.color = 0
+        self.color = 7
         self.is_hovered = false
     end
 end
 
 function Tab:draw()
     if self.is_visible then
-        rectfill(self.x - 2, self.y - 2, (self.x - 2) + 6, (self.y-2) + self.h, self.color)
-        for key, value in ipairs(self.text_table) do
-            key-=1
-            print("\014" .. value, self.x, self.y + (6 * key), 7)
-        end
-        rect(self.x - 2, self.y - 2, (self.x - 2) + 6, (self.y-2) + self.h, 7)
+        pal(7, self.color)
+        spr(self.img, self.x, self.y)
+        pal()
     end
 end
 
