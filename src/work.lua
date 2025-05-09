@@ -11,6 +11,8 @@ work_panel = {
     labels = {},
 
     lbl_0 = Label.new(" 0 ", 0, 70, 7),
+    lbl_o = Label.new(" o ", 0, 70, 7),
+    lbl_x = Label.new(" x ", 0, 70, 7),
 
     lbl_1 = Label.new(" 1 ", 0, 60, 7),
     lbl_2 = Label.new(" 2 ", 0, 60, 7),
@@ -24,10 +26,14 @@ work_panel = {
     lbl_7 = Label.new(" 7 ", 10, 45, 7),
     lbl_8 = Label.new(" 8 ", 18, 45, 7),
     lbl_9 = Label.new(" 9 ", 26, 45, 7),
+
+
+    lbl_question = Label.new("01+02= ", 26, 35, 7),
+    lbl_answer = Label.new("03", 26, 35, 7),
     
     draw = function(self)
         self.tab:draw()
-        rectfill(self.x, 40, self.x + 50, 85, 0)
+        rectfill(self.x, 30, self.x + 50, 85, 0)
  
         --print("\014 click to buy    ", self.x, 52, 7)
         --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
@@ -38,7 +44,7 @@ work_panel = {
         --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
        -- rect(self.x, self.y, self.x + 56, self.y + 40, 7)
         --self.tab:draw()
-        rect(self.x, 40, self.x + 50, 85, 7)
+        rect(self.x, 30, self.x + 50, 85, 7)
     end,
 
     update=function(self)
@@ -59,6 +65,11 @@ work_panel = {
         self.lbl_3.x = self.x + 14+12+12
 
         self.lbl_0.x = self.x + 14
+        self.lbl_o.x = self.x + 14+12
+        self.lbl_x.x = self.x + 14+12+12
+
+        self.lbl_question.x  = self.x + 5 
+        self.lbl_answer.x  = self.x + 5+30
 
 
         --self.lbl_item_1.x = self.x + 5
@@ -98,6 +109,8 @@ work_panel = {
 
 work_panel.tab.func = function() toggle_work() end
 
+work_panel.lbl_o.callback = function() work_panel:btn_pressed(11) end
+work_panel.lbl_x.callback = function() work_panel:btn_pressed(12) end
 
 work_panel.lbl_0.callback = function() work_panel:btn_pressed() end
 work_panel.lbl_1.callback = function() work_panel:btn_pressed() end
@@ -123,6 +136,11 @@ add(work_panel.labels, work_panel.lbl_6)
 add(work_panel.labels, work_panel.lbl_7)
 add(work_panel.labels, work_panel.lbl_8)
 add(work_panel.labels, work_panel.lbl_9)
+add(work_panel.labels, work_panel.lbl_o)
+add(work_panel.labels, work_panel.lbl_x)
+
+add(work_panel.labels, work_panel.lbl_question)
+add(work_panel.labels, work_panel.lbl_answer)
 
 
 
@@ -137,7 +155,7 @@ function get_equation()
     local operation = math.random(1, 2) -- 1 addition, 2 subtraction 
 
 
-    local question = num_1 .. OPERATORS[operation] .. num_2 .. " = "
+    local question = pad_zeros(num_1, 2) .. OPERATORS[operation] .. pad_zeros(num_2,2) .. " = "
 
 
 
@@ -156,3 +174,5 @@ function get_equation()
     end
 
 end
+
+work_panel.lbl_question:set_text(get_equation())

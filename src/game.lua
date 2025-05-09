@@ -53,6 +53,11 @@ local canvas_bank = userdata("u8", W, H)
 local canvas_shop = userdata("u8", W, H)
 local canvas_work = userdata("u8", W, H)
 
+local cpu = 0
+
+
+local canvas_empty = userdata("u8", W, H)
+
 
 local tabs = {}
 
@@ -172,7 +177,20 @@ function _update()
         clock_stop_3:stop()
         stop_reel(3)
     end
+
+
+    --update_title(string.format("%.2f", stat(1)*100) .. "% cpu")
+
+    cpu = string.format("%.2f", stat(1)*100) .. "% cpu"
+    cpu = stat(1)
+
+
+
+    
 end
+
+
+
 
 function toggle_stats()
     if stats_panel.is_showing then
@@ -246,13 +264,14 @@ function _draw()
         handle:draw()
         hud:draw()
 
+
+        
+        
+
         -- Bank Canvas -- 
         set_draw_target(canvas_bank)
         cls()
         bank_panel:draw()
-
-        
-
 
         -- Shop Canvas -- 
         set_draw_target(canvas_shop)
@@ -262,7 +281,6 @@ function _draw()
         -- Work Canvas -- 
         set_draw_target(canvas_work)
         cls()
-  
         work_panel:draw()
 
 
@@ -273,12 +291,14 @@ function _draw()
         sspr(canvas_shop, 0, 0, 100, 100, 0, 0, W, H)
         sspr(canvas_work, 0, 0, 100, 100, 0, 0, W, H)
 
-        print(string.format("%.2f", stat(1)*100) .. "% cpu", 0, 190, 7 )
+        
 
 
     else
         print("Debt paid", 30, 50, 7)
     end
+
+    print(stat(1), 0, 190, 7 )
 
 end
 
@@ -348,6 +368,15 @@ function on_mouse_click(x, y)
         end
     end
 
+    if work_panel.is_showing then
+        for l in all(work_panel.labels) do
+            if l.is_hovered then
+                l:was_clicked()
+                return
+            end
+        end
+    end
+
     if handle.is_hovered and main_window.x == 0 then
         if not are_reels_spinning() and player_stats.cash >= curr_bet then
             pull_handle()
@@ -356,9 +385,6 @@ function on_mouse_click(x, y)
     end
 end
 
-function pad_zeros(num, zeros)
-    return string.format("%0" .. zeros .. "d", num)
-end
 
 function toggle_auto_mode()
     auto_mode = not auto_mode
@@ -424,7 +450,8 @@ end
 
 
 function update_title(num)
-    window { title = "$" .. pad_zeros(num, 6) }
+   -- window { title = "$" .. pad_zeros(num, 6) }
+    window { title = num  }
 end
 
 function toggle_window_size()

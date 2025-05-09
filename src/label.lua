@@ -43,6 +43,10 @@ function Label:was_clicked()
 	self:callback()
 end
 
+function Label:set_text(str)
+	self.text = str
+end
+
 function is_colliding_lbl(m_x, m_y, box)
     if m_x < box.x + box.w and
         m_x > box.x and
