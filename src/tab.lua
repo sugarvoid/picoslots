@@ -9,8 +9,7 @@ function Tab:new(img, x, y)
     self.w = 7
     self.is_hovered = false
     self.is_visible = true
-    
-    self.func = function () end
+    self.func = function() end
 end
 
 function Tab:update()
@@ -32,6 +31,5 @@ function Tab:draw()
 end
 
 function Tab:was_clicked()
-    --sfx(5)
     self.func()
 end

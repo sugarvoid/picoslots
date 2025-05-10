@@ -3,9 +3,9 @@ stats_panel = {
     y = 0,
     tab = Tab(91, 0, 7),
 
-    side="left",
-    is_active=false,
-    
+    side = "left",
+    is_active = false,
+
     draw = function(self)
         self.tab:draw()
         if self.is_active then
@@ -17,17 +17,13 @@ stats_panel = {
             print("\014 3-kind " .. pad_zeros(player_stats.three_kind, 5), self.x, 42, 7)
             rect(-60, 0, 0, 50, 7)
         end
-        
     end,
 
-
-
-    update=function(self)
-        --self.stat_tab.x = self.x + 5
+    update = function(self)
         self.tab:update()
     end,
 
-    slide_in=function(self)
+    slide_in = function(self)
         sfx(5)
         flux.to(self, 0.5, { x = -2 }):ease("quadout")
         flux.to(self.tab, 0.5, { x = 56 }):ease("quadout")
@@ -36,19 +32,18 @@ stats_panel = {
         bank_panel.tab.is_visible = false
         work_panel.tab.is_visible = false
     end,
-    slide_out=function(self)
+
+    slide_out = function(self)
         sfx(9)
         flux.to(self, 0.5, { x = -60 }):ease("quadin"):oncomplete(
-            function ()
+            function()
                 self.is_showing = false
-               -- stats_display.stat_tab.is_visible = true
                 shop_panel.tab.is_visible = true
                 bank_panel.tab.is_visible = true
                 work_panel.tab.is_visible = true
             end
         )
         flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")
-        
     end,
 }
 

@@ -1,4 +1,3 @@
-
 Light = Object:extend()
 
 local light_y = 17
@@ -7,7 +6,7 @@ function Light:new(x)
 	self.img = 11
 	self.tic = 0
 	self.x = x
-	self.is_on = false 
+	self.is_on = false
 	self.col = 8
 end
 
@@ -38,11 +37,11 @@ function Light:turn_off()
 end
 
 function draw_lights()
-	foreach(all_lights, function(obj) obj:draw() end )
+	foreach(all_lights, function(obj) obj:draw() end)
 end
 
 function update_lights()
-	foreach(all_lights, function(obj) obj:update() end )
+	foreach(all_lights, function(obj) obj:update() end)
 end
 
 local light_small_actions = {
@@ -78,24 +77,23 @@ local light_small_actions = {
 }
 
 light_man = {
-	is_running=false,
-	t=0,
-	seconds=0,
-	update=function(self)
+	is_running = false,
+	t = 0,
+	seconds = 0,
+	update = function(self)
 		if self.is_running then
-	        self.t = self.t + 1
-	        if self.t >= 5 then
-	            --self:tick()
-	            self.seconds+=1
-	            do_small_lights()
-	            self.t = 0
-	        end
-	    end
+			self.t = self.t + 1
+			if self.t >= 5 then
+				self.seconds += 1
+				do_small_lights()
+				self.t = 0
+			end
+		end
 	end,
-	restart=function(self)
-		self.is_running=false
-		self.t=0
-		self.seconds=0
+	restart = function(self)
+		self.is_running = false
+		self.t = 0
+		self.seconds = 0
 	end,
 }
 

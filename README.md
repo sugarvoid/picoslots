@@ -1,6 +1,8 @@
 # Picoslots
 - A slot machine 
 
+[Play in browser](https://sugarvoid.itch.io/slots)
+
 ![gameplay](https://github.com/sugarvoid/picoslots/blob/main/gameplay.gif)
 <br>
 

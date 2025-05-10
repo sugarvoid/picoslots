@@ -10,33 +10,17 @@ bank_panel = {
     transaction_value = 0,
     lbl_get = Label("get", 105, 28, 7),
     lbl_pay = Label("pay", 130, 28, 7),
-
     lbl_more = Label(" + ", 105, 12, 7),
     lbl_less = Label(" - ", 130, 12, 7),
 
     update = function(self)
         self.tab:update()
 
-        --TODO: remove this from update. 
-        --self.lbl_get.x = self.x + 5
-        --self.lbl_pay.x = self.x + 30
-
-        --self.lbl_more.x = self.x + 5
-        --self.lbl_less.x = self.x + 30
-
         if self.is_active then
             foreach(self.labels, function(obj) obj:update() end )
-            --self.lbl_get:update()
-            --self.lbl_pay:update()
-            --self.lbl_more:update()
-            --self.lbl_less:update()
-            --if wheel_y > 0 then
-            --    self.transaction_value = mid(0, self.transaction_value + 100, 4000)
-            --elseif wheel_y < 0 then
-            --    self.transaction_value = mid(0, self.transaction_value - 100, 4000)
-            --end
         end
     end,
+
     draw = function(self)
         self.tab:draw()
         if self.is_active then
@@ -47,28 +31,6 @@ bank_panel = {
             rect(99, 0, 149, 40, 7)
         end
     end,
-    -- slide_in = function(self)
-    --     sfx(5)
-    --     flux.to(self, 0.5, { x = 50 }):ease("quadout")
-    --     flux.to(self.tab, 0.5, { x = 46 }):ease("quadout")
-    --     self.is_showing = true
-    --     stats_panel.tab.is_visible = false
-    --     shop_panel.tab.is_visible = false
-    --     work_panel.tab.is_visible = false
-    -- end,
-    -- slide_out = function(self)
-    --     sfx(9)
-    --     flux.to(self, 0.5, { x = 100 }):ease("quadout"):oncomplete(
-    --         function()
-    --             self.is_showing = false
-    --             stats_panel.tab.is_visible = true
-    --             shop_panel.tab.is_visible = true
-    --             work_panel.tab.is_visible = true
-    --             self.transaction_value = 0
-    --         end
-    --     )
-    --     flux.to(self.tab, 0.5, { x = 95 }):ease("quadout")
-    -- end,
 
     get_money = function(self)
         if self.transaction_value > 0 then
@@ -80,6 +42,7 @@ bank_panel = {
         end
         self.transaction_value = 0
     end,
+
     pay_money = function(self)
         if self.transaction_value > 0 and player_stats.cash >= self.transaction_value then
             player_stats.cash -= self.transaction_value
@@ -98,6 +61,7 @@ bank_panel = {
 
         
     end,
+    
     change_trans_value = function(self, amount)
         self.transaction_value = mid(0, self.transaction_value + amount, 4000)
     end

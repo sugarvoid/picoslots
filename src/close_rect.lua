@@ -21,9 +21,9 @@ function CloseRect:update()
     end
 end
 
-function CloseRect:draw()
-    rect(self.x, self.y, self.x + self.w, self.y + self.h, self.color)
-end
+-- function CloseRect:draw()
+--     rect(self.x, self.y, self.x + self.w, self.y + self.h, self.color)
+-- end
 
 function CloseRect:was_clicked()
     self.func()

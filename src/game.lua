@@ -22,17 +22,17 @@ add(clocks, clock_stop_1)
 add(clocks, clock_stop_2)
 add(clocks, clock_stop_3)
 
-mouse_offset = 2
+window_scale = 2
 
-cam_pos = {x=0, y=0}
+cam_pos = { x = 0, y = 0 }
 
 local results = { 0, 0, 0 }
 
 local left_close = CloseRect(7, 40)
 local right_close = CloseRect(50, 42)
 
-left_close.func = function() pan_home()  end
-right_close.func = function() pan_home () end
+left_close.func = function() pan_home() end
+right_close.func = function() pan_home() end
 
 
 local close_rects = {}
@@ -63,21 +63,8 @@ main_window = { x = 0 }
 
 local canvas_main = userdata("u8", 100, 100)
 
---local canvas_stats = userdata("u8", W, H)
---local canvas_bank = userdata("u8", W, H)
---local canvas_shop = userdata("u8", W, H)
---local canvas_work = userdata("u8", W, H)
-
-local cpu = 0
-
-
---local canvas_empty = userdata("u8", W, H)
-
-
 local tabs = {}
 
---local stat_tab = Tab("left", 5, "stats")
---stat_tab.func = function() toggle_stats() end
 
 add(tabs, stats_panel.tab)
 add(tabs, shop_panel.tab)
@@ -92,8 +79,6 @@ function _init()
     end
 
     load_stats()
-
-    --player_stats.cooldown = 100
 
     poke(0x5f5c, 255)
     poke(0x5f5d, 255)
@@ -123,7 +108,7 @@ function _update()
 
     if mb == 1 then
         if m_delay == 0 then
-            on_mouse_click(mx, my)
+            on_mouse_click()
             m_delay = m_delay + 1
             return
         end
@@ -131,39 +116,20 @@ function _update()
         m_delay = 0
     end
 
-
-    if _keyp("s") then
-        tab_clicked(shop_panel)
-    end
-
-    if _keyp("i") then
-        tab_clicked(stats_panel)
-    end
-
-    if _keyp("b") then
-        tab_clicked(bank_panel)
-    end
-
-    if _keyp("e") then
-        tab_clicked(work_panel)
-    end
-
     if _keyp("f") then
         toggle_window_size()
     end
 
+    --if btn(2) then cam_pos.y-=1  end
+    --if btn(3) then cam_pos.y+=1  end
+    --if btn(0) then cam_pos.x-=1  end
+    --if btn(1) then cam_pos.x+=1  end
 
-    if btn(2) then cam_pos.y-=1  end
-    if btn(3) then cam_pos.y+=1  end
-    if btn(0) then cam_pos.x-=1  end
-    if btn(1) then cam_pos.x+=1  end
-
-
-    if main_window.x == 0 then
+    if cam_pos.x == 0 then
         if not auto_mode then
-            --if btnp(3) and not are_reels_spinning() and player_stats.cash >= curr_bet then
-                --pull_handle()
-            --end
+            if btnp(3) and not are_reels_spinning() and player_stats.cash >= PULL_COST then
+                pull_handle()
+            end
         end
 
         if _keyp("a") then
@@ -181,18 +147,12 @@ function _update()
     bank_panel:update()
     shop_panel:update()
     work_panel:update()
-
     handle:update()
-
 
     foreach(reels, function(obj) obj:update() end)
     foreach(clocks, function(obj) obj:update() end)
-    foreach(all_m_text, function(obj) obj:update() end )
-
-
-    
-    foreach(close_rects, function(obj) obj:update() end )
-    
+    foreach(all_m_text, function(obj) obj:update() end)
+    foreach(close_rects, function(obj) obj:update() end)
 
     if clock_pull.seconds >= 5 then
         clock_pull.seconds = 0
@@ -212,30 +172,16 @@ function _update()
         stop_reel(3)
     end
 
-
-    --update_title(string.format("%.2f", stat(1)*100) .. "% cpu")
-
-    --cpu = string.format("%.2f", stat(1)*100) .. "% cpu"
-    --cpu = stat(1)
-
-
-    sec_tick-=1 
+    sec_tick -= 1
     if sec_tick <= 0 then
         on_second()
     end
-
-
-
-    
 end
-
 
 function get_mouse_pos()
-    local _x, _y = mouse()
-    --return (mx-cam_pos.x)*mouse_offset, (my-cam_pos.y)*mouse_offset
-    return _x/mouse_offset+cam_pos.x, _y/mouse_offset+cam_pos.y
+    --local _x, _y = mouse()
+    return mx / window_scale + cam_pos.x, my / window_scale + cam_pos.y
 end
-
 
 function on_second()
     if player_stats.cooldown > 0 then
@@ -244,70 +190,27 @@ function on_second()
     sec_tick = 60
 end
 
-
--- function toggle_stats()
---     if stats_panel.is_showing then
---         stats_panel:slide_out()
---         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
---     else
---         stats_panel:slide_in()
---         flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
---     end
--- end
-
--- function toggle_shop()
---     if shop_panel.is_showing then
---         shop_panel:slide_out()
---         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
---     else
---         shop_panel:slide_in()
---         flux.to(main_window, 0.5, { x = (W / 2) + 10 }):ease("quadout")
---     end
--- end
-
--- function toggle_bank()
---     if bank_panel.is_showing then
---         bank_panel:slide_out()
---         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
---     else
---         bank_panel:slide_in()
---         flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
---     end
--- end
-
--- function toggle_work()
---     if work_panel.is_active then
---         work_panel:slide_out()
---         flux.to(main_window, 0.5, { x = 0 }):ease("quadin")
---     else
---         work_panel:slide_in()
---         flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
---     end
--- end
-
 function tab_clicked(clicked_panel)
-    if not clicked_panel.is_active then 
-        if clicked_panel.side == "left" then 
+    if not clicked_panel.is_active then
+        if clicked_panel.side == "left" then
             clicked_panel.is_active = true
             pan_left()
-        elseif clicked_panel.side == "right" then 
+        elseif clicked_panel.side == "right" then
             clicked_panel.is_active = true
             pan_right()
         end
     else
         pan_home()
-        --clicked_panel.is_active = false
     end
 end
 
 function hide_panels()
-   --TODO: Add
-   -- this will hide all the other panels when one is clicked
+    --TODO: Add
+    -- this will hide all the other panels when one is clicked
 end
 
 function pan_home()
-    if true then
-        --bank_panel:slide_out()
+    if cam_pos.x != 0 then
         flux.to(cam_pos, 0.5, { x = 0 }):ease("quadin"):oncomplete(
             function()
                 shop_panel.is_active = false
@@ -317,54 +220,28 @@ function pan_home()
                 show_tabs()
             end
         )
-    else
-        --bank_panel:slide_in()
-        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
     end
 end
 
 function pan_left()
-    if true then
-        --bank_panel:slide_out()
-        flux.to(cam_pos, 0.5, { x = -60 }):ease("quadin")
-    else
-        --bank_panel:slide_in()
-        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
-    end
+    flux.to(cam_pos, 0.5, { x = -60 }):ease("quadin")
 end
 
 function pan_right()
-    if true then
-        --bank_panel:slide_out()
-        flux.to(cam_pos, 0.5, { x = 50 }):ease("quadin")
-    else
-        --bank_panel:slide_in()
-        --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
-    end
+    flux.to(cam_pos, 0.5, { x = 50 }):ease("quadin")
 end
 
 function _draw()
     cls()
 
     if not debt_paid then
-
-        -- Stats Canvas --
-        --set_draw_target(canvas_stats)
-        --cls()
-        
-        
-
         -- Main Canvas --
         set_draw_target(canvas_main)
         cls()
 
         camera(cam_pos.x, cam_pos.y)
 
-        
-
         stats_panel:draw()
-
-        
 
         line(0, 80, 17, 80, 4)
         line(80, 80, 100, 80, 4)
@@ -381,31 +258,20 @@ function _draw()
         reel_3:draw()
 
         handle:draw()
-        
+
         bank_panel:draw()
         shop_panel:draw()
         work_panel:draw()
 
         hud:draw()
 
-        foreach(close_rects, function(obj) obj:draw() end )
+        --foreach(close_rects, function(obj) obj:draw() end)
 
         set_draw_target()
         sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
-
-
-
     else
         print("Debt paid", 30, 50, 7)
     end
-
-
-    --local y = date("*t")
-    --print(stat(1), (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
-    -- print(y.sec, (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
-
-    --window { title = tostr(stat(1)) }
-
 end
 
 function start_reels()
@@ -448,7 +314,7 @@ function update_dt()
     last_time = t
 end
 
-function on_mouse_click(x, y)
+function on_mouse_click()
     for t in all(tabs) do
         if t.is_hovered and t.is_visible then
             t:was_clicked()
@@ -491,7 +357,6 @@ function on_mouse_click(x, y)
         return
     end
 
-
     if cam_pos.x != 0 then
         for r in all(close_rects) do
             if r.is_hovered then
@@ -515,7 +380,6 @@ function show_tabs()
         t.is_visible = true
     end
 end
-
 
 function toggle_auto_mode()
     auto_mode = not auto_mode
@@ -579,13 +443,11 @@ function get_payout(r)
     end
 end
 
-
 function update_title(num)
-   -- window { title = "$" .. pad_zeros(num, 6) }
-    window { title = num  }
+    window { title = num }
 end
 
-function draw_cooldown(x,y)
+function draw_cooldown(x, y)
     p8_print(seconds_to_hms(player_stats.cooldown), x, y, 7)
 end
 
@@ -593,10 +455,10 @@ function toggle_window_size()
     --todo: both will always be the same, do i need both varibles?
     if W == 100 then
         W, H = 200, 200
-        mouse_offset = 2
+        window_scale = 2
     else
         W, H = 100, 100
-        mouse_offset = 1
+        window_scale = 1
     end
     window {
         width  = W,
@@ -640,16 +502,9 @@ function save_stats()
     store("/appdata/slots/save_data.pod", player_stats)
 end
 
-
 function seconds_to_hms(seconds)
     local h = flr(seconds / 3600)
     local m = flr((seconds % 3600) / 60)
     local s = seconds % 60
     return string.format("%02d:%02d:%02d", h, m, s)
 end
-
-
--- function get_panel_item_x(panel_x, offset)
---     return panel_x + offset
--- end
-
