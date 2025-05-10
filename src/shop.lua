@@ -14,7 +14,7 @@ shop_panel = {
     draw = function(self)
         self.tab:draw()
         if self.is_active then
-            rectfill(self.x, self.y, self.x + 56, self.y + 40, 0)
+            rectfill(-60, 50, 0, 90, 0)
             print("\014 click to buy    ", self.x, 52, 7)
             --print("\014 item a: " .. pad_zeros(200, 5), self.x, 60, 7)
         -- print("\014 item b: " .. pad_zeros(300, 5), self.x, 67, 7)
@@ -22,7 +22,7 @@ shop_panel = {
             foreach(self.labels, function(obj) obj:draw() end )
             --print("\014 2-kind: " .. pad_zeros(player_stats.two_kind, 5), self.x, 28, 7)
             --print("\014 3-kind: " .. pad_zeros(player_stats.three_kind, 5), self.x, 35, 7)
-            rect(self.x, self.y, self.x + 56, self.y + 40, 7)
+            rect(-60, 50, 0, 90, 7)
         end
         
     end,
@@ -38,29 +38,29 @@ shop_panel = {
         
     end,
 
-    slide_in=function(self)
-        sfx(5)
-        flux.to(self, 0.5, { x = -2 }):ease("quadout")
-        flux.to(self.tab, 0.5, { x = 56 }):ease("quadout")
-        self.is_showing = true
-        stats_panel.tab.is_visible = false
-        bank_panel.tab.is_visible = false
-        work_panel.tab.is_visible = false
-    end,
-    slide_out=function(self)
-        sfx(9)
-        flux.to(self, 0.5, { x = -60 }):ease("quadin"):oncomplete(
-            function ()
-                self.is_showing = false
-                stats_panel.tab.is_visible = true
-                work_panel.tab.is_visible = true
-               -- shop_pannel.tab.is_visible = true
-                bank_panel.tab.is_visible = true
-            end
-        )
-        flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")
+    -- slide_in=function(self)
+    --     sfx(5)
+    --     flux.to(self, 0.5, { x = -2 }):ease("quadout")
+    --     flux.to(self.tab, 0.5, { x = 56 }):ease("quadout")
+    --     self.is_showing = true
+    --     stats_panel.tab.is_visible = false
+    --     bank_panel.tab.is_visible = false
+    --     work_panel.tab.is_visible = false
+    -- end,
+    -- slide_out=function(self)
+    --     sfx(9)
+    --     flux.to(self, 0.5, { x = -60 }):ease("quadin"):oncomplete(
+    --         function ()
+    --             self.is_showing = false
+    --             stats_panel.tab.is_visible = true
+    --             work_panel.tab.is_visible = true
+    --            -- shop_pannel.tab.is_visible = true
+    --             bank_panel.tab.is_visible = true
+    --         end
+    --     )
+    --     flux.to(self.tab, 0.5, { x = 2 }):ease("quadin")
         
-    end,
+    -- end,
     buy_item=function(self,item_idx)
         --notify("buying item")
         notify("buying item " .. tostr(item_idx))

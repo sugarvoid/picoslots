@@ -301,7 +301,7 @@ end
 function pan_right()
     if true then
         --bank_panel:slide_out()
-        flux.to(cam_pos, 0.5, { x = 60 }):ease("quadin")
+        flux.to(cam_pos, 0.5, { x = 50 }):ease("quadin")
     else
         --bank_panel:slide_in()
         --flux.to(main_window, 0.5, { x = -W / 2 }):ease("quadout")
