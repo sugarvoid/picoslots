@@ -28,6 +28,18 @@ cam_pos = {x=0, y=0}
 
 local results = { 0, 0, 0 }
 
+local left_close = CloseRect(0, 40)
+local right_close = CloseRect(50, 49)
+
+left_close.func = function() pan_home()  end
+right_close.func = function() pan_home () end
+
+
+local close_rects = {}
+
+add(close_rects, left_close)
+add(close_rects, right_close)
+
 local PAYOUTS_3 = {
     100, 200, 300, 400, 500, 600, 700, 800
 }
@@ -176,6 +188,11 @@ function _update()
     foreach(reels, function(obj) obj:update() end)
     foreach(clocks, function(obj) obj:update() end)
     foreach(all_m_text, function(obj) obj:update() end )
+
+
+    
+    foreach(close_rects, function(obj) obj:update() end )
+    
 
     if clock_pull.seconds >= 5 then
         clock_pull.seconds = 0
@@ -370,6 +387,8 @@ function _draw()
 
         hud:draw()
 
+        foreach(close_rects, function(obj) obj:draw() end )
+
         set_draw_target()
         sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
 
@@ -468,6 +487,16 @@ function on_mouse_click(x, y)
             pull_handle()
         end
         return
+    end
+
+
+    if cam_pos.x != 0 then
+        for r in all(close_rects) do
+            if r.is_hovered then
+                r:was_clicked()
+                return
+            end
+        end
     end
 end
 

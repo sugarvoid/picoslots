@@ -5,6 +5,9 @@ p_spr_3 = 75
 p_spr_4 = 75
 
 
+
+
+
 hud = {
 	draw=function(self)
 		print("$", 32, 0, 7)
