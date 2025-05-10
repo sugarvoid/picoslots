@@ -28,6 +28,8 @@ hud = {
 		if auto_mode and flr(time() * 2) % 2 == 0  then
 			print("\014auto", 1, 92, 7)
 		end
+
+		foreach(all_m_text, function(obj) obj:draw() end )
 	end,
 	update_payout_spr=function(self, num)
 		p_spr_1, p_spr_2, p_spr_3, p_spr_4 = number_to_spr(num)

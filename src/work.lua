@@ -119,7 +119,9 @@ work_panel = {
                 
                 sfx(10)
                 player_stats.cash += 2
+                player_stats.earned += 2
                 notify("Earned $2.00")
+                MText:new("$2", 27, {x=38, y=2}, 110, 30)
                 save_stats()
             else
                sfx(8)

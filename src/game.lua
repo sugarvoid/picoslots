@@ -8,7 +8,7 @@ local last_time = time()
 local dt = 0
 local key_delay = 0
 
-local VERSION = 4
+local VERSION = 5
 local sec_tick = 0
 
 local clock_pull = Clock()
@@ -81,7 +81,7 @@ function _init()
 
     load_stats()
 
-    player_stats.cooldown = 100
+    -- player_stats.cooldown = 100
 
     poke(0x5f5c, 255)
     poke(0x5f5d, 255)
@@ -175,6 +175,7 @@ function _update()
 
     foreach(reels, function(obj) obj:update() end)
     foreach(clocks, function(obj) obj:update() end)
+    foreach(all_m_text, function(obj) obj:update() end )
 
     if clock_pull.seconds >= 5 then
         clock_pull.seconds = 0
@@ -362,12 +363,12 @@ function _draw()
         reel_3:draw()
 
         handle:draw()
-        hud:draw()
+        
         bank_panel:draw()
         shop_panel:draw()
         work_panel:draw()
 
-        
+        hud:draw()
 
         set_draw_target()
         sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
@@ -379,9 +380,10 @@ function _draw()
     end
 
 
-    local y = date("*t")
+    --local y = date("*t")
     --print(stat(1), (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
-    print(y.sec, (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
+    -- print(y.sec, (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
+
     --window { title = tostr(stat(1)) }
 
 end
@@ -584,6 +586,7 @@ function create_new_save()
         cash = 200,
         debt = 22100,
         cooldown = 0,
+        earned = 0,
         date = { y = 0, m = 0, d = 0 },
     }
 end
