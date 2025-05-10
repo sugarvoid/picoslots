@@ -357,8 +357,9 @@ function _draw()
     end
 
 
-
-    print(stat(1), (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
+    local y = date("*t")
+    --print(stat(1), (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
+    print(y.sec, (0+cam_pos.x)/mouse_offset, 190+cam_pos.y/mouse_offset, 7 )
     --window { title = tostr(stat(1)) }
 
 end
