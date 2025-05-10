@@ -8,7 +8,8 @@ local last_time = time()
 local dt = 0
 local key_delay = 0
 
-local VERSION = 3
+local VERSION = 4
+local sec_tick = 0
 
 local clock_pull = Clock()
 local clock_stop_1 = Clock()
@@ -79,6 +80,8 @@ function _init()
     end
 
     load_stats()
+
+    player_stats.cooldown = 100
 
     poke(0x5f5c, 255)
     poke(0x5f5d, 255)
@@ -198,6 +201,12 @@ function _update()
     --cpu = stat(1)
 
 
+    sec_tick-=1 
+    if sec_tick <= 0 then
+        on_second()
+    end
+
+
 
     
 end
@@ -209,6 +218,13 @@ function get_mouse_pos()
     return _x/mouse_offset+cam_pos.x, _y/mouse_offset+cam_pos.y
 end
 
+
+function on_second()
+    if player_stats.cooldown > 0 then
+        player_stats.cooldown -= 1
+    end
+    sec_tick = 60
+end
 
 
 -- function toggle_stats()
@@ -350,8 +366,14 @@ function _draw()
         bank_panel:draw()
         shop_panel:draw()
         work_panel:draw()
+
+        
+
         set_draw_target()
         sspr(canvas_main, 0, 0, 100, 100, cam_pos.x, cam_pos.y, W, H)
+
+
+
     else
         print("Debt paid", 30, 50, 7)
     end
@@ -516,6 +538,10 @@ function update_title(num)
     window { title = num  }
 end
 
+function draw_cooldown(x,y)
+    p8_print(seconds_to_hms(player_stats.cooldown), x, y, 7)
+end
+
 function toggle_window_size()
     --todo: both will always be the same, do i need both varibles?
     if W == 100 then
@@ -548,7 +574,7 @@ end
 
 function create_new_save()
     return {
-        version = 3,
+        version = 4,
         total_pulls = 0,
         total_spent = 0,
         total_earned = 0,
@@ -557,12 +583,21 @@ function create_new_save()
         three_kind = 0,
         cash = 200,
         debt = 22100,
+        cooldown = 0,
         date = { y = 0, m = 0, d = 0 },
     }
 end
 
 function save_stats()
     store("/appdata/slots/save_data.pod", player_stats)
+end
+
+
+function seconds_to_hms(seconds)
+    local h = flr(seconds / 3600)
+    local m = flr((seconds % 3600) / 60)
+    local s = seconds % 60
+    return string.format("%02d:%02d:%02d", h, m, s)
 end
 
 

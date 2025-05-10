@@ -41,14 +41,20 @@ work_panel = {
         self.tab:draw()
         if self.is_active then
             rectfill(99, 30, 149, 85, 0)
-            foreach(self.labels, function(obj) obj:draw() end )
+            if player_stats.cooldown <= 0 then
+                foreach(self.labels, function(obj) obj:draw() end )
+            else
+                p8_print("cooldown", 114, 52, 7)
+                draw_cooldown(110, 70)
+            end
+            
             rect(99, 30, 149, 85, 7)
         end
     end,
 
     update=function(self)
         self.tab:update()
-        if self.is_active then
+        if self.is_active and player_stats.cooldown <= 0 then
             --self.stat_tab.x = self.x + 5
             foreach(self.labels, function(obj) obj:update() end )
             --self.tab:update()
@@ -117,6 +123,7 @@ work_panel = {
                 save_stats()
             else
                sfx(8)
+               player_stats.cooldown += 30
             end 
             self.input = ""
             self.lbl_answer:set_text(self.input)
