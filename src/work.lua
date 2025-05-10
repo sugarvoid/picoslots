@@ -40,9 +40,9 @@ work_panel = {
     draw = function(self)
         self.tab:draw()
         if self.is_active then
-            rectfill(100, 30, 149, 85, 0)
+            rectfill(99, 30, 149, 85, 0)
             foreach(self.labels, function(obj) obj:draw() end )
-            rect(100, 30, 149, 85, 7)
+            rect(99, 30, 149, 85, 7)
         end
     end,
 

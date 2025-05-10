@@ -40,11 +40,11 @@ bank_panel = {
     draw = function(self)
         self.tab:draw()
         if self.is_active then
-            rectfill(100, 0, 149, 40, 0)
+            rectfill(99, 0, 149, 40, 0)
             print("\014    loan ", 100, 2, 7)
             foreach(self.labels, function(obj) obj:draw() end )
             print("\014" .. tostr(pad_zeros(self.transaction_value, 4)), 116, 12, 7)
-            rect(100, 0, 149, 40, 7)
+            rect(99, 0, 149, 40, 7)
         end
     end,
     -- slide_in = function(self)
