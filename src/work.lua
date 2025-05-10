@@ -13,8 +13,9 @@ work_panel = {
     labels = {},
 
     lbl_0 = Label(" 0 ", 114, 70, 7),
-    lbl_o = Label(" o ", 126, 70, 7),
-    lbl_x = Label(" x ", 138, 70, 7),
+    
+    lbl_o = Label(" e ", 126, 75, 7),
+    lbl_x = Label(" c ", 138, 75, 7),
 
     lbl_1 = Label(" 1 ", 114, 60, 7),
     lbl_2 = Label(" 2 ", 126, 60, 7),
@@ -113,7 +114,7 @@ work_panel = {
         if b_idx < 11 and #self.input <= 1 then
             self.input ..= tostr(b_idx)
             self.lbl_answer:set_text(self.input)
-        elseif b_idx == 11 then
+        elseif b_idx == 11 and #self.input < 0 then
             --local _a = tonum(self.input)
             if tonum(self.input) == self.current_a then
                 

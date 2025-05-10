@@ -8,7 +8,7 @@ local last_time = time()
 local dt = 0
 local key_delay = 0
 
-local VERSION = 5
+local VERSION = 6
 local sec_tick = 0
 
 local clock_pull = Clock()
@@ -28,8 +28,8 @@ cam_pos = {x=0, y=0}
 
 local results = { 0, 0, 0 }
 
-local left_close = CloseRect(0, 40)
-local right_close = CloseRect(50, 49)
+local left_close = CloseRect(7, 40)
+local right_close = CloseRect(50, 42)
 
 left_close.func = function() pan_home()  end
 right_close.func = function() pan_home () end
@@ -314,6 +314,7 @@ function pan_home()
                 bank_panel.is_active = false
                 stats_panel.is_active = false
                 work_panel.is_active = false
+                show_tabs()
             end
         )
     else
@@ -449,8 +450,9 @@ end
 
 function on_mouse_click(x, y)
     for t in all(tabs) do
-        if t.is_hovered then
+        if t.is_hovered and t.is_visible then
             t:was_clicked()
+            hide_tabs(t)
             return
         end
     end
@@ -497,6 +499,20 @@ function on_mouse_click(x, y)
                 return
             end
         end
+    end
+end
+
+function hide_tabs(clicked_tab)
+    for t in all(tabs) do
+        if t != clicked_tab then
+            t.is_visible = false
+        end
+    end
+end
+
+function show_tabs()
+    for t in all(tabs) do
+        t.is_visible = true
     end
 end
 
@@ -605,14 +621,14 @@ end
 
 function create_new_save()
     return {
-        version = 4,
+        version = 6,
         total_pulls = 0,
         total_spent = 0,
         total_earned = 0,
         total_profit = 0,
         two_kind = 0,
         three_kind = 0,
-        cash = 200,
+        cash = 100,
         debt = 22100,
         cooldown = 0,
         earned = 0,
