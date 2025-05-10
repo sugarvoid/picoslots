@@ -11,7 +11,7 @@
 |Down| Pull handle|
 |A|  Toggle auto mode |
 |F|    Toggle screen size |
-|S|    Toggle stats |
+
 
 ## Libraries  Used
 - [flux](https://github.com/rxi/flux)

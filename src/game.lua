@@ -55,7 +55,7 @@ show_payout = false
 debt_paid = false
 
 payout = 0
-curr_bet = 5
+PULL_COST = 5
 reels = {}
 
 main_window = { x = 0 }
@@ -93,7 +93,7 @@ function _init()
 
     load_stats()
 
-    -- player_stats.cooldown = 100
+    --player_stats.cooldown = 100
 
     poke(0x5f5c, 255)
     poke(0x5f5d, 255)
@@ -101,7 +101,7 @@ function _init()
         width      = 100,
         height     = 100,
         resizeable = false,
-        title      = "Slots",
+        title      = "Picoslots",
         fullscreen = false,
         x          = 260,
         y          = 50,
@@ -433,7 +433,7 @@ function stop_reel(num)
         has_spun = false
         show_payout = true
         payout = get_payout(results)
-        payout = payout * (curr_bet / 5)
+        payout = payout * (PULL_COST / 5)
         hud:update_payout_spr(payout)
         player_stats.cash = mid(0, player_stats.cash + payout, 999999)
         player_stats.total_earned += payout
@@ -485,7 +485,7 @@ function on_mouse_click(x, y)
     end
 
     if handle.is_hovered and cam_pos.x == 0 then
-        if not are_reels_spinning() and player_stats.cash >= curr_bet then
+        if not are_reels_spinning() and player_stats.cash >= PULL_COST then
             pull_handle()
         end
         return

@@ -8,8 +8,7 @@ function CloseRect:new(x, w)
     self.w = w
     self.is_hovered = false
     self.is_visible = true
-
-    self.func = nil  --function() end
+    self.func = nil
 end
 
 function CloseRect:update()
@@ -27,6 +26,5 @@ function CloseRect:draw()
 end
 
 function CloseRect:was_clicked()
-    --sfx(5)
     self.func()
 end

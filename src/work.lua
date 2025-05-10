@@ -1,6 +1,14 @@
 
 local OPERATORS = {"+", "-"} 
 
+local COL_1 = 105
+local COL_2 = 105+12
+local COL_3 = 105+12+12
+
+local ROW_1 = 45
+local ROW_2 = 45+8
+local ROW_3 = 45+8+8
+local ROW_4 = 45+8+8+8
 
 work_panel = {
     x = 100,
@@ -12,23 +20,23 @@ work_panel = {
 
     labels = {},
 
-    lbl_0 = Label(" 0 ", 114, 70, 7),
+    lbl_0 = Label(" 0 ", COL_1, ROW_4, 7),
     
-    lbl_o = Label(" e ", 126, 75, 7),
-    lbl_x = Label(" c ", 138, 75, 7),
+    lbl_o = Label(" e ", COL_2, ROW_4, 7),
+    lbl_x = Label(" c ", COL_3, ROW_4, 7),
 
-    lbl_1 = Label(" 1 ", 114, 60, 7),
-    lbl_2 = Label(" 2 ", 126, 60, 7),
-    lbl_3 = Label(" 3 ", 138, 60, 7),
+    lbl_1 = Label(" 1 ", COL_1, ROW_3, 7),
+    lbl_2 = Label(" 2 ", COL_2, ROW_3, 7),
+    lbl_3 = Label(" 3 ", COL_3, ROW_3, 7),
 
 
-    lbl_4 = Label(" 4 ", 114, 52, 7),
-    lbl_5 = Label(" 5 ", 126, 52, 7),
-    lbl_6 = Label(" 6 ", 138, 52, 7),
+    lbl_4 = Label(" 4 ", COL_1, ROW_2, 7),
+    lbl_5 = Label(" 5 ", COL_2, ROW_2, 7),
+    lbl_6 = Label(" 6 ", COL_3, ROW_2, 7),
 
-    lbl_7 = Label(" 7 ", 114, 45, 7),
-    lbl_8 = Label(" 8 ", 126, 45, 7),
-    lbl_9 = Label(" 9 ", 138, 45, 7),
+    lbl_7 = Label(" 7 ", COL_1, ROW_1, 7),
+    lbl_8 = Label(" 8 ", COL_2, ROW_1, 7),
+    lbl_9 = Label(" 9 ", COL_3, ROW_1, 7),
 
 
     lbl_question = Label("01+02= ", 105, 35, 7),
@@ -45,8 +53,10 @@ work_panel = {
             if player_stats.cooldown <= 0 then
                 foreach(self.labels, function(obj) obj:draw() end )
             else
-                p8_print("cooldown", 114, 52, 7)
-                draw_cooldown(110, 70)
+                p8_print("cooldown", 109, 52, 7)
+                rect(100, 31, 148, 84, 8)
+
+                draw_cooldown(109, 70)
             end
             
             rect(99, 30, 149, 85, 7)
@@ -114,14 +124,13 @@ work_panel = {
         if b_idx < 11 and #self.input <= 1 then
             self.input ..= tostr(b_idx)
             self.lbl_answer:set_text(self.input)
-        elseif b_idx == 11 and #self.input < 0 then
+        elseif b_idx == 11 and #self.input > 0 then
             --local _a = tonum(self.input)
             if tonum(self.input) == self.current_a then
                 
                 sfx(10)
                 player_stats.cash += 2
                 player_stats.earned += 2
-                notify("Earned $2.00")
                 MText:new("$2", 27, {x=38, y=2}, 110, 30)
                 save_stats()
             else
